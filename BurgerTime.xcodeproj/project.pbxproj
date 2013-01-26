@@ -24,6 +24,9 @@
 		0F96980616B38D02005BE1C1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9697E516B38D02005BE1C1 /* CoreData.framework */; };
 		0F96980E16B38D02005BE1C1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0F96980C16B38D02005BE1C1 /* InfoPlist.strings */; };
 		0F96981116B38D02005BE1C1 /* BurgerTimeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F96981016B38D02005BE1C1 /* BurgerTimeTests.m */; };
+		0F96982016B39283005BE1C1 /* PrototypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F96981F16B39283005BE1C1 /* PrototypeViewController.m */; };
+		0F96982416B3937C005BE1C1 /* HeartGuardBot.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F96982316B3937C005BE1C1 /* HeartGuardBot.m */; };
+		0F96982616B39390005BE1C1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F96982516B39390005BE1C1 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,11 @@
 		0F96980D16B38D02005BE1C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0F96980F16B38D02005BE1C1 /* BurgerTimeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BurgerTimeTests.h; sourceTree = "<group>"; };
 		0F96981016B38D02005BE1C1 /* BurgerTimeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BurgerTimeTests.m; sourceTree = "<group>"; };
+		0F96981E16B39283005BE1C1 /* PrototypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrototypeViewController.h; sourceTree = "<group>"; };
+		0F96981F16B39283005BE1C1 /* PrototypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrototypeViewController.m; sourceTree = "<group>"; };
+		0F96982216B3937C005BE1C1 /* HeartGuardBot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartGuardBot.h; sourceTree = "<group>"; };
+		0F96982316B3937C005BE1C1 /* HeartGuardBot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartGuardBot.m; sourceTree = "<group>"; };
+		0F96982516B39390005BE1C1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F96982616B39390005BE1C1 /* QuartzCore.framework in Frameworks */,
 				0F9697E016B38D02005BE1C1 /* UIKit.framework in Frameworks */,
 				0F9697E216B38D02005BE1C1 /* Foundation.framework in Frameworks */,
 				0F9697E416B38D02005BE1C1 /* CoreGraphics.framework in Frameworks */,
@@ -108,6 +117,7 @@
 		0F9697DE16B38D02005BE1C1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0F96982516B39390005BE1C1 /* QuartzCore.framework */,
 				0F9697DF16B38D02005BE1C1 /* UIKit.framework */,
 				0F9697E116B38D02005BE1C1 /* Foundation.framework */,
 				0F9697E316B38D02005BE1C1 /* CoreGraphics.framework */,
@@ -124,6 +134,10 @@
 				0F9697F116B38D02005BE1C1 /* AppDelegate.m */,
 				0F9697F916B38D02005BE1C1 /* BurgerTime.xcdatamodeld */,
 				0F9697E816B38D02005BE1C1 /* Supporting Files */,
+				0F96981E16B39283005BE1C1 /* PrototypeViewController.h */,
+				0F96981F16B39283005BE1C1 /* PrototypeViewController.m */,
+				0F96982216B3937C005BE1C1 /* HeartGuardBot.h */,
+				0F96982316B3937C005BE1C1 /* HeartGuardBot.m */,
 			);
 			path = BurgerTime;
 			sourceTree = "<group>";
@@ -273,6 +287,8 @@
 				0F9697EE16B38D02005BE1C1 /* main.m in Sources */,
 				0F9697F216B38D02005BE1C1 /* AppDelegate.m in Sources */,
 				0F9697FB16B38D02005BE1C1 /* BurgerTime.xcdatamodeld in Sources */,
+				0F96982016B39283005BE1C1 /* PrototypeViewController.m in Sources */,
+				0F96982416B3937C005BE1C1 /* HeartGuardBot.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +457,7 @@
 				0F96981616B38D02005BE1C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0F96981716B38D02005BE1C1 /* Build configuration list for PBXNativeTarget "BurgerTimeTests" */ = {
 			isa = XCConfigurationList;
@@ -449,6 +466,7 @@
 				0F96981916B38D02005BE1C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
