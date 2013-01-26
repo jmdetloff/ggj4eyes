@@ -12,6 +12,6 @@
 
 
 + (NSArray *)collidingRectsForHeartWithScale:(CGFloat)scale;
-
++ (NSArray *)validSpawningLocationsWithScale:(CGFloat)scale;
 
 @end

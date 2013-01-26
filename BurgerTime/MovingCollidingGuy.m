@@ -29,10 +29,17 @@
     NSMutableArray *blockedDirections = [[NSMutableArray alloc] init];
     for (NSValue *rectVal in blockingRectangles) {
         CGRect blockingRect = [rectVal CGRectValue];
-        CGPoint topLeft = self.frame.origin;
-        CGPoint topRight = CGPointMake(CGRectGetMaxX(self.frame), self.frame.origin.y);
-        CGPoint bottomLeft = CGPointMake(self.frame.origin.x, CGRectGetMaxY(self.frame));
-        CGPoint bottomRight = CGPointMake(CGRectGetMaxX(self.frame), CGRectGetMaxY(self.frame));
+        CGRect selfFrame = self.frame;
+        
+        CGFloat naiveDistance = [self distanceBetween:self.center and:blockingRect.origin];
+        if (naiveDistance > blockingRect.size.width + selfFrame.size.width && naiveDistance > blockingRect.size.height + selfFrame.size.height) {
+            continue;
+        }
+        
+        CGPoint topLeft = selfFrame.origin;
+        CGPoint topRight = CGPointMake(CGRectGetMaxX(selfFrame), selfFrame.origin.y);
+        CGPoint bottomLeft = CGPointMake(selfFrame.origin.x, CGRectGetMaxY(selfFrame));
+        CGPoint bottomRight = CGPointMake(CGRectGetMaxX(selfFrame), CGRectGetMaxY(selfFrame));
         
         if (CGRectContainsPoint(blockingRect, topLeft)) {
             if (![blockedDirections containsObject:[NSNumber numberWithInt:Left]]) [blockedDirections addObject:[NSNumber numberWithInt:Left]];
@@ -183,4 +190,10 @@
     [self clearDestination];
 }
 
+- (CGFloat) distanceBetween:(CGPoint)point1 and:(CGPoint)point2 {
+    CGFloat dx = point2.x - point1.x;
+    CGFloat dy = point2.y - point1.y;
+    return sqrt(dx*dx + dy*dy);
+}
+            
 @end

@@ -55,4 +55,10 @@
     return rects;
 }
 
+
++ (NSArray *)validSpawningLocationsWithScale:(CGFloat)scale {
+    
+}
+
+
 @end
