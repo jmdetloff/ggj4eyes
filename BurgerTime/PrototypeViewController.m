@@ -17,6 +17,8 @@
     NSMutableArray *_totalNanobots;
     NSTimer *_moveTimer;
     NSArray *_collidingRects;
+    CGPoint _swipeStart;
+    NSMutableArray *_nanobotsBeingSwiped;
 }
 
 
@@ -35,6 +37,7 @@
             [_totalNanobots addObject:bot];
         }
         
+        _nanobotsBeingSwiped = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -47,6 +50,9 @@
     for (HeartGuardBot *bot in _totalNanobots) {
         [self.view addSubview:bot];
     }
+    
+    UIPanGestureRecognizer *gestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
+    [self.view addGestureRecognizer:gestureRecognizer];
     
     _moveTimer = [NSTimer scheduledTimerWithTimeInterval:1/30.0 target:self selector:@selector(moveBots) userInfo:nil repeats:YES];
 }
@@ -80,5 +86,40 @@
     }
     return randomPoint;
 }
+
+
+- (void)swipe:(UIPanGestureRecognizer *)gestureRecognizer {
+    CGPoint stopLocation = [gestureRecognizer locationInView:self.view];
+    
+    if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
+        _swipeStart = [gestureRecognizer locationInView:self.view];
+        
+    } else {
+        
+        NSMutableArray *swipedNanobots = [[NSMutableArray alloc] init];
+        for (HeartGuardBot *bot in _totalNanobots) {
+            if ([self distanceBetween:stopLocation and:bot.center] < 80) {
+                [swipedNanobots addObject:bot];
+            }
+        }
+        
+        [_nanobotsBeingSwiped addObjectsFromArray:swipedNanobots];
+    }
+    
+    for (HeartGuardBot *bot in _nanobotsBeingSwiped) {
+        [bot setDestinationPoint:stopLocation withDuration:8];
+    }
+    
+    if (gestureRecognizer.state == UIGestureRecognizerStateEnded || gestureRecognizer.state == UIGestureRecognizerStateCancelled) {
+        [_nanobotsBeingSwiped removeAllObjects];
+    }
+}
+
+
+- (CGFloat) distanceBetween:(CGPoint)point1 and:(CGPoint)point2 {
+    CGFloat dx = point2.x - point1.x;
+    CGFloat dy = point2.y - point1.y;
+    return sqrt(dx*dx + dy*dy);
+};
 
 @end

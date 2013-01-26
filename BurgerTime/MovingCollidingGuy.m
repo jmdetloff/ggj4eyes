@@ -10,6 +10,9 @@
 
 @implementation MovingCollidingGuy {
     MovementDirection _previousMovementDirection;
+    CGPoint _destinationPoint;
+    NSTimer *_clearDestinationTimer;
+    BOOL _destinationValid;
 }
 
 
@@ -60,6 +63,16 @@
     
     MovementDirection moveDirection;
     
+    if (_destinationValid) {
+        MovementDirection direction = [self destinationMovementDirectionWithInvalidDirections:blockedDirections];
+        if (direction != -1) {
+            [self moveInDirection:direction];
+            if (CGPointEqualToPoint(_destinationPoint, self.frame.origin)) {
+                _destinationValid = NO;
+            }
+        }
+    }
+    
     if (arc4random()%10 != 1 && ![blockedDirections containsObject:[NSNumber numberWithInt:_previousMovementDirection]]) {
         moveDirection = _previousMovementDirection;
     } else {
@@ -73,8 +86,13 @@
         moveDirection = [[validMoveDirections objectAtIndex:arc4random()%[validMoveDirections count]] intValue];
     }
 
+    [self moveInDirection:moveDirection];
+}
+
+
+- (void)moveInDirection:(MovementDirection)direction {
     CGRect botFrame = self.frame;
-    switch (moveDirection) {
+    switch (direction) {
         case Left:
             botFrame.origin.x--;
             break;
@@ -94,8 +112,60 @@
     }
     self.frame = botFrame;
     
-    _previousMovementDirection = moveDirection;
+    _previousMovementDirection = direction;
 }
 
+
+- (void)setDestinationPoint:(CGPoint)destinationPoint withDuration:(NSTimeInterval)duration {
+    _destinationPoint = destinationPoint;
+    _destinationValid = YES;
+    
+    [_clearDestinationTimer invalidate];
+    if (duration > 0) {
+        _clearDestinationTimer = [NSTimer scheduledTimerWithTimeInterval:duration target:self selector:@selector(clearDestination) userInfo:nil repeats:NO];
+    }
+}
+
+
+- (void)clearDestination {
+    _destinationValid = NO;
+}
+
+
+- (MovementDirection)destinationMovementDirectionWithInvalidDirections:(NSArray *)invalidDirections {
+    CGFloat yDiff = self.frame.origin.y - _destinationPoint.y;
+    CGFloat xDiff = self.frame.origin.x - _destinationPoint.x;
+    
+    if (xDiff == 0 && yDiff == 0) {
+        return -1;
+    }
+    
+    MovementDirection direction = -1;
+    if (arc4random()%((int)(abs(yDiff) + abs(xDiff))) < abs(xDiff)) {
+        if (xDiff < 0) {
+            direction = Right;
+        } else if (xDiff > 0) {
+            direction = Left;
+        }
+        
+        if ([invalidDirections containsObject:[NSNumber numberWithInt:direction]]) {
+            direction = -1;
+        }
+    }
+    
+    if (arc4random()%((int)(abs(yDiff) + abs(xDiff))) >= abs(xDiff) || direction == -1) {
+        if (yDiff < 0) {
+            direction = Down;
+        } else if (xDiff > 0) {
+            direction = Up;
+        }
+        
+        if ([invalidDirections containsObject:[NSNumber numberWithInt:direction]]) {
+            direction = -1;
+        }
+    }
+    
+    return direction;
+}
 
 @end
