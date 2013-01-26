@@ -7,16 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MovingCollidingGuy.h"
+#import "LivingGuyManager.h"
 
-@interface EnemyBot : UIView
-typedef enum { ENDOCARDITIS, MYOCARDITIS, ATHEROSCLEROSIS, ISCHAEMIA, CARDIOMYOPATHY } types;
-@property types botType;
-@property int hp;
-@property int atk;
-@property int splash_radius;
+@interface EnemyBot : MovingCollidingGuy <DestinationDelegate, LivingGuy>
+typedef enum { TEAR, ENDOCARDITIS, MYOCARDITIS, ATHEROSCLEROSIS, ISCHAEMIA, CARDIOMYOPATHY } EnemyType;
+@property  (nonatomic, assign) EnemyType botType;
+@property (nonatomic, assign) int hp;
+@property (nonatomic, assign) int atk;
+@property (nonatomic, assign) int splash_radius;
 
 -(NSString *)name;
 -(UIColor *)color;
-
+- (void)die;
 
 @end

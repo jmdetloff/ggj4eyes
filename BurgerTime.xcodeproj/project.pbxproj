@@ -30,6 +30,9 @@
 		0F96982816B39B38005BE1C1 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 0F96982716B39B38005BE1C1 /* File */; };
 		0F96982B16B3A008005BE1C1 /* MovingCollidingGuy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F96982A16B3A008005BE1C1 /* MovingCollidingGuy.m */; };
 		0FACD3F016B449FF006BB9EC /* EnemyBot.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FACD3EF16B449FF006BB9EC /* EnemyBot.m */; };
+		0FACD3F416B44B09006BB9EC /* EnemySpawner.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FACD3F316B44B09006BB9EC /* EnemySpawner.m */; };
+		0FACD3F716B44B61006BB9EC /* HeartLeakEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FACD3F616B44B61006BB9EC /* HeartLeakEnemy.m */; };
+		0FACD3FB16B457A1006BB9EC /* LivingGuyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FACD3FA16B457A0006BB9EC /* LivingGuyManager.m */; };
 		2415D1A416B3B82E00308B74 /* wave.json in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1A216B3B82E00308B74 /* wave.json */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +78,12 @@
 		0F96982A16B3A008005BE1C1 /* MovingCollidingGuy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovingCollidingGuy.m; sourceTree = "<group>"; };
 		0FACD3EE16B449FF006BB9EC /* EnemyBot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyBot.h; sourceTree = "<group>"; };
 		0FACD3EF16B449FF006BB9EC /* EnemyBot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyBot.m; sourceTree = "<group>"; };
+		0FACD3F216B44B09006BB9EC /* EnemySpawner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemySpawner.h; sourceTree = "<group>"; };
+		0FACD3F316B44B09006BB9EC /* EnemySpawner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemySpawner.m; sourceTree = "<group>"; };
+		0FACD3F516B44B61006BB9EC /* HeartLeakEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartLeakEnemy.h; sourceTree = "<group>"; };
+		0FACD3F616B44B61006BB9EC /* HeartLeakEnemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartLeakEnemy.m; sourceTree = "<group>"; };
+		0FACD3F916B457A0006BB9EC /* LivingGuyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivingGuyManager.h; sourceTree = "<group>"; };
+		0FACD3FA16B457A0006BB9EC /* LivingGuyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LivingGuyManager.m; sourceTree = "<group>"; };
 		2415D1A216B3B82E00308B74 /* wave.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wave.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,18 +150,13 @@
 		0F9697E716B38D02005BE1C1 /* BurgerTime */ = {
 			isa = PBXGroup;
 			children = (
-				0FACD3EE16B449FF006BB9EC /* EnemyBot.h */,
-				0FACD3EF16B449FF006BB9EC /* EnemyBot.m */,
+				0FACD3F816B44C8B006BB9EC /* enemies and bots */,
 				0F9697F016B38D02005BE1C1 /* AppDelegate.h */,
 				0F9697F116B38D02005BE1C1 /* AppDelegate.m */,
-				0F9697F916B38D02005BE1C1 /* BurgerTime.xcdatamodeld */,
-				0F9697E816B38D02005BE1C1 /* Supporting Files */,
 				0F96981E16B39283005BE1C1 /* PrototypeViewController.h */,
 				0F96981F16B39283005BE1C1 /* PrototypeViewController.m */,
-				0F96982216B3937C005BE1C1 /* HeartGuardBot.h */,
-				0F96982316B3937C005BE1C1 /* HeartGuardBot.m */,
-				0F96982916B3A008005BE1C1 /* MovingCollidingGuy.h */,
-				0F96982A16B3A008005BE1C1 /* MovingCollidingGuy.m */,
+				0F9697F916B38D02005BE1C1 /* BurgerTime.xcdatamodeld */,
+				0F9697E816B38D02005BE1C1 /* Supporting Files */,
 			);
 			path = BurgerTime;
 			sourceTree = "<group>";
@@ -189,6 +193,25 @@
 				0F96980C16B38D02005BE1C1 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0FACD3F816B44C8B006BB9EC /* enemies and bots */ = {
+			isa = PBXGroup;
+			children = (
+				0FACD3F216B44B09006BB9EC /* EnemySpawner.h */,
+				0FACD3F316B44B09006BB9EC /* EnemySpawner.m */,
+				0F96982916B3A008005BE1C1 /* MovingCollidingGuy.h */,
+				0F96982A16B3A008005BE1C1 /* MovingCollidingGuy.m */,
+				0F96982216B3937C005BE1C1 /* HeartGuardBot.h */,
+				0F96982316B3937C005BE1C1 /* HeartGuardBot.m */,
+				0FACD3EE16B449FF006BB9EC /* EnemyBot.h */,
+				0FACD3EF16B449FF006BB9EC /* EnemyBot.m */,
+				0FACD3F516B44B61006BB9EC /* HeartLeakEnemy.h */,
+				0FACD3F616B44B61006BB9EC /* HeartLeakEnemy.m */,
+				0FACD3F916B457A0006BB9EC /* LivingGuyManager.h */,
+				0FACD3FA16B457A0006BB9EC /* LivingGuyManager.m */,
+			);
+			name = "enemies and bots";
 			sourceTree = "<group>";
 		};
 		2415D1A116B3B82E00308B74 /* data */ = {
@@ -318,6 +341,9 @@
 				0F96982416B3937C005BE1C1 /* HeartGuardBot.m in Sources */,
 				0F96982B16B3A008005BE1C1 /* MovingCollidingGuy.m in Sources */,
 				0FACD3F016B449FF006BB9EC /* EnemyBot.m in Sources */,
+				0FACD3F416B44B09006BB9EC /* EnemySpawner.m in Sources */,
+				0FACD3F716B44B61006BB9EC /* HeartLeakEnemy.m in Sources */,
+				0FACD3FB16B457A1006BB9EC /* LivingGuyManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

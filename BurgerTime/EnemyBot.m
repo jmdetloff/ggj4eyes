@@ -24,6 +24,7 @@
     }
     return self;
 }
+
 -(NSString *)name
 {
     switch (botType) {
@@ -37,6 +38,8 @@
             return @"Ischaemia";
         case CARDIOMYOPATHY:
             return @"Cardiomyopathy";
+        default:
+            return nil;
     }
 }
 -(UIColor *)color
@@ -52,7 +55,17 @@
             return [UIColor blueColor];
         case CARDIOMYOPATHY:
             return [UIColor yellowColor];
+        default:
+            return nil;
     }
+}
+
+- (void)destinationReached:(id)sender {
+    // no-op
+}
+
+- (void)die {
+    // noop
 }
 
 @end
