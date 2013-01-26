@@ -10,6 +10,8 @@
 #import "HeartLeakEnemy.h"
 #import <QuartzCore/QuartzCore.h>
 
+static NSArray *_botColors;
+
 @implementation HeartGuardBot
 @synthesize botType;
 @synthesize level;
@@ -44,6 +46,13 @@
     }
     NSLog(@"Made it through color switch without picking a color");
     return [UIColor blackColor]; // removes warning
+}
+
+-(void)setBotImage {
+    if (!_botColors)
+        _botColors = [NSArray arrayWithObjects:@"white", @"blue", @"red", @"green", @"yellow", nil];
+    UIImage *botImage = [UIImage imageNamed:[NSString stringWithFormat:@"nanobot_%@.png", [_botColors objectAtIndex:self.botType]]];
+    [self addSubview:[[UIImageView alloc] initWithImage:botImage]];
 }
 
 

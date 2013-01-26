@@ -43,7 +43,8 @@
             CGRect botFrame = CGRectMake(0, 0, 5, 5);
             botFrame.origin = [self randomPointWithinBoundsExcludingRects:_collidingRects];
             HeartGuardBot *bot = [[HeartGuardBot alloc] initWithFrame:botFrame];
-            bot.backgroundColor = [bot botColor];
+//            bot.backgroundColor = [bot botColor];
+            [bot setBotImage];
             bot.livingGuyManager = _livingGuyManager;
             [_livingGuyManager.bots addObject:bot];
         }
