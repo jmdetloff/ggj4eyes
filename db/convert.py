@@ -11,10 +11,13 @@ JSON_FILE_EXTN = '.json'
 DB_DIR = os.path.dirname(os.path.realpath(__file__))
 INPUT_DIR = os.path.join(DB_DIR, 'input')
 OUTPUT_DIR = os.path.join(DB_DIR, 'data')
+OUTPUT_FILE_NAME = os.path.join(OUTPUT_DIR, 'everything.json')
 
 FILES = filter(lambda x:x.endswith(TEXT_FILE_EXTN), os.listdir(INPUT_DIR))
 
+megadict = {}
 for fn in FILES:
+	fn_no_ext = fn[:-len(TEXT_FILE_EXTN)]
 	f = open(os.path.join(INPUT_DIR, fn), 'r')
 	hdrline = f.readline().strip()
 	typeline = f.readline().strip()
@@ -41,10 +44,12 @@ for fn in FILES:
 				d[fields[j]] = json.loads(entries[j])
 		ret[str(i)] = d
 		i += 1
-	s = json.dumps(ret)
+	megadict[fn_no_ext] = ret
+	# s = json.dumps(ret)
 
-	outfn = os.path.join(OUTPUT_DIR, fn[:-len(TEXT_FILE_EXTN)]+JSON_FILE_EXTN)
-	g = open(outfn, 'w')
-	g.write(s)
-	g.close()
-	print 'Wrote to '+outfn+'.'
+# outfn = os.path.join(OUTPUT_DIR, fn[:-len(TEXT_FILE_EXTN)]+JSON_FILE_EXTN)
+g = open(OUTPUT_FILE_NAME, 'w')
+g.write(json.dumps(megadict))
+g.close()
+# print 'Wrote to '+outfn+'.'
+print 'Exported data.'
