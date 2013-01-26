@@ -19,7 +19,8 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        botType = arc4random() % 5; // Probably not what we want to do.
+        botType = arc4random() % 5;
+        // Probably not what we want to do.
     }
     return self;
 }
@@ -27,15 +28,15 @@
 -(UIColor *)botColor  // color blind people are screwed
 {
     switch(botType) {
-        case 0:
+        case SCRUB:
             return [UIColor blackColor];
-        case 1:
+        case PLUG:
             return [UIColor blueColor];
-        case 2:
+        case FIGHT:
             return [UIColor redColor];
-        case 3:
+        case HEALER:
             return [UIColor greenColor];
-        case 4:
+        case SPAWNBOT:
             return [UIColor yellowColor];
     }
     NSLog(@"Made it through color switch without picking a color");

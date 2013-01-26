@@ -13,14 +13,8 @@
     
 }
 -(UIColor *)botColor;
-@property int botType;
-// Should make an enum
-// in the meantime:
-// 0 - scrub
-// 1 - plug
-// 2 - fight
-// 3 - healer
-// 4 - mombot/spawnbot
+//typedef  types;
+@property  enum    { SCRUB, PLUG, FIGHT, HEALER, SPAWNBOT }  botType;
 
 @property int level;
 @property int range;
