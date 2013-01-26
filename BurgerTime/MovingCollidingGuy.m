@@ -12,7 +12,6 @@
     MovementDirection _previousMovementDirection;
     CGPoint _destinationPoint;
     BOOL _destinationValid;
-    NSDate *_clearDestinationDate;
 }
 
 
@@ -61,10 +60,6 @@
 
 - (void)moveWithBlockedDirections:(NSArray *)blockedDirections {
     
-    if (_clearDestinationDate && [_clearDestinationDate timeIntervalSinceNow] <= 0) {
-        [self clearDestination];
-    }
-    
     MovementDirection moveDirection;
     
     if (_destinationValid) {
@@ -72,7 +67,7 @@
         if (direction != -1) {
             [self moveInDirection:direction];
             if (CGPointEqualToPoint(_destinationPoint, self.frame.origin)) {
-                _destinationValid = NO;
+                [self clearDestination];
             }
         }
     }
@@ -123,12 +118,6 @@
 - (void)setDestinationPoint:(CGPoint)destinationPoint withDuration:(NSTimeInterval)duration {
     _destinationPoint = destinationPoint;
     _destinationValid = YES;
-    
-    if (duration > 0) {
-        _clearDestinationDate = [NSDate dateWithTimeInterval:duration sinceDate:[NSDate date]];
-    } else {
-        _clearDestinationDate = nil;
-    }
 }
 
 
