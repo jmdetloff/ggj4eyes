@@ -57,7 +57,7 @@
 
 
 + (NSArray *)validSpawningLocationsWithScale:(CGFloat)scale {
-    
+    return nil;
 }
 
 

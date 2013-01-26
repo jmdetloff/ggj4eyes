@@ -8,6 +8,13 @@
 
 #import "MovingCollidingGuy.h"
 
+#define N_DIRECTIONS 8
+#define N_BOUNDING_RECTS 1
+
+static float _boundRects[] = {
+    -10, -10, 20, 788
+};
+
 @implementation MovingCollidingGuy {
     MovementDirection _previousMovementDirection;
     CGPoint _destinationPoint;
@@ -15,13 +22,55 @@
 }
 
 
+@synthesize angle, velocity, position;
+
+- (float)ithAngle:(int)i {
+    //i should be in [0, N_DIRECTIONS-1]
+    return -M_PI + 2 * M_PI * i / N_DIRECTIONS;
+}
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-
+        self.position = frame.origin;
+        self.angle = 0;
+        self.velocity = 30;
     }
     return self;
+}
+
+- (void)advance:(double)dt {
+    self.position = [self nextPos:dt withAngle:self.angle];
+}
+
+- (CGPoint)nextPos:(double)dt withAngle:(float)ang {
+    float dx = self.velocity*dt*cosf(ang);
+    float dy = self.velocity*dt*sinf(ang);
+    return CGPointMake(self.position.x + dx, self.position.y + dy);
+}
+
+- (BOOL)validPos:(CGPoint)pos {
+    for (int i = 0;i < N_BOUNDING_RECTS;i++) {
+        if (pos.x >= _boundRects[4*i + 0] &&
+            pos.y >= _boundRects[4*i + 1] &&
+            pos.x <= _boundRects[4*i + 0] + _boundRects[4*i + 2] &&
+            pos.y <= _boundRects[4*i + 1] + _boundRects[4*i + 3])
+            return NO;
+    }
+    return YES;
+}
+
+- (void)rerollAngle:(double)dt {
+    int index;
+    float ang;
+    while (1) {
+        index = arc4random()%N_DIRECTIONS;
+        ang = [self ithAngle:index];
+        if ([self validPos:[self nextPos:dt withAngle:ang]])
+            break;
+    }
+    self.angle = ang;
 }
 
 
