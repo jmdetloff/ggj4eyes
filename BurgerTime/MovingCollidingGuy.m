@@ -67,7 +67,7 @@
         if (direction != -1) {
             [self moveInDirection:direction];
             if (CGPointEqualToPoint(_destinationPoint, self.frame.origin)) {
-                [self clearDestination];
+                [self reachedDestination];
             }
         }
     }
@@ -116,12 +116,15 @@
 
 
 - (void)setDestinationPoint:(CGPoint)destinationPoint withDuration:(NSTimeInterval)duration {
+    [self clearDestination];
+    
     _destinationPoint = destinationPoint;
     _destinationValid = YES;
 }
 
 
 - (void)clearDestination {
+    self.enemyKey = nil;
     _destinationValid = NO;
 }
 
@@ -166,6 +169,14 @@
     }
     
     return direction;
+}
+
+
+- (void)reachedDestination {
+    if (self.enemyKey) {
+        [self.enemyKey destinationReached:self];
+    }
+    [self clearDestination];
 }
 
 @end
