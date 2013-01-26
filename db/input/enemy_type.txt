@@ -1,6 +1,6 @@
 id	name	modifiers
 int	str	dict
-1	endo	{"scrub":2.0, "plug":0.5}
+1	tear	{"scrub":2.0, "plug":0.5}
 2	myo	{}
 3	athero	{}
 4	isc	{}

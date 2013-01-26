@@ -28,8 +28,8 @@
 -(NSString *)name
 {
     switch (botType) {
-        case ENDOCARDITIS:
-            return @"Endocarditus";
+        case TEAR:
+            return @"Myocardial rupture";
         case MYOCARDITIS:
             return @"Myocarditis";
         case ATHEROSCLEROSIS:
@@ -45,7 +45,7 @@
 -(UIColor *)color
 {
     switch(botType) {
-        case ENDOCARDITIS:
+        case TEAR:
             return [UIColor blackColor];
         case MYOCARDITIS:
             return [UIColor redColor];
