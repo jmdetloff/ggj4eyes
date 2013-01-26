@@ -87,9 +87,7 @@
         for (EnemyBot *enemy in _livingGuyManager.enemies) {
             [bot interactWithEnemy:enemy];
         }
-        
-//        NSArray *blockedDirections = [bot blockedDirectionsForBlockingRectangles:_collidingRects];
-//        [bot moveWithBlockedDirections:blockedDirections];
+        [bot advance:_timeInterval];
     }
 }
 

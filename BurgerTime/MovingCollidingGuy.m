@@ -42,6 +42,7 @@ static float _boundRects[] = {
 
 - (void)advance:(double)dt {
     self.position = [self nextPos:dt withAngle:self.angle];
+    self.frame = CGRectMake(self.position.x, self.position.y, self.frame.size.width, self.frame.size.height);
 }
 
 - (CGPoint)nextPos:(double)dt withAngle:(float)ang {
