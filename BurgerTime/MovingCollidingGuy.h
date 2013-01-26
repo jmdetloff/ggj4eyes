@@ -26,7 +26,15 @@ typedef enum {
 @property (nonatomic, weak) id<DestinationDelegate> enemyKey;
 @property (nonatomic, strong) LivingGuyManager *livingGuyManager;
 - (void)setDestinationPoint:(CGPoint)destinationPoint withDuration:(NSTimeInterval)duration;
-- (void)moveWithBlockedDirections:(NSArray *)blockedDirections;
-- (NSArray *)blockedDirectionsForBlockingRectangles:(NSArray *)blockingRectangles;
 - (void)clearDestination;
+
+@property (nonatomic) float angle;
+@property (nonatomic) float velocity;
+@property (nonatomic) CGPoint position;
+
+- (void)advance:(double)dt;
+- (CGPoint)nextPos:(double)dt withAngle:(float)ang;
+- (BOOL)validPos:(CGPoint)pos;
+- (void)rerollAngle:(double)dt;
+
 @end

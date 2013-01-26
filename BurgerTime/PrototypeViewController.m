@@ -19,12 +19,14 @@
 
 @implementation PrototypeViewController {
     NSTimer *_moveTimer;
+    NSTimer *_rerollTimer;
     NSArray *_collidingRects;
     NSMutableArray *_nanobotsBeingSwiped;
     CGPoint _lastSwipePoint;
     NSTimer *_enemySpawnTimer;
     NSInteger _currentWave;
     LivingGuyManager *_livingGuyManager;
+    double _timeInterval;
 }
 
 
@@ -73,7 +75,10 @@
     UIPanGestureRecognizer *gestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
     [self.view addGestureRecognizer:gestureRecognizer];
     
-    _moveTimer = [NSTimer scheduledTimerWithTimeInterval:1/30.0 target:self selector:@selector(moveBots) userInfo:nil repeats:YES];
+    _timeInterval = 1/30.0;
+    _moveTimer = [NSTimer scheduledTimerWithTimeInterval:_timeInterval target:self selector:@selector(moveBots) userInfo:nil repeats:YES];
+    _rerollTimer = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(rerollAllBots) userInfo:nil repeats:YES];
+    [self rerollAllBots];
 }
 
 
@@ -82,9 +87,13 @@
         for (EnemyBot *enemy in _livingGuyManager.enemies) {
             [bot interactWithEnemy:enemy];
         }
-        
-        NSArray *blockedDirections = [bot blockedDirectionsForBlockingRectangles:_collidingRects];
-        [bot moveWithBlockedDirections:blockedDirections];
+        [bot advance:_timeInterval];
+    }
+}
+
+- (void)rerollAllBots {
+    for (HeartGuardBot *bot in [_livingGuyManager.bots copy]) {
+        [bot rerollAngle:_timeInterval];
     }
 }
 
