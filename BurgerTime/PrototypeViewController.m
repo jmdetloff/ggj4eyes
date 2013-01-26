@@ -11,6 +11,7 @@
 #import "EnemyBot.h"
 #import "EnemySpawner.h"
 #import "LivingGuyManager.h"
+#import "CollidingRectsCreator.h"
 
 @interface PrototypeViewController () <DeathDelegate>
 @end
@@ -31,17 +32,16 @@
     self = [super init];
     if (self) {
         
-        _collidingRects = @[[NSValue valueWithCGRect:CGRectMake(-10, -10, 20, 788)],
-                            [NSValue valueWithCGRect:CGRectMake(1014, -10, 20, 788)],
-                            [NSValue valueWithCGRect:CGRectMake(-10, -10, 1044, 20)],
-                            [NSValue valueWithCGRect:CGRectMake(-10, 738, 1044, 20)]];
+        _collidingRects = [CollidingRectsCreator collidingRectsForHeartWithScale:1];
         
         _livingGuyManager = [[LivingGuyManager alloc] init];
         _livingGuyManager.deathDelegate = self;
         
+        CGRect spawnRect = CGRectMake(230, 550, 200, 300);
+        
         for (int i = 0; i < [levelParameters[@"startingBotNum"] intValue]; i++) {
             CGRect botFrame = CGRectMake(0, 0, 5, 5);
-            botFrame.origin = [self randomPointWithinBoundsExcludingRects:_collidingRects];
+            botFrame.origin = [self randomPointWithinBounds:spawnRect excludingRects:_collidingRects];
             HeartGuardBot *bot = [[HeartGuardBot alloc] initWithFrame:botFrame];
 //            bot.backgroundColor = [bot botColor];
             [bot setBotImage];
@@ -61,6 +61,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"heart_bg.png"]];
+    background.frame = self.view.bounds;
+    [self.view addSubview:background];
     
     for (HeartGuardBot *bot in _livingGuyManager.bots) {
         [self.view addSubview:bot];
@@ -85,11 +89,11 @@
 }
 
 
-- (CGPoint)randomPointWithinBoundsExcludingRects:(NSArray *)collidingRects {
+- (CGPoint)randomPointWithinBounds:(CGRect)rect excludingRects:(NSArray *)collidingRects {
     CGPoint randomPoint;
     BOOL verified = NO;
     while (!verified) {
-        randomPoint = CGPointMake(arc4random()%1024, arc4random()%768);
+        randomPoint = CGPointMake(rect.origin.x + arc4random()%(int)rect.size.width, rect.origin.y + arc4random()%(int)rect.size.height);
         BOOL invalid = NO;
         for (NSValue *collidingRectVal in collidingRects) {
             CGRect collidingRect = [collidingRectVal CGRectValue];
@@ -169,10 +173,10 @@
     switch (enemy.botType) {
         case TEAR: {
             CGRect botFrame = CGRectMake(0, 0, 20, 100);
-            botFrame.origin = [self randomPointWithinBoundsExcludingRects:_collidingRects];
+            botFrame.origin = [self randomPointWithinBounds:CGRectMake(200, 200, 200, 200) excludingRects:_collidingRects];
             enemy.frame = botFrame;
             enemy.livingGuyManager = _livingGuyManager;
-            [self.view insertSubview:enemy atIndex:0];
+            [self.view insertSubview:enemy atIndex:1];
         }
         break;
             
