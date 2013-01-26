@@ -4,7 +4,7 @@ import os
 import sys
 import json
 
-DELIMITER = ','
+DELIMITER = '\t'
 TEXT_FILE_EXTN = '.txt'
 JSON_FILE_EXTN = '.json'
 
@@ -37,6 +37,8 @@ for fn in FILES:
 				d[fields[j]] = int(entries[j])
 			elif types[j] == 'str':
 				d[fields[j]] = entries[j]
+			elif types[j] == 'dict':
+				d[fields[j]] = json.loads(entries[j])
 		ret[str(i)] = d
 		i += 1
 	s = json.dumps(ret)
