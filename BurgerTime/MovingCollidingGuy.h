@@ -17,6 +17,7 @@ typedef enum {
 
 
 @interface MovingCollidingGuy : UIView
+- (void)setDestinationPoint:(CGPoint)destinationPoint withDuration:(NSTimeInterval)duration;
 - (void)moveWithBlockedDirections:(NSArray *)blockedDirections;
 - (NSArray *)blockedDirectionsForBlockingRectangles:(NSArray *)blockingRectangles;
 @end
