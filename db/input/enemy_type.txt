@@ -1,4 +1,4 @@
-id	name	modifiers
+pk	name	modifiers
 int	str	dict
 1	endo	{"scrub":2.0, "plug":0.5}
 2	myo	{}

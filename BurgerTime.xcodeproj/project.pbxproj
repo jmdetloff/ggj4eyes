@@ -30,6 +30,10 @@
 		0F96982816B39B38005BE1C1 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 0F96982716B39B38005BE1C1 /* File */; };
 		0F96982B16B3A008005BE1C1 /* MovingCollidingGuy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F96982A16B3A008005BE1C1 /* MovingCollidingGuy.m */; };
 		24D9598F16B3FCD4007DD1CE /* everything.json in Resources */ = {isa = PBXBuildFile; fileRef = 24D9598E16B3FCD4007DD1CE /* everything.json */; };
+		24D9599116B3FE33007DD1CE /* class_map.json in Resources */ = {isa = PBXBuildFile; fileRef = 24D9599016B3FE33007DD1CE /* class_map.json */; };
+		24D9599516B3FEAF007DD1CE /* StaticDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D9599416B3FEAF007DD1CE /* StaticDataManager.m */; };
+		24D9599C16B4054F007DD1CE /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D9599B16B4054E007DD1CE /* Level.m */; };
+		24D9599F16B40832007DD1CE /* EnemyType.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D9599E16B40832007DD1CE /* EnemyType.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +77,13 @@
 		0F96982916B3A008005BE1C1 /* MovingCollidingGuy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovingCollidingGuy.h; sourceTree = "<group>"; };
 		0F96982A16B3A008005BE1C1 /* MovingCollidingGuy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovingCollidingGuy.m; sourceTree = "<group>"; };
 		24D9598E16B3FCD4007DD1CE /* everything.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = everything.json; sourceTree = "<group>"; };
+		24D9599016B3FE33007DD1CE /* class_map.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = class_map.json; sourceTree = "<group>"; };
+		24D9599316B3FEAF007DD1CE /* StaticDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticDataManager.h; sourceTree = "<group>"; };
+		24D9599416B3FEAF007DD1CE /* StaticDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticDataManager.m; sourceTree = "<group>"; };
+		24D9599A16B4054E007DD1CE /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
+		24D9599B16B4054E007DD1CE /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
+		24D9599D16B40832007DD1CE /* EnemyType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyType.h; sourceTree = "<group>"; };
+		24D9599E16B40832007DD1CE /* EnemyType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyType.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +159,7 @@
 				0F96982316B3937C005BE1C1 /* HeartGuardBot.m */,
 				0F96982916B3A008005BE1C1 /* MovingCollidingGuy.h */,
 				0F96982A16B3A008005BE1C1 /* MovingCollidingGuy.m */,
+				24D9599216B3FE97007DD1CE /* Static Data Classes */,
 			);
 			path = BurgerTime;
 			sourceTree = "<group>";
@@ -189,10 +201,24 @@
 		2415D1A116B3B82E00308B74 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				24D9599016B3FE33007DD1CE /* class_map.json */,
 				24D9598E16B3FCD4007DD1CE /* everything.json */,
 			);
 			name = data;
 			path = db/data;
+			sourceTree = "<group>";
+		};
+		24D9599216B3FE97007DD1CE /* Static Data Classes */ = {
+			isa = PBXGroup;
+			children = (
+				24D9599316B3FEAF007DD1CE /* StaticDataManager.h */,
+				24D9599416B3FEAF007DD1CE /* StaticDataManager.m */,
+				24D9599A16B4054E007DD1CE /* Level.h */,
+				24D9599B16B4054E007DD1CE /* Level.m */,
+				24D9599D16B40832007DD1CE /* EnemyType.h */,
+				24D9599E16B40832007DD1CE /* EnemyType.m */,
+			);
+			path = "Static Data Classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +298,7 @@
 				0F9697F816B38D02005BE1C1 /* Default-568h@2x.png in Resources */,
 				0F96982816B39B38005BE1C1 /* File in Resources */,
 				24D9598F16B3FCD4007DD1CE /* everything.json in Resources */,
+				24D9599116B3FE33007DD1CE /* class_map.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +339,9 @@
 				0F96982016B39283005BE1C1 /* PrototypeViewController.m in Sources */,
 				0F96982416B3937C005BE1C1 /* HeartGuardBot.m in Sources */,
 				0F96982B16B3A008005BE1C1 /* MovingCollidingGuy.m in Sources */,
+				24D9599516B3FEAF007DD1CE /* StaticDataManager.m in Sources */,
+				24D9599C16B4054F007DD1CE /* Level.m in Sources */,
+				24D9599F16B40832007DD1CE /* EnemyType.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

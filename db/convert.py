@@ -29,7 +29,7 @@ for fn in FILES:
 
 	types = typeline.split(DELIMITER)
 
-	ret = {}
+	ret = []
 	i = 0
 	for line in lines:
 		line = line.strip()
@@ -42,7 +42,7 @@ for fn in FILES:
 				d[fields[j]] = entries[j]
 			elif types[j] == 'dict':
 				d[fields[j]] = json.loads(entries[j])
-		ret[str(i)] = d
+		ret.append(d)
 		i += 1
 	megadict[fn_no_ext] = ret
 	# s = json.dumps(ret)

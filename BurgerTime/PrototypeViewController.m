@@ -8,6 +8,7 @@
 
 #import "PrototypeViewController.h"
 #import "HeartGuardBot.h"
+#import "StaticDataManager.h"
 
 @interface PrototypeViewController ()
 @end
@@ -57,6 +58,8 @@
     [self.view addGestureRecognizer:gestureRecognizer];
     
     _moveTimer = [NSTimer scheduledTimerWithTimeInterval:1/30.0 target:self selector:@selector(moveBots) userInfo:nil repeats:YES];
+    
+    [[StaticDataManager sharedInstance] unpack];
 }
 
 
