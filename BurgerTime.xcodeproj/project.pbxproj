@@ -27,8 +27,9 @@
 		0F96982016B39283005BE1C1 /* PrototypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F96981F16B39283005BE1C1 /* PrototypeViewController.m */; };
 		0F96982416B3937C005BE1C1 /* HeartGuardBot.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F96982316B3937C005BE1C1 /* HeartGuardBot.m */; };
 		0F96982616B39390005BE1C1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F96982516B39390005BE1C1 /* QuartzCore.framework */; };
-		2415D1A316B3B82E00308B74 /* wave.json in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1A216B3B82E00308B74 /* wave.json */; };
 		2415D1A416B3B82E00308B74 /* wave.json in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1A216B3B82E00308B74 /* wave.json */; };
+		0F96982816B39B38005BE1C1 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 0F96982716B39B38005BE1C1 /* File */; };
+		0F96982B16B3A008005BE1C1 /* MovingCollidingGuy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F96982A16B3A008005BE1C1 /* MovingCollidingGuy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,9 @@
 		0F96982316B3937C005BE1C1 /* HeartGuardBot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartGuardBot.m; sourceTree = "<group>"; };
 		0F96982516B39390005BE1C1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2415D1A216B3B82E00308B74 /* wave.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wave.json; sourceTree = "<group>"; };
+		0F96982716B39B38005BE1C1 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
+		0F96982916B3A008005BE1C1 /* MovingCollidingGuy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovingCollidingGuy.h; sourceTree = "<group>"; };
+		0F96982A16B3A008005BE1C1 /* MovingCollidingGuy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovingCollidingGuy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,8 @@
 				0F96981F16B39283005BE1C1 /* PrototypeViewController.m */,
 				0F96982216B3937C005BE1C1 /* HeartGuardBot.h */,
 				0F96982316B3937C005BE1C1 /* HeartGuardBot.m */,
+				0F96982916B3A008005BE1C1 /* MovingCollidingGuy.h */,
+				0F96982A16B3A008005BE1C1 /* MovingCollidingGuy.m */,
 			);
 			path = BurgerTime;
 			sourceTree = "<group>";
@@ -156,6 +162,7 @@
 				0F9697F316B38D02005BE1C1 /* Default.png */,
 				0F9697F516B38D02005BE1C1 /* Default@2x.png */,
 				0F9697F716B38D02005BE1C1 /* Default-568h@2x.png */,
+				0F96982716B39B38005BE1C1 /* File */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -264,6 +271,7 @@
 				0F9697F616B38D02005BE1C1 /* Default@2x.png in Resources */,
 				0F9697F816B38D02005BE1C1 /* Default-568h@2x.png in Resources */,
 				2415D1A316B3B82E00308B74 /* wave.json in Resources */,
+				0F96982816B39B38005BE1C1 /* File in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +312,7 @@
 				0F9697FB16B38D02005BE1C1 /* BurgerTime.xcdatamodeld in Sources */,
 				0F96982016B39283005BE1C1 /* PrototypeViewController.m in Sources */,
 				0F96982416B3937C005BE1C1 /* HeartGuardBot.m in Sources */,
+				0F96982B16B3A008005BE1C1 /* MovingCollidingGuy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
