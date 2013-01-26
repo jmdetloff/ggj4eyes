@@ -17,7 +17,9 @@ typedef enum {
 
 
 @interface MovingCollidingGuy : UIView
+@property (nonatomic, strong) id swipeKey;
 - (void)setDestinationPoint:(CGPoint)destinationPoint withDuration:(NSTimeInterval)duration;
 - (void)moveWithBlockedDirections:(NSArray *)blockedDirections;
 - (NSArray *)blockedDirectionsForBlockingRectangles:(NSArray *)blockingRectangles;
+- (void)clearDestination;
 @end
