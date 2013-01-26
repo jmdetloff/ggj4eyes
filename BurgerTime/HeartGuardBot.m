@@ -47,7 +47,7 @@ static NSArray *_botColors;
 
 -(void)setBotImage {
     if (!_botColors)
-        _botColors = [NSArray arrayWithObjects:@"white", @"white", @"red", @"white", @"white", nil];
+        _botColors = [NSArray arrayWithObjects:@"white", @"blue", @"red", @"green", @"yellow", nil];
     UIImage *botImage = [UIImage imageNamed:[NSString stringWithFormat:@"nanobot_%@.png", [_botColors objectAtIndex:self.botType]]];
     [self addSubview:[[UIImageView alloc] initWithImage:botImage]];
 }
