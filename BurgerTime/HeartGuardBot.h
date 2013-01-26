@@ -6,9 +6,10 @@
 //  Copyright (c) 2013 GlobalGameJam. All rights reserved.
 //
 
+#import "MovingCollidingGuy.h"
 #import <UIKit/UIKit.h>
 
-@interface HeartGuardBot : UIView
+@interface HeartGuardBot : MovingCollidingGuy
 {
     
 }
@@ -18,7 +19,5 @@ typedef   enum    { SCRUB, PLUG, FIGHT, HEALER, SPAWNBOT } types;
 
 @property int level;
 @property int range;
-
-
 
 @end
