@@ -28,7 +28,7 @@
             CGRect botFrame = CGRectMake(0, 0, 5, 5);
             botFrame.origin = [self randomPointWithinBounds];
             HeartGuardBot *bot = [[HeartGuardBot alloc] initWithFrame:botFrame];
-            bot.backgroundColor = [UIColor blackColor];
+            bot.backgroundColor = [bot botColor];
             [_totalNanobots addObject:bot];
         }
         
