@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "BurgerTime/MovingCollidingGuy.m"
-         timestampString = "380875602.03619"
+         timestampString = "380885614.149475"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "64"
-         endingLineNumber = "64"
+         startingLineNumber = "68"
+         endingLineNumber = "68"
          landmarkName = "-moveWithBlockedDirections:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "BurgerTime/MovingCollidingGuy.m"
-         timestampString = "380879622.03407"
+         timestampString = "380885614.149475"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "149"
-         endingLineNumber = "149"
+         startingLineNumber = "154"
+         endingLineNumber = "154"
          landmarkName = "-destinationMovementDirectionWithInvalidDirections:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "BurgerTime/MovingCollidingGuy.m"
-         timestampString = "380879622.03407"
+         timestampString = "380885614.149475"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "148"
-         endingLineNumber = "148"
+         startingLineNumber = "153"
+         endingLineNumber = "153"
          landmarkName = "-destinationMovementDirectionWithInvalidDirections:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -47,11 +47,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "BurgerTime/MovingCollidingGuy.m"
-         timestampString = "380879622.03407"
+         timestampString = "380885614.149475"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "151"
-         endingLineNumber = "151"
+         startingLineNumber = "156"
+         endingLineNumber = "156"
          landmarkName = "-destinationMovementDirectionWithInvalidDirections:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -60,11 +60,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "BurgerTime/MovingCollidingGuy.m"
-         timestampString = "380879622.03407"
+         timestampString = "380885614.149475"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "163"
-         endingLineNumber = "163"
+         startingLineNumber = "168"
+         endingLineNumber = "168"
          landmarkName = "-destinationMovementDirectionWithInvalidDirections:"
          landmarkType = "5">
       </FileBreakpoint>

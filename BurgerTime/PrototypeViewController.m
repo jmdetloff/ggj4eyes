@@ -17,8 +17,8 @@
     NSMutableArray *_totalNanobots;
     NSTimer *_moveTimer;
     NSArray *_collidingRects;
-    CGPoint _swipeStart;
     NSMutableArray *_nanobotsBeingSwiped;
+    CGPoint _lastSwipePoint;
 }
 
 
@@ -37,6 +37,7 @@
             [_totalNanobots addObject:bot];
         }
         
+        _lastSwipePoint = CGPointMake(INFINITY, INFINITY);
         _nanobotsBeingSwiped = [[NSMutableArray alloc] init];
     }
     return self;
@@ -91,28 +92,35 @@
 - (void)swipe:(UIPanGestureRecognizer *)gestureRecognizer {
     CGPoint stopLocation = [gestureRecognizer locationInView:self.view];
     
-    if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
-        _swipeStart = [gestureRecognizer locationInView:self.view];
-        
-    } else {
-        
-        NSMutableArray *swipedNanobots = [[NSMutableArray alloc] init];
-        for (HeartGuardBot *bot in _totalNanobots) {
-            if ([self distanceBetween:stopLocation and:bot.center] < 80) {
-                [swipedNanobots addObject:bot];
-            }
-        }
-        
-        [_nanobotsBeingSwiped addObjectsFromArray:swipedNanobots];
+    if ([self distanceBetween:_lastSwipePoint and:stopLocation] < 50) {
+        return;
     }
+    
+    static NSMutableArray *swipedNanobots;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        swipedNanobots = [[NSMutableArray alloc] init];
+    });
+    
+    [swipedNanobots removeAllObjects];
+    for (HeartGuardBot *bot in _totalNanobots) {
+        if ([self distanceBetween:stopLocation and:bot.center] < 80) {
+            [swipedNanobots addObject:bot];
+        }
+    }
+    
+    [_nanobotsBeingSwiped addObjectsFromArray:swipedNanobots];
     
     for (HeartGuardBot *bot in _nanobotsBeingSwiped) {
         [bot setDestinationPoint:stopLocation withDuration:8];
     }
     
     if (gestureRecognizer.state == UIGestureRecognizerStateEnded || gestureRecognizer.state == UIGestureRecognizerStateCancelled) {
+        _lastSwipePoint = CGPointMake(INFINITY, INFINITY);
         [_nanobotsBeingSwiped removeAllObjects];
     }
+    
+    _lastSwipePoint = stopLocation;
 }
 
 
