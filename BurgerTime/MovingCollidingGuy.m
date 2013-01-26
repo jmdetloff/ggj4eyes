@@ -140,8 +140,14 @@
         return -1;
     }
     
+    CGFloat absXDiff = fabsf(xDiff);
+    CGFloat absYDiff = fabsf(yDiff);
+    
+    NSInteger randomNum = arc4random()%100;
+    CGFloat xProportion = absXDiff/(absXDiff + absYDiff)*100;
+    
     MovementDirection direction = -1;
-    if (arc4random()%((int)(abs(yDiff) + abs(xDiff))) < abs(xDiff)) {
+    if ( randomNum < xProportion) {
         if (xDiff < 0) {
             direction = Right;
         } else if (xDiff > 0) {
@@ -153,10 +159,10 @@
         }
     }
     
-    if (arc4random()%((int)(abs(yDiff) + abs(xDiff))) >= abs(xDiff) || direction == -1) {
+    if (randomNum >= xProportion || direction == -1) {
         if (yDiff < 0) {
             direction = Down;
-        } else if (xDiff > 0) {
+        } else if (yDiff > 0) {
             direction = Up;
         }
         
