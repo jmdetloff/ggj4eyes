@@ -13,8 +13,8 @@
     
 }
 -(UIColor *)botColor;
-//typedef  types;
-@property  enum    { SCRUB, PLUG, FIGHT, HEALER, SPAWNBOT }  botType;
+typedef   enum    { SCRUB, PLUG, FIGHT, HEALER, SPAWNBOT } types;
+@property types  botType;
 
 @property int level;
 @property int range;
