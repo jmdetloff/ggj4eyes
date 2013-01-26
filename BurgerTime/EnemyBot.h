@@ -10,8 +10,9 @@
 #import "MovingCollidingGuy.h"
 #import "LivingGuyManager.h"
 
-@interface EnemyBot : MovingCollidingGuy <DestinationDelegate, LivingGuy>
 typedef enum { TEAR, ENDOCARDITIS, MYOCARDITIS, ATHEROSCLEROSIS, ISCHAEMIA, CARDIOMYOPATHY } EnemyType;
+
+@interface EnemyBot : MovingCollidingGuy <DestinationDelegate, LivingGuy>
 @property  (nonatomic, assign) EnemyType botType;
 @property (nonatomic, assign) int hp;
 @property (nonatomic, assign) int atk;
