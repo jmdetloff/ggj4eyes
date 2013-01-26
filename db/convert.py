@@ -10,7 +10,7 @@ JSON_FILE_EXTN = '.json'
 
 DB_DIR = os.path.dirname(os.path.realpath(__file__))
 INPUT_DIR = os.path.join(DB_DIR, 'input')
-OUTPUT_DIR = os.path.join(DB_DIR, 'output')
+OUTPUT_DIR = os.path.join(DB_DIR, 'data')
 
 FILES = filter(lambda x:x.endswith(TEXT_FILE_EXTN), os.listdir(INPUT_DIR))
 

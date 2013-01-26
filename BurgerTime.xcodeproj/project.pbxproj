@@ -27,6 +27,8 @@
 		0F96982016B39283005BE1C1 /* PrototypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F96981F16B39283005BE1C1 /* PrototypeViewController.m */; };
 		0F96982416B3937C005BE1C1 /* HeartGuardBot.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F96982316B3937C005BE1C1 /* HeartGuardBot.m */; };
 		0F96982616B39390005BE1C1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F96982516B39390005BE1C1 /* QuartzCore.framework */; };
+		2415D1A316B3B82E00308B74 /* wave.json in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1A216B3B82E00308B74 /* wave.json */; };
+		2415D1A416B3B82E00308B74 /* wave.json in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1A216B3B82E00308B74 /* wave.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,7 @@
 		0F96982216B3937C005BE1C1 /* HeartGuardBot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartGuardBot.h; sourceTree = "<group>"; };
 		0F96982316B3937C005BE1C1 /* HeartGuardBot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartGuardBot.m; sourceTree = "<group>"; };
 		0F96982516B39390005BE1C1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		2415D1A216B3B82E00308B74 /* wave.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wave.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,7 @@
 			children = (
 				0F9697E716B38D02005BE1C1 /* BurgerTime */,
 				0F96980916B38D02005BE1C1 /* BurgerTimeTests */,
+				2415D1A116B3B82E00308B74 /* data */,
 				0F9697DE16B38D02005BE1C1 /* Frameworks */,
 				0F9697DC16B38D02005BE1C1 /* Products */,
 			);
@@ -173,6 +177,15 @@
 				0F96980C16B38D02005BE1C1 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2415D1A116B3B82E00308B74 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				2415D1A216B3B82E00308B74 /* wave.json */,
+			);
+			name = data;
+			path = db/data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +263,7 @@
 				0F9697F416B38D02005BE1C1 /* Default.png in Resources */,
 				0F9697F616B38D02005BE1C1 /* Default@2x.png in Resources */,
 				0F9697F816B38D02005BE1C1 /* Default-568h@2x.png in Resources */,
+				2415D1A316B3B82E00308B74 /* wave.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F96980E16B38D02005BE1C1 /* InfoPlist.strings in Resources */,
+				2415D1A416B3B82E00308B74 /* wave.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
