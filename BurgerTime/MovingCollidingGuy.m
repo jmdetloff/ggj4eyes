@@ -11,7 +11,6 @@
 @implementation MovingCollidingGuy {
     MovementDirection _previousMovementDirection;
     CGPoint _destinationPoint;
-    NSTimer *_clearDestinationTimer;
     BOOL _destinationValid;
 }
 
@@ -68,7 +67,7 @@
         if (direction != -1) {
             [self moveInDirection:direction];
             if (CGPointEqualToPoint(_destinationPoint, self.frame.origin)) {
-                _destinationValid = NO;
+                [self clearDestination];
             }
         }
     }
@@ -119,11 +118,6 @@
 - (void)setDestinationPoint:(CGPoint)destinationPoint withDuration:(NSTimeInterval)duration {
     _destinationPoint = destinationPoint;
     _destinationValid = YES;
-    
-    [_clearDestinationTimer invalidate];
-    if (duration > 0) {
-        _clearDestinationTimer = [NSTimer scheduledTimerWithTimeInterval:duration target:self selector:@selector(clearDestination) userInfo:nil repeats:NO];
-    }
 }
 
 

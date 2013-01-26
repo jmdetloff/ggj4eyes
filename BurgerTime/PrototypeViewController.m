@@ -17,8 +17,9 @@
     NSMutableArray *_totalNanobots;
     NSTimer *_moveTimer;
     NSArray *_collidingRects;
-    CGPoint _swipeStart;
     NSMutableArray *_nanobotsBeingSwiped;
+    CGPoint _lastSwipePoint;
+    NSTimer *_swipeTimer;
 }
 
 
@@ -37,6 +38,7 @@
             [_totalNanobots addObject:bot];
         }
         
+        _lastSwipePoint = CGPointMake(INFINITY, INFINITY);
         _nanobotsBeingSwiped = [[NSMutableArray alloc] init];
     }
     return self;
@@ -91,27 +93,45 @@
 - (void)swipe:(UIPanGestureRecognizer *)gestureRecognizer {
     CGPoint stopLocation = [gestureRecognizer locationInView:self.view];
     
-    if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
-        _swipeStart = [gestureRecognizer locationInView:self.view];
+    if (gestureRecognizer.state == UIGestureRecognizerStateEnded || gestureRecognizer.state == UIGestureRecognizerStateCancelled) {
+        _lastSwipePoint = CGPointMake(INFINITY, INFINITY);
         
-    } else {
-        
-        NSMutableArray *swipedNanobots = [[NSMutableArray alloc] init];
-        for (HeartGuardBot *bot in _totalNanobots) {
-            if ([self distanceBetween:stopLocation and:bot.center] < 80) {
-                [swipedNanobots addObject:bot];
-            }
+        NSTimer *swipeTimer = [NSTimer scheduledTimerWithTimeInterval:8 target:self selector:@selector(freeSwipedBots:) userInfo:[_nanobotsBeingSwiped copy] repeats:NO];
+        for (HeartGuardBot *bot in _nanobotsBeingSwiped) {
+            bot.swipeKey = swipeTimer;
         }
         
-        [_nanobotsBeingSwiped addObjectsFromArray:swipedNanobots];
+        [_nanobotsBeingSwiped removeAllObjects];
+        
+        return;
     }
+    
+    if ([self distanceBetween:_lastSwipePoint and:stopLocation] < 60) {
+        return;
+    }
+    
+    for (HeartGuardBot *bot in _totalNanobots) {
+        if ([self distanceBetween:stopLocation and:bot.center] < 60) {
+            if (![_nanobotsBeingSwiped containsObject:bot]) {
+                [_nanobotsBeingSwiped addObject:bot];
+                bot.swipeKey = nil;
+            }
+        }
+    } 
     
     for (HeartGuardBot *bot in _nanobotsBeingSwiped) {
         [bot setDestinationPoint:stopLocation withDuration:8];
     }
     
-    if (gestureRecognizer.state == UIGestureRecognizerStateEnded || gestureRecognizer.state == UIGestureRecognizerStateCancelled) {
-        [_nanobotsBeingSwiped removeAllObjects];
+    _lastSwipePoint = stopLocation;
+}
+
+
+- (void)freeSwipedBots:(NSTimer *)timer {
+    for (HeartGuardBot *bot in timer.userInfo) {
+        if (bot.swipeKey == timer) {
+            [bot clearDestination];
+        }
     }
 }
 

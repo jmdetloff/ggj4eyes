@@ -21,6 +21,8 @@
     if (self) {
         botType = arc4random() % 5;
         // Probably not what we want to do.
+        
+        self.opaque = YES;
     }
     return self;
 }
