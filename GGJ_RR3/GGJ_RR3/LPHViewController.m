@@ -18,15 +18,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-}
--(void)viewDidAppear:(BOOL)animated
-{
     if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera] == NO)
     {
-        NSLog(@"Camera not available :(");
+//        NSLog(@"Camera not available :(");
     }
     captureDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
-
+    
     if ( [captureDevice isTorchAvailable] && [captureDevice isTorchModeSupported:AVCaptureTorchModeOn]  )
     {
         BOOL success = [captureDevice lockForConfiguration:nil];
@@ -37,6 +34,10 @@
         }
     }
     [self initCapture];
+}
+-(void)viewDidAppear:(BOOL)animated
+{
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -93,7 +94,7 @@
 {
     /*We create an autorelease pool because as we are not in the main_queue our code is
 	 not executed in the main thread. So we have to create an autorelease pool for the thread we are in*/
-    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+//    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
     
     CVImageBufferRef imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
     CVPixelBufferLockBaseAddress(imageBuffer, 0);
@@ -141,34 +142,52 @@
     
     [self->MainImageView setImage:uiImage];
     
-    [uiImage release];
+//    [uiImage release];
     CGImageRelease(image);
     
     if(image == nil)
     {
         NSLog(@"Unable to get image");
-        [pool drain];
+     //   [pool drain];
         return;
     }
     
 
     
-    [pool drain];
+    //[pool drain];
 }
 
 
 - (void)dealloc {
-    [MainImageView release];
+ /*   [MainImageView release];
     [Output release];
     [GraphView release];
-    [super dealloc];
+    [super dealloc];*/
+    
+    if ( [captureDevice isTorchAvailable] && [captureDevice isTorchModeSupported:AVCaptureTorchModeOn]  )
+    {
+        BOOL success = [captureDevice lockForConfiguration:nil];
+        if ( success )
+        {
+            [captureDevice setTorchMode:AVCaptureTorchModeOff];
+            [captureDevice unlockForConfiguration];
+        }
+    }
+    [captureSession stopRunning];
+ /*   [prevLayer release];
+    [captureDevice release];
+    [captureSession release];*/
+    captureSession = nil;
+    captureDevice  = nil;
 }
+
 - (void)viewDidUnload {
-    [MainImageView release];
+//    NSLog(@"View unloaded");
+  //  [MainImageView release];
     MainImageView = nil;
-    [Output release];
+    //[Output release];
     Output = nil;
-    [GraphView release];
+    //[GraphView release];
     GraphView = nil;
     [super viewDidUnload];
 }
