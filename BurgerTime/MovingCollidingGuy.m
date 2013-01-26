@@ -82,7 +82,11 @@
         
         [validMoveDirections removeObjectsInArray:blockedDirections];
         
-        moveDirection = [[validMoveDirections objectAtIndex:arc4random()%[validMoveDirections count]] intValue];
+        if ([validMoveDirections count] == 0) {
+            moveDirection = -1;
+        } else {
+            moveDirection = [[validMoveDirections objectAtIndex:arc4random()%[validMoveDirections count]] intValue];
+        }
     }
 
     [self moveInDirection:moveDirection];
