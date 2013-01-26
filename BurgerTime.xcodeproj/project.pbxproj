@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F4D1FC816B46D0F00291459 /* heart_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D1FC716B46D0F00291459 /* heart_bg.png */; };
+		0F4D1FCC16B47EEC00291459 /* CollidingRectsCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4D1FCB16B47EEC00291459 /* CollidingRectsCreator.m */; };
 		0F9697E016B38D02005BE1C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9697DF16B38D02005BE1C1 /* UIKit.framework */; };
 		0F9697E216B38D02005BE1C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9697E116B38D02005BE1C1 /* Foundation.framework */; };
 		0F9697E416B38D02005BE1C1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9697E316B38D02005BE1C1 /* CoreGraphics.framework */; };
@@ -50,6 +52,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F4D1FC716B46D0F00291459 /* heart_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart_bg.png; sourceTree = "<group>"; };
+		0F4D1FCA16B47EEC00291459 /* CollidingRectsCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollidingRectsCreator.h; sourceTree = "<group>"; };
+		0F4D1FCB16B47EEC00291459 /* CollidingRectsCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollidingRectsCreator.m; sourceTree = "<group>"; };
 		0F9697DB16B38D02005BE1C1 /* BurgerTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BurgerTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F9697DF16B38D02005BE1C1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0F9697E116B38D02005BE1C1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -163,6 +168,9 @@
 				0F96981E16B39283005BE1C1 /* PrototypeViewController.h */,
 				0F96981F16B39283005BE1C1 /* PrototypeViewController.m */,
 				0F9697F916B38D02005BE1C1 /* BurgerTime.xcdatamodeld */,
+				0F4D1FCA16B47EEC00291459 /* CollidingRectsCreator.h */,
+				0F4D1FCB16B47EEC00291459 /* CollidingRectsCreator.m */,
+				0F4D1FC716B46D0F00291459 /* heart_bg.png */,
 				0F9697E816B38D02005BE1C1 /* Supporting Files */,
 			);
 			path = BurgerTime;
@@ -310,6 +318,7 @@
 				0F9697F616B38D02005BE1C1 /* Default@2x.png in Resources */,
 				0F9697F816B38D02005BE1C1 /* Default-568h@2x.png in Resources */,
 				0F96982816B39B38005BE1C1 /* File in Resources */,
+				0F4D1FC816B46D0F00291459 /* heart_bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +365,7 @@
 				0FACD3F716B44B61006BB9EC /* HeartLeakEnemy.m in Sources */,
 				0FACD3FB16B457A1006BB9EC /* LivingGuyManager.m in Sources */,
 				675D312316B4696C0071B7B9 /* Wave.m in Sources */,
+				0F4D1FCC16B47EEC00291459 /* CollidingRectsCreator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
