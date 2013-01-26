@@ -1,0 +1,3 @@
+id	name	range	base_attack	splash_radius modifiers	description
+int	str	int	int	int	dict	str
+1	scrub	5	5	0	{}	Just a scrub.
