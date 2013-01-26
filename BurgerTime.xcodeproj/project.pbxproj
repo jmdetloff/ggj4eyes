@@ -27,9 +27,23 @@
 		0F96982016B39283005BE1C1 /* PrototypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F96981F16B39283005BE1C1 /* PrototypeViewController.m */; };
 		0F96982416B3937C005BE1C1 /* HeartGuardBot.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F96982316B3937C005BE1C1 /* HeartGuardBot.m */; };
 		0F96982616B39390005BE1C1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F96982516B39390005BE1C1 /* QuartzCore.framework */; };
-		2415D1A416B3B82E00308B74 /* wave.json in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1A216B3B82E00308B74 /* wave.json */; };
 		0F96982816B39B38005BE1C1 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 0F96982716B39B38005BE1C1 /* File */; };
 		0F96982B16B3A008005BE1C1 /* MovingCollidingGuy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F96982A16B3A008005BE1C1 /* MovingCollidingGuy.m */; };
+		2415D1A416B3B82E00308B74 /* wave.json in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1A216B3B82E00308B74 /* wave.json */; };
+		2415D1AC16B3E68200308B74 /* enemy_type.json in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1AA16B3E68200308B74 /* enemy_type.json */; };
+		2415D1AD16B3E68200308B74 /* enemy_type.json in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1AA16B3E68200308B74 /* enemy_type.json */; };
+		2415D1AE16B3E68200308B74 /* level.json in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1AB16B3E68200308B74 /* level.json */; };
+		2415D1AF16B3E68200308B74 /* level.json in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1AB16B3E68200308B74 /* level.json */; };
+		2415D1B716B3EA3400308B74 /* nanobot_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1B216B3EA3400308B74 /* nanobot_blue.png */; };
+		2415D1B816B3EA3400308B74 /* nanobot_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1B216B3EA3400308B74 /* nanobot_blue.png */; };
+		2415D1B916B3EA3400308B74 /* nanobot_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1B316B3EA3400308B74 /* nanobot_green.png */; };
+		2415D1BA16B3EA3400308B74 /* nanobot_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1B316B3EA3400308B74 /* nanobot_green.png */; };
+		2415D1BB16B3EA3400308B74 /* nanobot_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1B416B3EA3400308B74 /* nanobot_red.png */; };
+		2415D1BC16B3EA3400308B74 /* nanobot_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1B416B3EA3400308B74 /* nanobot_red.png */; };
+		2415D1BD16B3EA3400308B74 /* nanobot_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1B516B3EA3400308B74 /* nanobot_white.png */; };
+		2415D1BE16B3EA3400308B74 /* nanobot_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1B516B3EA3400308B74 /* nanobot_white.png */; };
+		2415D1BF16B3EA3400308B74 /* nanobot_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1B616B3EA3400308B74 /* nanobot_yellow.png */; };
+		2415D1C016B3EA3400308B74 /* nanobot_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1B616B3EA3400308B74 /* nanobot_yellow.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,10 +83,17 @@
 		0F96982216B3937C005BE1C1 /* HeartGuardBot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartGuardBot.h; sourceTree = "<group>"; };
 		0F96982316B3937C005BE1C1 /* HeartGuardBot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartGuardBot.m; sourceTree = "<group>"; };
 		0F96982516B39390005BE1C1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		2415D1A216B3B82E00308B74 /* wave.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wave.json; sourceTree = "<group>"; };
 		0F96982716B39B38005BE1C1 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
 		0F96982916B3A008005BE1C1 /* MovingCollidingGuy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovingCollidingGuy.h; sourceTree = "<group>"; };
 		0F96982A16B3A008005BE1C1 /* MovingCollidingGuy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovingCollidingGuy.m; sourceTree = "<group>"; };
+		2415D1A216B3B82E00308B74 /* wave.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wave.json; sourceTree = "<group>"; };
+		2415D1AA16B3E68200308B74 /* enemy_type.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = enemy_type.json; sourceTree = "<group>"; };
+		2415D1AB16B3E68200308B74 /* level.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level.json; sourceTree = "<group>"; };
+		2415D1B216B3EA3400308B74 /* nanobot_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanobot_blue.png; sourceTree = "<group>"; };
+		2415D1B316B3EA3400308B74 /* nanobot_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanobot_green.png; sourceTree = "<group>"; };
+		2415D1B416B3EA3400308B74 /* nanobot_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanobot_red.png; sourceTree = "<group>"; };
+		2415D1B516B3EA3400308B74 /* nanobot_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanobot_white.png; sourceTree = "<group>"; };
+		2415D1B616B3EA3400308B74 /* nanobot_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanobot_yellow.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +128,7 @@
 			children = (
 				0F9697E716B38D02005BE1C1 /* BurgerTime */,
 				0F96980916B38D02005BE1C1 /* BurgerTimeTests */,
+				2415D1B116B3EA3400308B74 /* images */,
 				2415D1A116B3B82E00308B74 /* data */,
 				0F9697DE16B38D02005BE1C1 /* Frameworks */,
 				0F9697DC16B38D02005BE1C1 /* Products */,
@@ -189,10 +211,24 @@
 		2415D1A116B3B82E00308B74 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				2415D1AA16B3E68200308B74 /* enemy_type.json */,
 				2415D1A216B3B82E00308B74 /* wave.json */,
+				2415D1AB16B3E68200308B74 /* level.json */,
 			);
 			name = data;
 			path = db/data;
+			sourceTree = "<group>";
+		};
+		2415D1B116B3EA3400308B74 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				2415D1B216B3EA3400308B74 /* nanobot_blue.png */,
+				2415D1B316B3EA3400308B74 /* nanobot_green.png */,
+				2415D1B416B3EA3400308B74 /* nanobot_red.png */,
+				2415D1B516B3EA3400308B74 /* nanobot_white.png */,
+				2415D1B616B3EA3400308B74 /* nanobot_yellow.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,8 +306,14 @@
 				0F9697F416B38D02005BE1C1 /* Default.png in Resources */,
 				0F9697F616B38D02005BE1C1 /* Default@2x.png in Resources */,
 				0F9697F816B38D02005BE1C1 /* Default-568h@2x.png in Resources */,
-				2415D1A316B3B82E00308B74 /* wave.json in Resources */,
 				0F96982816B39B38005BE1C1 /* File in Resources */,
+				2415D1AC16B3E68200308B74 /* enemy_type.json in Resources */,
+				2415D1AE16B3E68200308B74 /* level.json in Resources */,
+				2415D1B716B3EA3400308B74 /* nanobot_blue.png in Resources */,
+				2415D1B916B3EA3400308B74 /* nanobot_green.png in Resources */,
+				2415D1BB16B3EA3400308B74 /* nanobot_red.png in Resources */,
+				2415D1BD16B3EA3400308B74 /* nanobot_white.png in Resources */,
+				2415D1BF16B3EA3400308B74 /* nanobot_yellow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +323,13 @@
 			files = (
 				0F96980E16B38D02005BE1C1 /* InfoPlist.strings in Resources */,
 				2415D1A416B3B82E00308B74 /* wave.json in Resources */,
+				2415D1AD16B3E68200308B74 /* enemy_type.json in Resources */,
+				2415D1AF16B3E68200308B74 /* level.json in Resources */,
+				2415D1B816B3EA3400308B74 /* nanobot_blue.png in Resources */,
+				2415D1BA16B3EA3400308B74 /* nanobot_green.png in Resources */,
+				2415D1BC16B3EA3400308B74 /* nanobot_red.png in Resources */,
+				2415D1BE16B3EA3400308B74 /* nanobot_white.png in Resources */,
+				2415D1C016B3EA3400308B74 /* nanobot_yellow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

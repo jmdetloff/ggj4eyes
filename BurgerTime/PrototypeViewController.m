@@ -33,7 +33,8 @@
             CGRect botFrame = CGRectMake(0, 0, 5, 5);
             botFrame.origin = [self randomPointWithinBoundsExcludingRects:_collidingRects];
             HeartGuardBot *bot = [[HeartGuardBot alloc] initWithFrame:botFrame];
-            bot.backgroundColor = [bot botColor];
+//            bot.backgroundColor = [bot botColor];
+            [bot setBotImage];
             [_totalNanobots addObject:bot];
         }
         
@@ -47,6 +48,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor blackColor];
     for (HeartGuardBot *bot in _totalNanobots) {
         [self.view addSubview:bot];
     }

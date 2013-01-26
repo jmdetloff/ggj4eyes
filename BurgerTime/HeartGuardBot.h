@@ -20,4 +20,6 @@ typedef   enum    { SCRUB, PLUG, FIGHT, HEALER, SPAWNBOT } types;
 @property int level;
 @property int range;
 
+-(void)setBotImage;
+
 @end
