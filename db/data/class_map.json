@@ -1,0 +1,6 @@
+{
+	"enemy_type" : "EnemyType",
+	"level" : "Level",
+	"nanobots" : "Nanobot",
+	"wave" : "Wave"
+}
