@@ -49,8 +49,10 @@
             [self reachedDestination];
         self.angle = atan2(_destinationPoint.y - self.position.y, _destinationPoint.x - self.position.x);
     }
-    if (![MovingCollidingGuy validPos:[self nextPos:dt withAngle:self.angle]])
+    if (![MovingCollidingGuy validPos:[self nextPos:dt withAngle:self.angle]]) {
+        [self clearDestination];
         [self rerollAngle:dt];
+    }
     self.position = [self nextPos:dt withAngle:self.angle];
     
     self.frame = CGRectMake(self.position.x - self.frame.size.width/2, self.position.y - self.frame.size.height/2, self.frame.size.width, self.frame.size.height);
