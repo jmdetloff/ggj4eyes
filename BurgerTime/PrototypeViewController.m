@@ -450,6 +450,9 @@
 
 
 - (void)viewDied:(UIView *)view {
+    if ([view isKindOfClass:[ParentEnemy class]]) {
+        _infoPanel.points += ((ParentEnemy*)view).kill_reward;
+    }
     [view removeFromSuperview];
 }
 

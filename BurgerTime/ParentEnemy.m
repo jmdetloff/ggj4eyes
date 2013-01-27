@@ -14,6 +14,7 @@
 @synthesize bot_atk, heart_atk;
 @synthesize maxhp;
 @synthesize trackingBots;
+@synthesize kill_reward;
 
 - (id)initWithFrame:(CGRect)frame
 {

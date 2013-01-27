@@ -31,6 +31,7 @@
     pe.maxhp = pe.hp;
     pe.bot_atk = w.bot_atk;
     pe.heart_atk = w.heart_atk;
+    pe.kill_reward = w.reward;
     return pe;
 }
 

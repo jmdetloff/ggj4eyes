@@ -15,5 +15,6 @@
 @property (nonatomic) int bot_atk;
 @property (nonatomic) int heart_atk;
 @property (nonatomic, strong) NSString *enemy_type;
+@property (nonatomic) int reward;
 
 @end
