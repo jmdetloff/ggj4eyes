@@ -61,6 +61,10 @@ static const float _sideLength = 40;
     return self;
 }
 
+- (BOOL)moves {
+    return NO;
+}
+
 - (void)die {
     for (HeartGuardBot *bot in self.trackingBots) {
         if (bot.enemyKey == self) bot.enemyKey = nil;

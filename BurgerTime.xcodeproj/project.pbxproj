@@ -27,6 +27,11 @@
 		0F4D207516B4F07C00291459 /* FighterDescription.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D207116B4F07C00291459 /* FighterDescription.png */; };
 		0F4D207616B4F07C00291459 /* HealerDescription.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D207216B4F07C00291459 /* HealerDescription.png */; };
 		0F4D207716B4F07C00291459 /* MomDescription.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D207316B4F07C00291459 /* MomDescription.png */; };
+		0F4D20A316B50D9300291459 /* ParasiteEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4D20A216B50D9300291459 /* ParasiteEnemy.m */; };
+		0F4D20A716B5111D00291459 /* toxin_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D20A416B5111D00291459 /* toxin_01.png */; };
+		0F4D20A816B5111D00291459 /* toxin_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D20A516B5111D00291459 /* toxin_02.png */; };
+		0F4D20A916B5111D00291459 /* toxin_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D20A616B5111D00291459 /* toxin_03.png */; };
+		0F4D20AC16B52E1A00291459 /* ZapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4D20AB16B52E1A00291459 /* ZapView.m */; };
 		0F9697E016B38D02005BE1C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9697DF16B38D02005BE1C1 /* UIKit.framework */; };
 		0F9697E216B38D02005BE1C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9697E116B38D02005BE1C1 /* Foundation.framework */; };
 		0F9697E416B38D02005BE1C1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9697E316B38D02005BE1C1 /* CoreGraphics.framework */; };
@@ -87,6 +92,9 @@
 		67CC3F1616B5081200CD0BB1 /* mombo.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E65216B4D4DA00A3CBF5 /* mombo.caf */; };
 		67CC3F1716B5081500CD0BB1 /* zapper.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E65316B4D4DA00A3CBF5 /* zapper.caf */; };
 		67CC3F1816B5081700CD0BB1 /* heartbeat.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E65416B4D4DA00A3CBF5 /* heartbeat.caf */; };
+		67CF4ABB16B5122700129B56 /* rip_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 67CF4AB816B5122700129B56 /* rip_03.png */; };
+		67CF4ABC16B5122700129B56 /* rip_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 67CF4AB916B5122700129B56 /* rip_02.png */; };
+		67CF4ABD16B5122700129B56 /* rip_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 67CF4ABA16B5122700129B56 /* rip_01.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +130,13 @@
 		0F4D207116B4F07C00291459 /* FighterDescription.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FighterDescription.png; sourceTree = "<group>"; };
 		0F4D207216B4F07C00291459 /* HealerDescription.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HealerDescription.png; sourceTree = "<group>"; };
 		0F4D207316B4F07C00291459 /* MomDescription.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MomDescription.png; sourceTree = "<group>"; };
+		0F4D20A116B50D9300291459 /* ParasiteEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParasiteEnemy.h; sourceTree = "<group>"; };
+		0F4D20A216B50D9300291459 /* ParasiteEnemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParasiteEnemy.m; sourceTree = "<group>"; };
+		0F4D20A416B5111D00291459 /* toxin_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toxin_01.png; sourceTree = "<group>"; };
+		0F4D20A516B5111D00291459 /* toxin_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toxin_02.png; sourceTree = "<group>"; };
+		0F4D20A616B5111D00291459 /* toxin_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toxin_03.png; sourceTree = "<group>"; };
+		0F4D20AA16B52E1900291459 /* ZapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZapView.h; sourceTree = "<group>"; };
+		0F4D20AB16B52E1A00291459 /* ZapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZapView.m; sourceTree = "<group>"; };
 		0F9697DB16B38D02005BE1C1 /* BurgerTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BurgerTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F9697DF16B38D02005BE1C1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0F9697E116B38D02005BE1C1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -176,8 +191,6 @@
 		243B530116B514C8008AD5D2 /* Wave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wave.m; sourceTree = "<group>"; };
 		249B884316B50F4600E5E707 /* class_map.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = class_map.json; sourceTree = "<group>"; };
 		249B884416B50F4600E5E707 /* everything.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = everything.json; sourceTree = "<group>"; };
-		675D311D16B469350071B7B9 /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
-		675D311E16B469350071B7B9 /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
 		6773E62516B4BA8700A3CBF5 /* AudioManagement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioManagement.h; sourceTree = "<group>"; };
 		6773E62616B4BA8700A3CBF5 /* AudioManagement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioManagement.m; sourceTree = "<group>"; };
 		6773E62C16B4BC9400A3CBF5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -192,6 +205,9 @@
 		6773E65216B4D4DA00A3CBF5 /* mombo.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = mombo.caf; sourceTree = "<group>"; };
 		6773E65316B4D4DA00A3CBF5 /* zapper.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = zapper.caf; sourceTree = "<group>"; };
 		6773E65416B4D4DA00A3CBF5 /* heartbeat.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = heartbeat.caf; sourceTree = "<group>"; };
+		67CF4AB816B5122700129B56 /* rip_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rip_03.png; sourceTree = "<group>"; };
+		67CF4AB916B5122700129B56 /* rip_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rip_02.png; sourceTree = "<group>"; };
+		67CF4ABA16B5122700129B56 /* rip_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rip_01.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +242,12 @@
 		0F4D200116B4D5BA00291459 /* artwork */ = {
 			isa = PBXGroup;
 			children = (
+				67CF4AB816B5122700129B56 /* rip_03.png */,
+				67CF4AB916B5122700129B56 /* rip_02.png */,
+				67CF4ABA16B5122700129B56 /* rip_01.png */,
+				0F4D20A416B5111D00291459 /* toxin_01.png */,
+				0F4D20A516B5111D00291459 /* toxin_02.png */,
+				0F4D20A616B5111D00291459 /* toxin_03.png */,
 				0F4D200316B4D5C800291459 /* CleanButton.png */,
 				0F4D200416B4D5C800291459 /* CleanDrag.png */,
 				0F4D200516B4D5C800291459 /* FightButton.png */,
@@ -305,6 +327,8 @@
 				0F9697E816B38D02005BE1C1 /* Supporting Files */,
 				0F4D1FF516B4C47000291459 /* PanlessScrollView.h */,
 				0F4D1FF616B4C47000291459 /* PanlessScrollView.m */,
+				0F4D20AA16B52E1900291459 /* ZapView.h */,
+				0F4D20AB16B52E1A00291459 /* ZapView.m */,
 			);
 			path = BurgerTime;
 			sourceTree = "<group>";
@@ -362,6 +386,8 @@
 				24237C3916B4B88200F7E8E8 /* PlaqueEnemy.m */,
 				0FACD3F916B457A0006BB9EC /* LivingGuyManager.h */,
 				0FACD3FA16B457A0006BB9EC /* LivingGuyManager.m */,
+				0F4D20A116B50D9300291459 /* ParasiteEnemy.h */,
+				0F4D20A216B50D9300291459 /* ParasiteEnemy.m */,
 			);
 			name = "enemies and bots";
 			sourceTree = "<group>";
@@ -526,6 +552,12 @@
 				67CC3F1816B5081700CD0BB1 /* heartbeat.caf in Resources */,
 				249B884516B50F4600E5E707 /* class_map.json in Resources */,
 				249B884616B50F4600E5E707 /* everything.json in Resources */,
+				67CF4ABB16B5122700129B56 /* rip_03.png in Resources */,
+				67CF4ABC16B5122700129B56 /* rip_02.png in Resources */,
+				67CF4ABD16B5122700129B56 /* rip_01.png in Resources */,
+				0F4D20A716B5111D00291459 /* toxin_01.png in Resources */,
+				0F4D20A816B5111D00291459 /* toxin_02.png in Resources */,
+				0F4D20A916B5111D00291459 /* toxin_03.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,6 +621,8 @@
 				243B52FB16B51427008AD5D2 /* StaticDataManager.m in Sources */,
 				243B52FF16B51463008AD5D2 /* Nanobot.m in Sources */,
 				243B530216B514C8008AD5D2 /* Wave.m in Sources */,
+				0F4D20A316B50D9300291459 /* ParasiteEnemy.m in Sources */,
+				0F4D20AC16B52E1A00291459 /* ZapView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,7 +675,7 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Jethro Bell (Y36M9HWW85)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jethro Bell (Y36M9HWW85)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -656,7 +690,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "6877E784-4D1F-464B-ADD8-DC3045E32981";
+				PROVISIONING_PROFILE = "F076F39B-6465-479E-9047-77917F403280";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D4FA83BD-5BEC-4D9C-AFE8-9C79132E9256";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -672,7 +707,7 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Jethro Bell (Y36M9HWW85)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jethro Bell (Y36M9HWW85)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -680,7 +715,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "6877E784-4D1F-464B-ADD8-DC3045E32981";
+				PROVISIONING_PROFILE = "F076F39B-6465-479E-9047-77917F403280";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0E17218A-5856-40C0-B1B0-9A6ED2F0B078";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -690,11 +726,13 @@
 		0F96981516B38D02005BE1C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: John Detloff (MSXW884Y5A)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BurgerTime/BurgerTime-Prefix.pch";
 				INFOPLIST_FILE = "BurgerTime/BurgerTime-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "F3FF5004-4E64-4C8F-B0BE-5A422920935A";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
