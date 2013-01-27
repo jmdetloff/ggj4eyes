@@ -25,6 +25,7 @@
 #import "DefeatView.h"
 #import "VictoryView.h"
 
+
 #define kPowerRadius 80
 #define kFullHealth 5000
 #define kFullHealthbarLength 95
@@ -595,6 +596,7 @@
 - (void)winGame {
     _gameOver = YES;
     VictoryView *victoryView = [[VictoryView alloc] initWithFrame:CGRectMake(33, 285, 702, 561) forLevel:[_levelParams[@"levelNum"] intValue]];
+    victoryView.points = _infoPanel.points;
     [self.view addSubview:victoryView];
 }
 

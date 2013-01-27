@@ -134,7 +134,7 @@
 - (void)selectedLevel:(UIButton *)levelButton {
     [[AudioManagement sharedInstance] playIcon];
     [[AudioManagement sharedInstance] stopMenuBackground];
-    [((AppDelegate *)[[UIApplication sharedApplication] delegate]) showLevel:levelButton.tag];
+    [((AppDelegate *)[[UIApplication sharedApplication] delegate]) showHelp:levelButton.tag];
 }
 
 

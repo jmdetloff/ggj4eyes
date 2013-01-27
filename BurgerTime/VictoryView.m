@@ -62,7 +62,7 @@
     _totalPoints = [[UILabel alloc] initWithFrame:CGRectMake(362 - 30, 591-self.frame.origin.y, 400, 20)];
     _totalPoints.backgroundColor = [UIColor clearColor];
     _totalPoints.textColor = [UIColor whiteColor];
-    [self addSubview:_totalPoints];
+    //[self addSubview:_totalPoints];
     
     self.points = 0;
 }
