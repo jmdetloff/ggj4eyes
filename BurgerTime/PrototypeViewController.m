@@ -18,6 +18,7 @@
 #import "Utils.h"
 #import "StaticDataManager.h"
 #import "ZapView.h"
+#import "Level.h"
 
 #define kPowerRadius 80
 
@@ -349,6 +350,10 @@
     [self placeEnemy:firstBot];
 }
 
+- (void)loadLevel:(int)level {
+    Level *l = [[[StaticDataManager sharedInstance].allStaticObjects objectForKey:@"level"] objectAtIndex:level];
+    
+}
 
 - (void)placeEnemy:(ParentEnemy *)enemy {
     NSArray *spawnRects = [CollidingRectsCreator validSpawningLocationsWithScale:scaleFactor];
