@@ -57,7 +57,10 @@
 
 
 + (NSArray *)validSpawningLocationsWithScale:(CGFloat)scale {
-    
+    NSArray *rects = @[[NSValue valueWithCGRect:CGRectMake(125,419,90,237)],
+    [NSValue valueWithCGRect:CGRectMake(250,430,200,450)],
+    [NSValue valueWithCGRect:CGRectMake(516,380,89,399)]];
+    return rects;
 }
 
 
