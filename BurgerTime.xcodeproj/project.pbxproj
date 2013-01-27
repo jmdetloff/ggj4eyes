@@ -50,6 +50,14 @@
 		0F4D210B16B5C63100291459 /* InfoPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4D210A16B5C63100291459 /* InfoPanel.m */; };
 		0F4D211D16B5CB4900291459 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D211C16B5CB4800291459 /* background.png */; };
 		0F4D212016B5CBCD00291459 /* ingame.caf in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D211F16B5CBCD00291459 /* ingame.caf */; };
+		0F85771316B5D24200B7D011 /* Defeat.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F85770D16B5D24200B7D011 /* Defeat.png */; };
+		0F85771416B5D24200B7D011 /* NextButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F85770E16B5D24200B7D011 /* NextButton.png */; };
+		0F85771516B5D24200B7D011 /* NextButtonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F85770F16B5D24200B7D011 /* NextButtonPressed.png */; };
+		0F85771616B5D24200B7D011 /* RestartButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F85771016B5D24200B7D011 /* RestartButton.png */; };
+		0F85771716B5D24200B7D011 /* RestartButtonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F85771116B5D24200B7D011 /* RestartButtonPressed.png */; };
+		0F85771816B5D24200B7D011 /* Victory.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F85771216B5D24200B7D011 /* Victory.png */; };
+		0F85771B16B5D2A300B7D011 /* DefeatView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F85771A16B5D2A300B7D011 /* DefeatView.m */; };
+		0F8ACDB616B5D763006E794F /* VictoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8ACDB516B5D763006E794F /* VictoryView.m */; };
 		0F9697E016B38D02005BE1C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9697DF16B38D02005BE1C1 /* UIKit.framework */; };
 		0F9697E216B38D02005BE1C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9697E116B38D02005BE1C1 /* Foundation.framework */; };
 		0F9697E416B38D02005BE1C1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9697E316B38D02005BE1C1 /* CoreGraphics.framework */; };
@@ -76,6 +84,9 @@
 		0FACD3F416B44B09006BB9EC /* EnemySpawner.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FACD3F316B44B09006BB9EC /* EnemySpawner.m */; };
 		0FACD3F716B44B61006BB9EC /* HeartLeakEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FACD3F616B44B61006BB9EC /* HeartLeakEnemy.m */; };
 		0FACD3FB16B457A1006BB9EC /* LivingGuyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FACD3FA16B457A0006BB9EC /* LivingGuyManager.m */; };
+		0FE9708916B5DD7F006048C3 /* DeadDude_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FE9708616B5DD7F006048C3 /* DeadDude_01.png */; };
+		0FE9708A16B5DD7F006048C3 /* DeadDude_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FE9708716B5DD7F006048C3 /* DeadDude_02.png */; };
+		0FE9708B16B5DD7F006048C3 /* DeadDude_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FE9708816B5DD7F006048C3 /* DeadDude_03.png */; };
 		2414C82116B55847003C2F5D /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 2414C81F16B55847003C2F5D /* Level.m */; };
 		24237C3416B4B7C600F7E8E8 /* _plaqu03.png in Resources */ = {isa = PBXBuildFile; fileRef = 24237C3116B4B7C600F7E8E8 /* _plaqu03.png */; };
 		24237C3516B4B7C600F7E8E8 /* _plaqu02.png in Resources */ = {isa = PBXBuildFile; fileRef = 24237C3216B4B7C600F7E8E8 /* _plaqu02.png */; };
@@ -178,6 +189,16 @@
 		0F4D210A16B5C63100291459 /* InfoPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoPanel.m; sourceTree = "<group>"; };
 		0F4D211C16B5CB4800291459 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		0F4D211F16B5CBCD00291459 /* ingame.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ingame.caf; sourceTree = "<group>"; };
+		0F85770D16B5D24200B7D011 /* Defeat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Defeat.png; sourceTree = "<group>"; };
+		0F85770E16B5D24200B7D011 /* NextButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NextButton.png; sourceTree = "<group>"; };
+		0F85770F16B5D24200B7D011 /* NextButtonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NextButtonPressed.png; sourceTree = "<group>"; };
+		0F85771016B5D24200B7D011 /* RestartButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RestartButton.png; sourceTree = "<group>"; };
+		0F85771116B5D24200B7D011 /* RestartButtonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RestartButtonPressed.png; sourceTree = "<group>"; };
+		0F85771216B5D24200B7D011 /* Victory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Victory.png; sourceTree = "<group>"; };
+		0F85771A16B5D2A300B7D011 /* DefeatView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefeatView.m; sourceTree = "<group>"; };
+		0F85771C16B5D31800B7D011 /* DefeatView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefeatView.h; sourceTree = "<group>"; };
+		0F8ACDB416B5D763006E794F /* VictoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VictoryView.h; sourceTree = "<group>"; };
+		0F8ACDB516B5D763006E794F /* VictoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VictoryView.m; sourceTree = "<group>"; };
 		0F9697DB16B38D02005BE1C1 /* BurgerTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BurgerTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F9697DF16B38D02005BE1C1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0F9697E116B38D02005BE1C1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -215,6 +236,9 @@
 		0FACD3F616B44B61006BB9EC /* HeartLeakEnemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartLeakEnemy.m; sourceTree = "<group>"; };
 		0FACD3F916B457A0006BB9EC /* LivingGuyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivingGuyManager.h; sourceTree = "<group>"; };
 		0FACD3FA16B457A0006BB9EC /* LivingGuyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LivingGuyManager.m; sourceTree = "<group>"; };
+		0FE9708616B5DD7F006048C3 /* DeadDude_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DeadDude_01.png; sourceTree = "<group>"; };
+		0FE9708716B5DD7F006048C3 /* DeadDude_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DeadDude_02.png; sourceTree = "<group>"; };
+		0FE9708816B5DD7F006048C3 /* DeadDude_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DeadDude_03.png; sourceTree = "<group>"; };
 		2414C81F16B55847003C2F5D /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
 		2414C82016B55847003C2F5D /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
 		24237C3116B4B7C600F7E8E8 /* _plaqu03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _plaqu03.png; sourceTree = "<group>"; };
@@ -285,6 +309,7 @@
 		0F4D200116B4D5BA00291459 /* artwork */ = {
 			isa = PBXGroup;
 			children = (
+				0F85770B16B5D21000B7D011 /* victory/defeat */,
 				67CF4AB816B5122700129B56 /* rip_03.png */,
 				67CF4AB916B5122700129B56 /* rip_02.png */,
 				67CF4ABA16B5122700129B56 /* rip_01.png */,
@@ -309,6 +334,9 @@
 				0F4D207116B4F07C00291459 /* FighterDescription.png */,
 				0F4D207216B4F07C00291459 /* HealerDescription.png */,
 				0F4D207316B4F07C00291459 /* MomDescription.png */,
+				0FE9708616B5DD7F006048C3 /* DeadDude_01.png */,
+				0FE9708716B5DD7F006048C3 /* DeadDude_02.png */,
+				0FE9708816B5DD7F006048C3 /* DeadDude_03.png */,
 			);
 			name = artwork;
 			sourceTree = "<group>";
@@ -335,6 +363,19 @@
 				0F4D20EF16B5BF4900291459 /* InstructionsButtonPressed.png */,
 			);
 			name = Menus;
+			sourceTree = "<group>";
+		};
+		0F85770B16B5D21000B7D011 /* victory/defeat */ = {
+			isa = PBXGroup;
+			children = (
+				0F85770D16B5D24200B7D011 /* Defeat.png */,
+				0F85770E16B5D24200B7D011 /* NextButton.png */,
+				0F85770F16B5D24200B7D011 /* NextButtonPressed.png */,
+				0F85771016B5D24200B7D011 /* RestartButton.png */,
+				0F85771116B5D24200B7D011 /* RestartButtonPressed.png */,
+				0F85771216B5D24200B7D011 /* Victory.png */,
+			);
+			name = victory/defeat;
 			sourceTree = "<group>";
 		};
 		0F9697D016B38D02005BE1C1 = {
@@ -400,6 +441,10 @@
 				0F4D20AB16B52E1A00291459 /* ZapView.m */,
 				0F4D210916B5C63100291459 /* InfoPanel.h */,
 				0F4D210A16B5C63100291459 /* InfoPanel.m */,
+				0F85771C16B5D31800B7D011 /* DefeatView.h */,
+				0F85771A16B5D2A300B7D011 /* DefeatView.m */,
+				0F8ACDB416B5D763006E794F /* VictoryView.h */,
+				0F8ACDB516B5D763006E794F /* VictoryView.m */,
 			);
 			path = BurgerTime;
 			sourceTree = "<group>";
@@ -657,6 +702,15 @@
 				0F4D210716B5C4F300291459 /* InfoBar.png in Resources */,
 				0F4D211D16B5CB4900291459 /* background.png in Resources */,
 				0F4D212016B5CBCD00291459 /* ingame.caf in Resources */,
+				0F85771316B5D24200B7D011 /* Defeat.png in Resources */,
+				0F85771416B5D24200B7D011 /* NextButton.png in Resources */,
+				0F85771516B5D24200B7D011 /* NextButtonPressed.png in Resources */,
+				0F85771616B5D24200B7D011 /* RestartButton.png in Resources */,
+				0F85771716B5D24200B7D011 /* RestartButtonPressed.png in Resources */,
+				0F85771816B5D24200B7D011 /* Victory.png in Resources */,
+				0FE9708916B5DD7F006048C3 /* DeadDude_01.png in Resources */,
+				0FE9708A16B5DD7F006048C3 /* DeadDude_02.png in Resources */,
+				0FE9708B16B5DD7F006048C3 /* DeadDude_03.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -723,6 +777,8 @@
 				242D70A016B55D5B00DE0BFF /* Level.m in Sources */,
 				0F4D20DF16B5BBCD00291459 /* MenuViewController.m in Sources */,
 				0F4D210B16B5C63100291459 /* InfoPanel.m in Sources */,
+				0F85771B16B5D2A300B7D011 /* DefeatView.m in Sources */,
+				0F8ACDB616B5D763006E794F /* VictoryView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
