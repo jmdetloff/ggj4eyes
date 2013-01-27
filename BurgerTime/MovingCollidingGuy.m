@@ -10,11 +10,6 @@
 #import "CollidingRectsCreator.h"
 
 #define N_DIRECTIONS 8
-//#define N_BOUNDING_RECTS 1
-//
-//static float _boundRects[] = {
-//    -10, -10, 20, 788
-//};
 
 @implementation MovingCollidingGuy {
     MovementDirection _previousMovementDirection;
@@ -72,16 +67,6 @@
             return NO;
         }
     }
-//    
-//    
-//    
-//    for (int i = 0;i < N_BOUNDING_RECTS;i++) {
-//        if (pos.x >= _boundRects[4*i + 0] &&
-//            pos.y >= _boundRects[4*i + 1] &&
-//            pos.x <= _boundRects[4*i + 0] + _boundRects[4*i + 2] &&
-//            pos.y <= _boundRects[4*i + 1] + _boundRects[4*i + 3])
-//            return NO;
-//    }
     return YES;
 }
 

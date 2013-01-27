@@ -9,6 +9,7 @@
 #import "HeartGuardBot.h"
 #import "HeartLeakEnemy.h"
 #import <QuartzCore/QuartzCore.h>
+#import "PlaqueEnemy.h"
 
 static NSArray *_botColors;
 
@@ -69,7 +70,16 @@ static NSArray *_botColors;
             }
         }
             break;
-            
+        case PLAQUE: {
+            CGFloat distance = [self distanceBetween:self.center and:enemy.center];
+            if (distance < 75) {
+                PlaqueEnemy *pe = (PlaqueEnemy*)enemy;
+                if (self.enemyKey != pe) {
+//                    [self setDestinationPoint:<#(CGPoint)#> withDuration:<#(NSTimeInterval)#>
+                }
+            }
+        }
+            break;
         default:
             break;
     }

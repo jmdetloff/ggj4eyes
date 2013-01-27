@@ -189,6 +189,7 @@
 
 - (void)spawnEnemyWave {
     EnemyBot *firstBot = [EnemySpawner createEnemyForType:TEAR];
+//    EnemyBot *firstBot = [EnemySpawner createEnemyForType:PLAQUE];
     [self placeEnemy:firstBot];
 }
 
@@ -203,7 +204,13 @@
             [self.view insertSubview:enemy atIndex:1];
         }
         break;
-            
+        case PLAQUE: {
+            CGPoint p = [self randomPointWithinBounds:CGRectMake(200, 200, 200, 200) excludingRects:_collidingRects];
+            enemy.frame = CGRectMake(p.x, p.y, enemy.frame.size.width, enemy.frame.size.height);
+            enemy.livingGuyManager = _livingGuyManager;
+            [self.view insertSubview:enemy atIndex:1];
+        }
+            break;
         default:
             break;
     }
