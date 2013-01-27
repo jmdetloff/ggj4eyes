@@ -83,7 +83,7 @@ static NSArray *_botColors;
             CGFloat distance = [Utils distanceBetween:self.center and:enemy.center];
             if (distance < 75) {
                 PlaqueEnemy *pe = (PlaqueEnemy*)enemy;
-                if (self.enemyKey != pe) {
+                if (self.enemyKey != pe && pe.hp > 0) {
                     CGPoint p = [pe findASpreadPoint];
 //                    [self setDestinationPoint:p];
                     [self orderCycleWithPivot:p radius:10];

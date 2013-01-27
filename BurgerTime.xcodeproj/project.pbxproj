@@ -70,6 +70,7 @@
 		243B530216B514C8008AD5D2 /* Wave.m in Sources */ = {isa = PBXBuildFile; fileRef = 243B530116B514C8008AD5D2 /* Wave.m */; };
 		249B884516B50F4600E5E707 /* class_map.json in Resources */ = {isa = PBXBuildFile; fileRef = 249B884316B50F4600E5E707 /* class_map.json */; };
 		249B884616B50F4600E5E707 /* everything.json in Resources */ = {isa = PBXBuildFile; fileRef = 249B884416B50F4600E5E707 /* everything.json */; };
+		24C9068C16B5C52400C07198 /* Hooge0557.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24C9068B16B5C52400C07198 /* Hooge0557.ttf */; };
 		675D311F16B469350071B7B9 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6773E62716B4BA8700A3CBF5 /* AudioManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6773E62616B4BA8700A3CBF5 /* AudioManagement.m */; };
 		6773E62D16B4BC9400A3CBF5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6773E62C16B4BC9400A3CBF5 /* AudioToolbox.framework */; };
@@ -192,6 +193,7 @@
 		243B530116B514C8008AD5D2 /* Wave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wave.m; sourceTree = "<group>"; };
 		249B884316B50F4600E5E707 /* class_map.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = class_map.json; sourceTree = "<group>"; };
 		249B884416B50F4600E5E707 /* everything.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = everything.json; sourceTree = "<group>"; };
+		24C9068B16B5C52400C07198 /* Hooge0557.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Hooge0557.ttf; sourceTree = "<group>"; };
 		6773E62516B4BA8700A3CBF5 /* AudioManagement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioManagement.h; sourceTree = "<group>"; };
 		6773E62616B4BA8700A3CBF5 /* AudioManagement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioManagement.m; sourceTree = "<group>"; };
 		6773E62C16B4BC9400A3CBF5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -275,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				0F9697E716B38D02005BE1C1 /* BurgerTime */,
+				24C9068916B5C51800C07198 /* fonts */,
 				0F96980916B38D02005BE1C1 /* BurgerTimeTests */,
 				2415D1B116B3EA3400308B74 /* images */,
 				2415D1A116B3B82E00308B74 /* data */,
@@ -426,6 +429,15 @@
 			path = "Static Data Classes";
 			sourceTree = "<group>";
 		};
+		24C9068916B5C51800C07198 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				24C9068B16B5C52400C07198 /* Hooge0557.ttf */,
+			);
+			name = fonts;
+			path = images;
+			sourceTree = "<group>";
+		};
 		6773E62E16B4BD6200A3CBF5 /* sounds */ = {
 			isa = PBXGroup;
 			children = (
@@ -557,6 +569,7 @@
 				0F4D20A716B5111D00291459 /* toxin_01.png in Resources */,
 				0F4D20A816B5111D00291459 /* toxin_02.png in Resources */,
 				0F4D20A916B5111D00291459 /* toxin_03.png in Resources */,
+				24C9068C16B5C52400C07198 /* Hooge0557.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

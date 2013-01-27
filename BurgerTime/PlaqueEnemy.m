@@ -68,8 +68,9 @@ static const float _sideLength = 40;
     [self.megaTimer invalidate];
     [self updateAlpha];
     for (HeartGuardBot *bot in self.trackingBots) {
-        if (bot.enemyKey == self) bot.enemyKey = nil;
-        bot stop
+        if (bot.enemyKey == self)
+            bot.enemyKey = nil;
+        [bot stopCycling];
     }
     [self.trackingBots removeAllObjects];
 }
