@@ -274,7 +274,7 @@
 
 - (void)moveBots {
     for (HeartGuardBot *bot in [_livingGuyManager.bots copy]) {
-        for (ParentEnemy *enemy in _livingGuyManager.enemies) {
+        for (ParentEnemy *enemy in [_livingGuyManager.enemies copy]) {
             [bot interactWithEnemy:enemy];
         }
         [bot doAction];
@@ -452,6 +452,8 @@
             break;
         case FIGHT:
             [[AudioManagement sharedInstance] playZapper];
+            break;
+        default:
             break;
     }
     
