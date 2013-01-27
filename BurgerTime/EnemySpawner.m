@@ -8,6 +8,7 @@
 
 #import "EnemySpawner.h"
 #import "HeartLeakEnemy.h"
+#import "PlaqueEnemy.h"
 
 @implementation EnemySpawner
 
@@ -16,7 +17,9 @@
         case TEAR :
             return [[HeartLeakEnemy alloc] initWithHP:30];
             break;
-            
+        case PLAQUE :
+            return [[PlaqueEnemy alloc] initWithHP:20 spreadRadius:20];
+            break;
         default:
             return nil;
             break;

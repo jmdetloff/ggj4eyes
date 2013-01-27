@@ -25,16 +25,22 @@ typedef enum {
 @property (nonatomic, strong) id swipeKey;
 @property (nonatomic, weak) id<DestinationDelegate> enemyKey;
 @property (nonatomic, strong) LivingGuyManager *livingGuyManager;
-- (void)setDestinationPoint:(CGPoint)destinationPoint withDuration:(NSTimeInterval)duration;
+- (void)setDestinationPoint:(CGPoint)destinationPoint;
 - (void)clearDestination;
 
 @property (nonatomic) float angle;
 @property (nonatomic) float velocity;
 @property (nonatomic) CGPoint position;
 
+//"scrub" action
+@property (nonatomic) int cycleState;
+@property (nonatomic) CGPoint cyclePivot;
+@property (nonatomic) CGPoint cycleParticleStart;
+@property (nonatomic) float cycleRadius;
+
 - (void)advance:(double)dt;
 - (CGPoint)nextPos:(double)dt withAngle:(float)ang;
-+ (BOOL)validPos:(CGPoint)pos;
 - (void)rerollAngle:(double)dt;
+- (void)orderCycleWithPivot:(CGPoint)pivot_ radius:(float)radius_;
 
 @end

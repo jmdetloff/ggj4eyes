@@ -15,6 +15,7 @@
 #import "MovingCollidingGuy.h"
 #import "PanlessScrollView.h"
 #import "AudioManagement.h"
+#import "Utils.h"
 
 #define kPowerRadius 80
 
@@ -275,7 +276,7 @@
         _currentSwipeValid = YES;
     }
     
-    if (![MovingCollidingGuy validPos:stopLocation]) {
+    if (![CollidingRectsCreator validPos:stopLocation]) {
         _currentSwipeValid = NO;
     }
     
@@ -292,12 +293,12 @@
         return;
     }
     
-    if ([self distanceBetween:_lastSwipePoint and:stopLocation] < 60) {
+    if ([Utils distanceBetween:_lastSwipePoint and:stopLocation] < 60) {
         return;
     }
     
     for (HeartGuardBot *bot in _livingGuyManager.bots) {
-        if ([self distanceBetween:stopLocation and:bot.center] < 60) {
+        if ([Utils distanceBetween:stopLocation and:bot.center] < 60) {
             if (![_nanobotsBeingSwiped containsObject:bot]) {
                 [_nanobotsBeingSwiped addObject:bot];
                 bot.swipeKey = nil;
@@ -307,7 +308,7 @@
     
     if (_currentSwipeValid) {
         for (HeartGuardBot *bot in _nanobotsBeingSwiped) {
-            [bot setDestinationPoint:stopLocation withDuration:8];
+            [bot setDestinationPoint:stopLocation];
         }
     }
     
@@ -324,14 +325,6 @@
     }
 }
 
-
-- (CGFloat) distanceBetween:(CGPoint)point1 and:(CGPoint)point2 {
-    CGFloat dx = point2.x - point1.x;
-    CGFloat dy = point2.y - point1.y;
-    return sqrt(dx*dx + dy*dy);
-}
-
-
 - (void)spawnEnemyWave {
     ParentEnemy *firstBot = [EnemySpawner createEnemyForType:TEAR];
     [self placeEnemy:firstBot];
@@ -341,7 +334,6 @@
 - (void)placeEnemy:(ParentEnemy *)enemy {
     switch (enemy.botType) {
         case TEAR:
-        default:
         {
             CGRect botFrame = CGRectMake(0, 0, 20, 100);
             NSArray *spawnRects = [CollidingRectsCreator validSpawningLocationsWithScale:scaleFactor];
@@ -351,10 +343,20 @@
             [_zoomingContentView insertSubview:enemy atIndex:1];
         }
         break;
+        case PLAQUE: {
+            NSArray *spawnRects = [CollidingRectsCreator validSpawningLocationsWithScale:1];
+            CGPoint p = [self randomPointWithinRects:spawnRects];
+            enemy.frame = CGRectMake(p.x, p.y, enemy.frame.size.width, enemy.frame.size.height);
+            enemy.livingGuyManager = _livingGuyManager;
+            [_zoomingContentView insertSubview:enemy atIndex:1];
+        }
+            break;
+        default:
+            break;
             
     }
     
-    //[_livingGuyManager.enemies addObject:enemy];
+    [_livingGuyManager.enemies addObject:enemy];
 }
 
 
@@ -369,7 +371,7 @@
 
 - (void)transformBotsToType:(NanabotType)type atPoint:(CGPoint)loc {
     for (HeartGuardBot *bot in _livingGuyManager.bots) {
-        if ([self distanceBetween:bot.center and:loc] < kPowerRadius) {
+        if ([Utils distanceBetween:bot.center and:loc] < kPowerRadius) {
             bot.nanobotType = type;
             if (type == SPAWNBOT) break;
         }

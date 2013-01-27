@@ -13,10 +13,12 @@
 typedef enum { TEAR, PLAQUE, PARASITE } EnemyType;
 
 @interface ParentEnemy : MovingCollidingGuy <DestinationDelegate, LivingGuy>
-@property  (nonatomic, assign) EnemyType botType;
+@property (nonatomic, assign) EnemyType botType;
 @property (nonatomic, assign) int hp;
+@property (nonatomic, assign) int maxhp;
 @property (nonatomic, assign) int atk;
 @property (nonatomic, assign) int splash_radius;
+@property (nonatomic, strong) NSMutableArray *trackingBots;
 
 -(NSString *)name;
 -(UIColor *)color;

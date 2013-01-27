@@ -12,14 +12,18 @@
 @synthesize botType;
 @synthesize hp;
 @synthesize atk;
+@synthesize maxhp;
+@synthesize trackingBots;
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         botType = arc4random() % 5;
-        hp = 20;
+        maxhp = 20;
+        hp = maxhp;
         atk = 20;
+        self.trackingBots = [NSMutableArray array];
         // Probably not what we want to do.
     }
     return self;
