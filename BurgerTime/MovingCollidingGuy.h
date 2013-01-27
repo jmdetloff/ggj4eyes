@@ -34,7 +34,7 @@ typedef enum {
 
 - (void)advance:(double)dt;
 - (CGPoint)nextPos:(double)dt withAngle:(float)ang;
-- (BOOL)validPos:(CGPoint)pos;
++ (BOOL)validPos:(CGPoint)pos;
 - (void)rerollAngle:(double)dt;
 
 @end
