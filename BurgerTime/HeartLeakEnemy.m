@@ -17,6 +17,7 @@
 - (id)initWithHP:(NSInteger)hp {
     self = [super init];
     if (self) {
+        self.maxhp = hp;
         self.hp = hp;
         self.backgroundColor = [UIColor whiteColor];
         self.layer.borderColor = [UIColor blackColor].CGColor;

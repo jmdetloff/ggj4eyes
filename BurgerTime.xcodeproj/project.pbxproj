@@ -36,8 +36,6 @@
 		0FACD3F716B44B61006BB9EC /* HeartLeakEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FACD3F616B44B61006BB9EC /* HeartLeakEnemy.m */; };
 		0FACD3FB16B457A1006BB9EC /* LivingGuyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FACD3FA16B457A0006BB9EC /* LivingGuyManager.m */; };
 		2415D1A416B3B82E00308B74 /* wave.json in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1A216B3B82E00308B74 /* wave.json */; };
-		675D311F16B469350071B7B9 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 675D311E16B469350071B7B9 /* Level.m */; };
-		675D312316B4696C0071B7B9 /* Wave.m in Sources */ = {isa = PBXBuildFile; fileRef = 675D312216B4696C0071B7B9 /* Wave.m */; };
 		2415D1AD16B3E68200308B74 /* enemy_type.json in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1AA16B3E68200308B74 /* enemy_type.json */; };
 		2415D1AF16B3E68200308B74 /* level.json in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1AB16B3E68200308B74 /* level.json */; };
 		2415D1B716B3EA3400308B74 /* nanobot_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1B216B3EA3400308B74 /* nanobot_blue.png */; };
@@ -45,6 +43,12 @@
 		2415D1BB16B3EA3400308B74 /* nanobot_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1B416B3EA3400308B74 /* nanobot_red.png */; };
 		2415D1BD16B3EA3400308B74 /* nanobot_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1B516B3EA3400308B74 /* nanobot_white.png */; };
 		2415D1C016B3EA3400308B74 /* nanobot_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1B616B3EA3400308B74 /* nanobot_yellow.png */; };
+		24237C3416B4B7C600F7E8E8 /* _plaqu03.png in Resources */ = {isa = PBXBuildFile; fileRef = 24237C3116B4B7C600F7E8E8 /* _plaqu03.png */; };
+		24237C3516B4B7C600F7E8E8 /* _plaqu02.png in Resources */ = {isa = PBXBuildFile; fileRef = 24237C3216B4B7C600F7E8E8 /* _plaqu02.png */; };
+		24237C3616B4B7C600F7E8E8 /* _plaqu01.png in Resources */ = {isa = PBXBuildFile; fileRef = 24237C3316B4B7C600F7E8E8 /* _plaqu01.png */; };
+		24237C3A16B4B88200F7E8E8 /* PlaqueEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 24237C3916B4B88200F7E8E8 /* PlaqueEnemy.m */; };
+		675D311F16B469350071B7B9 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 675D311E16B469350071B7B9 /* Level.m */; };
+		675D312316B4696C0071B7B9 /* Wave.m in Sources */ = {isa = PBXBuildFile; fileRef = 675D312216B4696C0071B7B9 /* Wave.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,11 +103,6 @@
 		0FACD3F916B457A0006BB9EC /* LivingGuyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivingGuyManager.h; sourceTree = "<group>"; };
 		0FACD3FA16B457A0006BB9EC /* LivingGuyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LivingGuyManager.m; sourceTree = "<group>"; };
 		2415D1A216B3B82E00308B74 /* wave.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wave.json; sourceTree = "<group>"; };
-		675D311D16B469350071B7B9 /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
-		675D311E16B469350071B7B9 /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
-		675D312116B4696C0071B7B9 /* Wave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wave.h; sourceTree = "<group>"; };
-		675D312216B4696C0071B7B9 /* Wave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wave.m; sourceTree = "<group>"; };
-		2415D1A216B3B82E00308B74 /* wave.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wave.json; sourceTree = "<group>"; };
 		2415D1AA16B3E68200308B74 /* enemy_type.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = enemy_type.json; sourceTree = "<group>"; };
 		2415D1AB16B3E68200308B74 /* level.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level.json; sourceTree = "<group>"; };
 		2415D1B216B3EA3400308B74 /* nanobot_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanobot_blue.png; sourceTree = "<group>"; };
@@ -111,6 +110,15 @@
 		2415D1B416B3EA3400308B74 /* nanobot_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanobot_red.png; sourceTree = "<group>"; };
 		2415D1B516B3EA3400308B74 /* nanobot_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanobot_white.png; sourceTree = "<group>"; };
 		2415D1B616B3EA3400308B74 /* nanobot_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanobot_yellow.png; sourceTree = "<group>"; };
+		24237C3116B4B7C600F7E8E8 /* _plaqu03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _plaqu03.png; sourceTree = "<group>"; };
+		24237C3216B4B7C600F7E8E8 /* _plaqu02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _plaqu02.png; sourceTree = "<group>"; };
+		24237C3316B4B7C600F7E8E8 /* _plaqu01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _plaqu01.png; sourceTree = "<group>"; };
+		24237C3816B4B88200F7E8E8 /* PlaqueEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaqueEnemy.h; sourceTree = "<group>"; };
+		24237C3916B4B88200F7E8E8 /* PlaqueEnemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaqueEnemy.m; sourceTree = "<group>"; };
+		675D311D16B469350071B7B9 /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
+		675D311E16B469350071B7B9 /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
+		675D312116B4696C0071B7B9 /* Wave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wave.h; sourceTree = "<group>"; };
+		675D312216B4696C0071B7B9 /* Wave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wave.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +250,8 @@
 				0FACD3EF16B449FF006BB9EC /* EnemyBot.m */,
 				0FACD3F516B44B61006BB9EC /* HeartLeakEnemy.h */,
 				0FACD3F616B44B61006BB9EC /* HeartLeakEnemy.m */,
+				24237C3816B4B88200F7E8E8 /* PlaqueEnemy.h */,
+				24237C3916B4B88200F7E8E8 /* PlaqueEnemy.m */,
 				0FACD3F916B457A0006BB9EC /* LivingGuyManager.h */,
 				0FACD3FA16B457A0006BB9EC /* LivingGuyManager.m */,
 			);
@@ -262,6 +272,9 @@
 		2415D1B116B3EA3400308B74 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				24237C3116B4B7C600F7E8E8 /* _plaqu03.png */,
+				24237C3216B4B7C600F7E8E8 /* _plaqu02.png */,
+				24237C3316B4B7C600F7E8E8 /* _plaqu01.png */,
 				2415D1B216B3EA3400308B74 /* nanobot_blue.png */,
 				2415D1B316B3EA3400308B74 /* nanobot_green.png */,
 				2415D1B416B3EA3400308B74 /* nanobot_red.png */,
@@ -347,14 +360,14 @@
 				0F9697F616B38D02005BE1C1 /* Default@2x.png in Resources */,
 				0F9697F816B38D02005BE1C1 /* Default-568h@2x.png in Resources */,
 				0F96982816B39B38005BE1C1 /* File in Resources */,
-				2415D1AC16B3E68200308B74 /* enemy_type.json in Resources */,
-				2415D1AE16B3E68200308B74 /* level.json in Resources */,
 				2415D1B716B3EA3400308B74 /* nanobot_blue.png in Resources */,
 				2415D1B916B3EA3400308B74 /* nanobot_green.png in Resources */,
 				2415D1BB16B3EA3400308B74 /* nanobot_red.png in Resources */,
 				2415D1BD16B3EA3400308B74 /* nanobot_white.png in Resources */,
-				2415D1BF16B3EA3400308B74 /* nanobot_yellow.png in Resources */,
 				0F4D1FC816B46D0F00291459 /* heart_bg.png in Resources */,
+				24237C3416B4B7C600F7E8E8 /* _plaqu03.png in Resources */,
+				24237C3516B4B7C600F7E8E8 /* _plaqu02.png in Resources */,
+				24237C3616B4B7C600F7E8E8 /* _plaqu01.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,10 +379,6 @@
 				2415D1A416B3B82E00308B74 /* wave.json in Resources */,
 				2415D1AD16B3E68200308B74 /* enemy_type.json in Resources */,
 				2415D1AF16B3E68200308B74 /* level.json in Resources */,
-				2415D1B816B3EA3400308B74 /* nanobot_blue.png in Resources */,
-				2415D1BA16B3EA3400308B74 /* nanobot_green.png in Resources */,
-				2415D1BC16B3EA3400308B74 /* nanobot_red.png in Resources */,
-				2415D1BE16B3EA3400308B74 /* nanobot_white.png in Resources */,
 				2415D1C016B3EA3400308B74 /* nanobot_yellow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +418,7 @@
 				0FACD3FB16B457A1006BB9EC /* LivingGuyManager.m in Sources */,
 				675D312316B4696C0071B7B9 /* Wave.m in Sources */,
 				0F4D1FCC16B47EEC00291459 /* CollidingRectsCreator.m in Sources */,
+				24237C3A16B4B88200F7E8E8 /* PlaqueEnemy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,7 +428,6 @@
 			files = (
 				0F96981116B38D02005BE1C1 /* BurgerTimeTests.m in Sources */,
 				675D311F16B469350071B7B9 /* Level.m in Sources */,
-				675D312416B4696C0071B7B9 /* Wave.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
