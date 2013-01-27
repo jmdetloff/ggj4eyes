@@ -427,8 +427,10 @@
 - (void)transformBotsToType:(NanabotType)type atPoint:(CGPoint)loc {
     for (HeartGuardBot *bot in _livingGuyManager.bots) {
         if ([Utils distanceBetween:bot.center and:loc] < kPowerRadius) {
-            bot.nanobotType = type;
-            if (type == SPAWNBOT) break;
+            if (bot.nanobotType != SPAWNBOT) {
+                bot.nanobotType = type;
+                break;
+            }
         }
     }
 }
