@@ -56,6 +56,10 @@
     NSString *s = [[NSBundle mainBundle] pathForResource:@"ingame" ofType:@"caf"];
     backgroundMusic = [[AVAudioPlayer alloc]  initWithContentsOfURL:[[NSURL alloc] initFileURLWithPath:s] error:nil];
     [backgroundMusic setDelegate:self];
+    
+    NSString *m = [[NSBundle mainBundle] pathForResource:@"menu" ofType:@"caf"];
+    menuMusic = [[AVAudioPlayer alloc] initWithContentsOfURL:[[NSURL alloc] initFileURLWithPath:m] error:nil];
+    [menuMusic setDelegate:self];
 }
 
 -(id)init  // Don't call me; ask for a sharedInstance -  do *foo = [AudioManagement sharedInstance]

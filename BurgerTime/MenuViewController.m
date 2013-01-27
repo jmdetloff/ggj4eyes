@@ -8,6 +8,7 @@
 
 #import "MenuViewController.h"
 #import "AppDelegate.h"
+#import "AudioManagement.h"
 
 @interface MenuViewController ()
 
@@ -59,10 +60,13 @@
     [creditsButton setBackgroundImage:[UIImage imageNamed:@"CreditsButton.png"] forState:UIControlStateNormal];
     [creditsButton setBackgroundImage:[UIImage imageNamed:@"CreditsButtonPressed.png"] forState:UIControlStateHighlighted];
     [self.view addSubview:creditsButton];
+    
+    [[AudioManagement sharedInstance] playMenuBackground];
 }
 
 
 - (void)instructions {
+    [[AudioManagement sharedInstance] playIcon];
     _popover = [[UIImageView alloc] initWithFrame:self.view.bounds];
     _popover.userInteractionEnabled = YES;
     _popover.image = [UIImage imageNamed:@"InstructionsBG.png"];
@@ -77,6 +81,7 @@
 
 
 - (void)credits {
+    [[AudioManagement sharedInstance] playIcon];
     _popover = [[UIImageView alloc] initWithFrame:self.view.bounds];
     _popover.userInteractionEnabled = YES;
     _popover.image = [UIImage imageNamed:@"CreditsBG.png"];
@@ -92,6 +97,7 @@
 
 - (void)closePopover {
     if (_popover) {
+        [[AudioManagement sharedInstance] playIcon];
         [_popover removeFromSuperview];
         _popover = nil;
     }
@@ -122,6 +128,8 @@
 
 
 - (void)selectedLevel:(UIButton *)levelButton {
+    [[AudioManagement sharedInstance] playIcon];
+    [[AudioManagement sharedInstance] stopMenuBackground];
     [((AppDelegate *)[[UIApplication sharedApplication] delegate]) showLevel:levelButton.tag];
 }
 
