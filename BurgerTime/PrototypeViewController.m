@@ -415,7 +415,6 @@
 //        et = PLAQUE;
 //    else if ([w.enemy_type isEqualToString:@"Parasite"])
 //        et = PARASITE;
-    NSLog(@"t=%f Placing enemy: %@", _waveTimeElapsed, w.enemy_type);
     ParentEnemy *firstBot = [EnemySpawner createEnemyForWave:w];
     [self placeEnemy:firstBot];
 }
@@ -495,6 +494,9 @@
             break;
         case HEALER:
             _infoPanel.healCount+=incrementer;
+            break;
+        case STANDARD:
+            _infoPanel.neutralCount+=incrementer;
             break;
         default:
             break;
