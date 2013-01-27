@@ -11,7 +11,7 @@
 @implementation ParentEnemy
 @synthesize botType;
 @synthesize hp;
-@synthesize atk;
+@synthesize bot_atk, heart_atk;
 @synthesize maxhp;
 @synthesize trackingBots;
 
@@ -22,7 +22,7 @@
         botType = arc4random() % 5;
         maxhp = 20;
         hp = maxhp;
-        atk = 20;
+//        atk = 20;
         self.trackingBots = [NSMutableArray array];
     }
     return self;

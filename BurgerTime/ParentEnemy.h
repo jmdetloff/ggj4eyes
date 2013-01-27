@@ -16,7 +16,8 @@ typedef enum { TEAR, PLAQUE, PARASITE } EnemyType;
 @property (nonatomic, assign) EnemyType botType;
 @property (nonatomic, assign) int hp;
 @property (nonatomic, assign) int maxhp;
-@property (nonatomic, assign) int atk;
+@property (nonatomic, assign) int bot_atk;
+@property (nonatomic, assign) int heart_atk;
 @property (nonatomic, assign) int splash_radius;
 @property (nonatomic, strong) NSMutableArray *trackingBots;
 

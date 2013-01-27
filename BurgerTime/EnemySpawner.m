@@ -10,19 +10,25 @@
 #import "HeartLeakEnemy.h"
 #import "PlaqueEnemy.h"
 #import "ParasiteEnemy.h"
+#import "ParentEnemy.h"
 
 @implementation EnemySpawner
 
 + (ParentEnemy *)createEnemyForWave:(Wave*)w {
+    ParentEnemy *pe;
     if ([w.enemy_type isEqualToString:@"Tear"]) {
-        return [[HeartLeakEnemy alloc] initWithHP:w.hp];
+        pe = [[HeartLeakEnemy alloc] initWithHP:w.hp];
     } else if ([w.enemy_type isEqualToString:@"Plaque"]) {
-        return [[PlaqueEnemy alloc] initWithHP:w.hp spreadRadius:30];
+        pe = [[PlaqueEnemy alloc] initWithHP:w.hp spreadRadius:30];
     } else if ([w.enemy_type isEqualToString:@"Parasite"]) {
-        return [[ParasiteEnemy alloc] init];
+        pe = [[ParasiteEnemy alloc] init];
     } else {
         return nil;
     }
+    pe.hp = w.hp;
+    pe.bot_atk = w.bot_atk;
+    pe.heart_atk = w.heart_atk;
+    return pe;
 }
 
 @end
