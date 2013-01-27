@@ -32,6 +32,10 @@
     self.window.rootViewController = [[HelpScreen alloc] initWithLevelParameters:levelParams];
 }
 - (void)showLevel:(NSInteger)level {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setBool:YES forKey:[NSString stringWithFormat:@"level%iunlocked", level]];
+    [defaults synchronize];
+    
     NSDictionary *levelParams = @{@"startingBotNum":@100, @"levelNum":[NSNumber numberWithInt:level]};
     self.window.rootViewController = [[PrototypeViewController alloc] initWithLevelParameters:levelParams];
 }

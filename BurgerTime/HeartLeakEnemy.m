@@ -57,6 +57,7 @@
     HeartGuardBot *bot = (HeartGuardBot *)sender;
 //    self.hp--;
     self.hp -= [sender damageAgainst:self];
+//    NSLog(@"%d", [sender damageAgainst:self]);
     [self stainAtPoint:[self convertPoint:bot.frame.origin fromView:[self superview]]];
     [self.livingGuyManager livingGuy:self killsLivingGuy:bot];
     if (self.hp <= 0) {
