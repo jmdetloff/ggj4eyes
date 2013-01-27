@@ -13,12 +13,12 @@
 
 @interface HeartGuardBot : MovingCollidingGuy <LivingGuy>
 
--(UIColor *)botColor;
-typedef   enum    { SCRUB, PLUG, FIGHT, HEALER, SPAWNBOT } types;
-@property types  botType;
+typedef   enum    { STANDARD, SCRUB, PLUG, FIGHT, HEALER, SPAWNBOT } NanabotType;
+@property NanabotType  botType;
 
 @property int level;
 @property int range;
+@property (nonatomic, assign) NanabotType nanobotType;
 
 - (void)interactWithEnemy:(EnemyBot *)enemy;
 - (void)setBotImage;

@@ -15,7 +15,7 @@
 #import "MovingCollidingGuy.h"
 #import "PanlessScrollView.h"
 
-@interface PrototypeViewController () <DeathDelegate, UIScrollViewDelegate>
+@interface PrototypeViewController () <DeathDelegate, UIScrollViewDelegate, UIGestureRecognizerDelegate>
 @end
 
 
@@ -33,6 +33,8 @@
     PanlessScrollView *_pinchView;
     UIView *_zoomingContentView;
     UIView *_gestureView;
+    UIView *_draggingView;
+    NSArray *_buttons;
 }
 
 
@@ -77,7 +79,7 @@
     [_pinchView setBounces:NO];
     [self.view addSubview:_pinchView];
     
-    UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"heart_bg.png"]];
+    UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background.png"]];
     background.frame = self.view.bounds;
     _zoomingContentView = background;
     [_pinchView addSubview:_zoomingContentView];
@@ -87,6 +89,7 @@
     }
     
     UIPanGestureRecognizer *gestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
+    gestureRecognizer.delegate = self;
     [self.view addGestureRecognizer:gestureRecognizer];
     
     _timeInterval = 1/30.0;
@@ -95,6 +98,109 @@
     _rerollTimer = [NSTimer timerWithTimeInterval:5 target:self selector:@selector(rerollAllBots) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:_rerollTimer forMode:NSRunLoopCommonModes];
     [self rerollAllBots];
+    
+    CGFloat panelHeight = 100;
+    UIView *toolPanelView = [[UIView alloc] initWithFrame:CGRectMake(0, 900, 768, panelHeight)];
+    toolPanelView.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:toolPanelView];
+    
+    CGSize buttonSize = CGSizeMake(92, 92);
+    
+    UIImageView *fightButton = [[UIImageView alloc] initWithFrame:CGRectMake(300, 0, buttonSize.width, buttonSize.height)];
+    [fightButton setImage:[UIImage imageNamed:@"FightButton.png"]];
+    fightButton.tag = FIGHT;
+    [toolPanelView addSubview:fightButton];
+    
+    UIImageView *healButton = [[UIImageView alloc] initWithFrame:CGRectMake(414, 0, buttonSize.width, buttonSize.height)];
+    [healButton setImage:[UIImage imageNamed:@"HealButton.png"]];
+    healButton.tag = HEALER;
+    [toolPanelView addSubview:healButton];
+    
+    UIImageView *cleanButton = [[UIImageView alloc] initWithFrame:CGRectMake(528, 0, buttonSize.width, buttonSize.height)];
+    [cleanButton setImage:[UIImage imageNamed:@"CleanButton.png"]];
+    cleanButton.tag = SCRUB;
+    [toolPanelView addSubview:cleanButton];
+    
+    UIImageView *momButton = [[UIImageView alloc] initWithFrame:CGRectMake(643, 0, buttonSize.width, buttonSize.height)];
+    [momButton setImage:[UIImage imageNamed:@"MomButton.png"]];
+    momButton.tag = SPAWNBOT;
+    [toolPanelView addSubview:momButton];
+    
+    _buttons = @[fightButton, healButton, cleanButton, momButton];
+}
+
+- (void)startDragging:(UIView *)sender {
+    NanabotType type = sender.tag;
+    switch (type) {
+        case FIGHT:
+            _draggingView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"FightDrag.png"]];
+            break;
+            
+        case SCRUB:
+            _draggingView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CleanDrag.png"]];
+            break;
+            
+        case SPAWNBOT:
+            _draggingView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MomDrag.png"]];
+            break;
+            
+        case HEALER:
+            _draggingView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"HealDrag.png"]];
+            break;
+            
+        default:
+            break;
+    }
+    
+    _draggingView.center = CGPointMake(sender.frame.origin.x + 92/2, 900 + 92/2);
+    [self.view addSubview:_draggingView];
+    _pinchView.userInteractionEnabled = NO;
+}
+
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+    if (_draggingView) {
+        return NO;
+    } else {
+        for (UIView *view in _buttons) {
+            CGPoint loc = [touch locationInView:view];
+            if (CGRectContainsPoint(view.bounds, loc)) {
+                return NO;
+            }
+        }
+        return YES;
+    }
+}
+
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    UITouch *touch = [touches anyObject];
+    for (UIView *view in _buttons) {
+        CGPoint loc = [touch locationInView:view];
+        if (CGRectContainsPoint(view.bounds, loc)) {
+            [self startDragging:view];
+            break;
+        }
+    }
+}
+
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+    UITouch *touch = [touches anyObject];
+    CGPoint loc = [touch locationInView:self.view];
+    _draggingView.center = loc;
+}
+
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    [_draggingView removeFromSuperview];
+    _draggingView = nil;
+    _pinchView.userInteractionEnabled = YES;
+}
+
+
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
+    NSLog(@"cancelled");
 }
 
 

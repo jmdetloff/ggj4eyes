@@ -7,9 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F4D1FC816B46D0F00291459 /* heart_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D1FC716B46D0F00291459 /* heart_bg.png */; };
 		0F4D1FCC16B47EEC00291459 /* CollidingRectsCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4D1FCB16B47EEC00291459 /* CollidingRectsCreator.m */; };
 		0F4D1FF716B4C47000291459 /* PanlessScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4D1FF616B4C47000291459 /* PanlessScrollView.m */; };
+		0F4D200B16B4D5C800291459 /* CleanButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D200316B4D5C800291459 /* CleanButton.png */; };
+		0F4D200C16B4D5C800291459 /* CleanDrag.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D200416B4D5C800291459 /* CleanDrag.png */; };
+		0F4D200D16B4D5C800291459 /* FightButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D200516B4D5C800291459 /* FightButton.png */; };
+		0F4D200E16B4D5C800291459 /* FightDrag.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D200616B4D5C800291459 /* FightDrag.png */; };
+		0F4D200F16B4D5C800291459 /* HealButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D200716B4D5C800291459 /* HealButton.png */; };
+		0F4D201016B4D5C800291459 /* HealDrag.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D200816B4D5C800291459 /* HealDrag.png */; };
+		0F4D201116B4D5C800291459 /* MomButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D200916B4D5C800291459 /* MomButton.png */; };
+		0F4D201216B4D5C800291459 /* MomDrag.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D200A16B4D5C800291459 /* MomDrag.png */; };
+		0F4D201416B4D5D700291459 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D201316B4D5D700291459 /* background.png */; };
 		0F9697E016B38D02005BE1C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9697DF16B38D02005BE1C1 /* UIKit.framework */; };
 		0F9697E216B38D02005BE1C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9697E116B38D02005BE1C1 /* Foundation.framework */; };
 		0F9697E416B38D02005BE1C1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9697E316B38D02005BE1C1 /* CoreGraphics.framework */; };
@@ -73,11 +81,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0F4D1FC716B46D0F00291459 /* heart_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart_bg.png; sourceTree = "<group>"; };
 		0F4D1FCA16B47EEC00291459 /* CollidingRectsCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollidingRectsCreator.h; sourceTree = "<group>"; };
 		0F4D1FCB16B47EEC00291459 /* CollidingRectsCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollidingRectsCreator.m; sourceTree = "<group>"; };
 		0F4D1FF516B4C47000291459 /* PanlessScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanlessScrollView.h; sourceTree = "<group>"; };
 		0F4D1FF616B4C47000291459 /* PanlessScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanlessScrollView.m; sourceTree = "<group>"; };
+		0F4D200316B4D5C800291459 /* CleanButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CleanButton.png; sourceTree = "<group>"; };
+		0F4D200416B4D5C800291459 /* CleanDrag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CleanDrag.png; sourceTree = "<group>"; };
+		0F4D200516B4D5C800291459 /* FightButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FightButton.png; sourceTree = "<group>"; };
+		0F4D200616B4D5C800291459 /* FightDrag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FightDrag.png; sourceTree = "<group>"; };
+		0F4D200716B4D5C800291459 /* HealButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HealButton.png; sourceTree = "<group>"; };
+		0F4D200816B4D5C800291459 /* HealDrag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HealDrag.png; sourceTree = "<group>"; };
+		0F4D200916B4D5C800291459 /* MomButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MomButton.png; sourceTree = "<group>"; };
+		0F4D200A16B4D5C800291459 /* MomDrag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MomDrag.png; sourceTree = "<group>"; };
+		0F4D201316B4D5D700291459 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		0F9697DB16B38D02005BE1C1 /* BurgerTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BurgerTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F9697DF16B38D02005BE1C1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0F9697E116B38D02005BE1C1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -172,6 +188,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F4D200116B4D5BA00291459 /* artwork */ = {
+			isa = PBXGroup;
+			children = (
+				0F4D200316B4D5C800291459 /* CleanButton.png */,
+				0F4D200416B4D5C800291459 /* CleanDrag.png */,
+				0F4D200516B4D5C800291459 /* FightButton.png */,
+				0F4D200616B4D5C800291459 /* FightDrag.png */,
+				0F4D200716B4D5C800291459 /* HealButton.png */,
+				0F4D201316B4D5D700291459 /* background.png */,
+				0F4D200816B4D5C800291459 /* HealDrag.png */,
+				0F4D200916B4D5C800291459 /* MomButton.png */,
+				0F4D200A16B4D5C800291459 /* MomDrag.png */,
+			);
+			name = artwork;
+			sourceTree = "<group>";
+		};
 		0F9697D016B38D02005BE1C1 = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				6773E62E16B4BD6200A3CBF5 /* sounds */,
+				0F4D200116B4D5BA00291459 /* artwork */,
 				0FACD3F816B44C8B006BB9EC /* enemies and bots */,
 				6773E62516B4BA8700A3CBF5 /* AudioManagement.h */,
 				6773E62616B4BA8700A3CBF5 /* AudioManagement.m */,
@@ -222,7 +255,6 @@
 				0F9697F916B38D02005BE1C1 /* BurgerTime.xcdatamodeld */,
 				0F4D1FCA16B47EEC00291459 /* CollidingRectsCreator.h */,
 				0F4D1FCB16B47EEC00291459 /* CollidingRectsCreator.m */,
-				0F4D1FC716B46D0F00291459 /* heart_bg.png */,
 				0F9697E816B38D02005BE1C1 /* Supporting Files */,
 				0F4D1FF516B4C47000291459 /* PanlessScrollView.h */,
 				0F4D1FF616B4C47000291459 /* PanlessScrollView.m */,
@@ -407,6 +439,15 @@
 				2415D1BD16B3EA3400308B74 /* nanobot_white.png in Resources */,
 				0F4D1FC816B46D0F00291459 /* heart_bg.png in Resources */,
 				6773E63516B4C99C00A3CBF5 /* ingame.caf in Resources */,
+				0F4D200B16B4D5C800291459 /* CleanButton.png in Resources */,
+				0F4D200C16B4D5C800291459 /* CleanDrag.png in Resources */,
+				0F4D200D16B4D5C800291459 /* FightButton.png in Resources */,
+				0F4D200E16B4D5C800291459 /* FightDrag.png in Resources */,
+				0F4D200F16B4D5C800291459 /* HealButton.png in Resources */,
+				0F4D201016B4D5C800291459 /* HealDrag.png in Resources */,
+				0F4D201116B4D5C800291459 /* MomButton.png in Resources */,
+				0F4D201216B4D5C800291459 /* MomDrag.png in Resources */,
+				0F4D201416B4D5D700291459 /* background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
