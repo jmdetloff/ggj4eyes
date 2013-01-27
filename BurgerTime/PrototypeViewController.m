@@ -335,7 +335,7 @@
     switch (enemy.botType) {
         case TEAR:
         {
-            CGRect botFrame = CGRectMake(0, 0, 20, 100);
+            CGRect botFrame = CGRectMake(0, 0, 20, 50);
             NSArray *spawnRects = [CollidingRectsCreator validSpawningLocationsWithScale:scaleFactor];
             botFrame.origin = [self randomPointWithinRects:spawnRects];
             enemy.frame = botFrame;

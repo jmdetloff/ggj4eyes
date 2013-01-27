@@ -19,9 +19,12 @@
     if (self) {
         self.maxhp = hp;
         self.hp = hp;
-        self.backgroundColor = [UIColor whiteColor];
-        self.layer.borderColor = [UIColor blackColor].CGColor;
-        self.layer.borderWidth = 3;
+
+        UIImageView *uiv = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rip_01.png"]];
+        [self addSubview:uiv];
+   //     self.backgroundColor = [UIColor whiteColor];
+     //   self.layer.borderColor = [UIColor blackColor].CGColor;
+       // self.layer.borderWidth = 3;
     }
     return self;
 }

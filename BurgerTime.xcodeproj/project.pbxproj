@@ -61,7 +61,6 @@
 		24237C3616B4B7C600F7E8E8 /* _plaqu01.png in Resources */ = {isa = PBXBuildFile; fileRef = 24237C3316B4B7C600F7E8E8 /* _plaqu01.png */; };
 		24237C3A16B4B88200F7E8E8 /* PlaqueEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 24237C3916B4B88200F7E8E8 /* PlaqueEnemy.m */; };
 		24237C3D16B4D36B00F7E8E8 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 24237C3C16B4D36B00F7E8E8 /* Utils.m */; };
-		675D312316B4696C0071B7B9 /* Wave.m in Sources */ = {isa = PBXBuildFile; fileRef = 675D312216B4696C0071B7B9 /* Wave.m */; };
 		675D311F16B469350071B7B9 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 675D311E16B469350071B7B9 /* Level.m */; };
 		6773E62716B4BA8700A3CBF5 /* AudioManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6773E62616B4BA8700A3CBF5 /* AudioManagement.m */; };
 		6773E62D16B4BC9400A3CBF5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6773E62C16B4BC9400A3CBF5 /* AudioToolbox.framework */; };
@@ -85,6 +84,9 @@
 		67CC3F1616B5081200CD0BB1 /* mombo.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E65216B4D4DA00A3CBF5 /* mombo.caf */; };
 		67CC3F1716B5081500CD0BB1 /* zapper.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E65316B4D4DA00A3CBF5 /* zapper.caf */; };
 		67CC3F1816B5081700CD0BB1 /* heartbeat.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E65416B4D4DA00A3CBF5 /* heartbeat.caf */; };
+		67CF4ABB16B5122700129B56 /* rip_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 67CF4AB816B5122700129B56 /* rip_03.png */; };
+		67CF4ABC16B5122700129B56 /* rip_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 67CF4AB916B5122700129B56 /* rip_02.png */; };
+		67CF4ABD16B5122700129B56 /* rip_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 67CF4ABA16B5122700129B56 /* rip_01.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,11 +113,6 @@
 		0F4D200916B4D5C800291459 /* MomButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MomButton.png; sourceTree = "<group>"; };
 		0F4D200A16B4D5C800291459 /* MomDrag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MomDrag.png; sourceTree = "<group>"; };
 		0F4D201316B4D5D700291459 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
-		0F4D203216B4E80400291459 /* nanobot_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanobot_blue.png; sourceTree = "<group>"; };
-		0F4D203316B4E80400291459 /* nanobot_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanobot_green.png; sourceTree = "<group>"; };
-		0F4D203416B4E80400291459 /* nanobot_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanobot_red.png; sourceTree = "<group>"; };
-		0F4D203516B4E80400291459 /* nanobot_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanobot_white.png; sourceTree = "<group>"; };
-		0F4D203616B4E80400291459 /* nanobot_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanobot_yellow.png; sourceTree = "<group>"; };
 		0F4D204C16B4EA6000291459 /* Cleanerbot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cleanerbot.png; sourceTree = "<group>"; };
 		0F4D204D16B4EA6000291459 /* Fighterbot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fighterbot.png; sourceTree = "<group>"; };
 		0F4D204E16B4EA6000291459 /* Healerbot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Healerbot.png; sourceTree = "<group>"; };
@@ -174,10 +171,6 @@
 		24237C3C16B4D36B00F7E8E8 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		675D311D16B469350071B7B9 /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
 		675D311E16B469350071B7B9 /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
-		675D312116B4696C0071B7B9 /* Wave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wave.h; sourceTree = "<group>"; };
-		675D312216B4696C0071B7B9 /* Wave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wave.m; sourceTree = "<group>"; };
-		675D311D16B469350071B7B9 /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
-		675D311E16B469350071B7B9 /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
 		6773E62516B4BA8700A3CBF5 /* AudioManagement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioManagement.h; sourceTree = "<group>"; };
 		6773E62616B4BA8700A3CBF5 /* AudioManagement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioManagement.m; sourceTree = "<group>"; };
 		6773E62C16B4BC9400A3CBF5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -192,6 +185,9 @@
 		6773E65216B4D4DA00A3CBF5 /* mombo.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = mombo.caf; sourceTree = "<group>"; };
 		6773E65316B4D4DA00A3CBF5 /* zapper.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = zapper.caf; sourceTree = "<group>"; };
 		6773E65416B4D4DA00A3CBF5 /* heartbeat.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = heartbeat.caf; sourceTree = "<group>"; };
+		67CF4AB816B5122700129B56 /* rip_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rip_03.png; sourceTree = "<group>"; };
+		67CF4AB916B5122700129B56 /* rip_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rip_02.png; sourceTree = "<group>"; };
+		67CF4ABA16B5122700129B56 /* rip_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rip_01.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +222,9 @@
 		0F4D200116B4D5BA00291459 /* artwork */ = {
 			isa = PBXGroup;
 			children = (
+				67CF4AB816B5122700129B56 /* rip_03.png */,
+				67CF4AB916B5122700129B56 /* rip_02.png */,
+				67CF4ABA16B5122700129B56 /* rip_01.png */,
 				0F4D200316B4D5C800291459 /* CleanButton.png */,
 				0F4D200416B4D5C800291459 /* CleanDrag.png */,
 				0F4D200516B4D5C800291459 /* FightButton.png */,
@@ -482,7 +481,6 @@
 				24237C3416B4B7C600F7E8E8 /* _plaqu03.png in Resources */,
 				24237C3516B4B7C600F7E8E8 /* _plaqu02.png in Resources */,
 				24237C3616B4B7C600F7E8E8 /* _plaqu01.png in Resources */,
-				6773E63516B4C99C00A3CBF5 /* ingame.caf in Resources */,
 				0F4D200B16B4D5C800291459 /* CleanButton.png in Resources */,
 				0F4D200C16B4D5C800291459 /* CleanDrag.png in Resources */,
 				0F4D200D16B4D5C800291459 /* FightButton.png in Resources */,
@@ -492,11 +490,6 @@
 				0F4D201116B4D5C800291459 /* MomButton.png in Resources */,
 				0F4D201216B4D5C800291459 /* MomDrag.png in Resources */,
 				0F4D201416B4D5D700291459 /* background.png in Resources */,
-				0F4D203716B4E80400291459 /* nanobot_blue.png in Resources */,
-				0F4D203816B4E80400291459 /* nanobot_green.png in Resources */,
-				0F4D203916B4E80400291459 /* nanobot_red.png in Resources */,
-				0F4D203A16B4E80400291459 /* nanobot_white.png in Resources */,
-				0F4D203B16B4E80400291459 /* nanobot_yellow.png in Resources */,
 				0F4D205116B4EA6000291459 /* Cleanerbot.png in Resources */,
 				0F4D205216B4EA6000291459 /* Fighterbot.png in Resources */,
 				0F4D205316B4EA6000291459 /* Healerbot.png in Resources */,
@@ -515,6 +508,9 @@
 				67CC3F1616B5081200CD0BB1 /* mombo.caf in Resources */,
 				67CC3F1716B5081500CD0BB1 /* zapper.caf in Resources */,
 				67CC3F1816B5081700CD0BB1 /* heartbeat.caf in Resources */,
+				67CF4ABB16B5122700129B56 /* rip_03.png in Resources */,
+				67CF4ABC16B5122700129B56 /* rip_02.png in Resources */,
+				67CF4ABD16B5122700129B56 /* rip_01.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,7 +625,7 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Jethro Bell (Y36M9HWW85)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jethro Bell (Y36M9HWW85)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -644,7 +640,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "6877E784-4D1F-464B-ADD8-DC3045E32981";
+				PROVISIONING_PROFILE = "F076F39B-6465-479E-9047-77917F403280";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D4FA83BD-5BEC-4D9C-AFE8-9C79132E9256";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -660,7 +657,7 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Jethro Bell (Y36M9HWW85)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jethro Bell (Y36M9HWW85)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -668,7 +665,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "6877E784-4D1F-464B-ADD8-DC3045E32981";
+				PROVISIONING_PROFILE = "F076F39B-6465-479E-9047-77917F403280";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0E17218A-5856-40C0-B1B0-9A6ED2F0B078";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
