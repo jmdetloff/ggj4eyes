@@ -47,6 +47,8 @@
 		0F4D20F316B5BF4900291459 /* HomeButtonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D20ED16B5BF4900291459 /* HomeButtonPressed.png */; };
 		0F4D20F416B5BF4900291459 /* InstructionsButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D20EE16B5BF4900291459 /* InstructionsButton.png */; };
 		0F4D20F516B5BF4900291459 /* InstructionsButtonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D20EF16B5BF4900291459 /* InstructionsButtonPressed.png */; };
+		0F4D210716B5C4F300291459 /* InfoBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D210616B5C4F300291459 /* InfoBar.png */; };
+		0F4D210B16B5C63100291459 /* InfoPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4D210A16B5C63100291459 /* InfoPanel.m */; };
 		0F9697E016B38D02005BE1C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9697DF16B38D02005BE1C1 /* UIKit.framework */; };
 		0F9697E216B38D02005BE1C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9697E116B38D02005BE1C1 /* Foundation.framework */; };
 		0F9697E416B38D02005BE1C1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9697E316B38D02005BE1C1 /* CoreGraphics.framework */; };
@@ -171,6 +173,9 @@
 		0F4D20ED16B5BF4900291459 /* HomeButtonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeButtonPressed.png; sourceTree = "<group>"; };
 		0F4D20EE16B5BF4900291459 /* InstructionsButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InstructionsButton.png; sourceTree = "<group>"; };
 		0F4D20EF16B5BF4900291459 /* InstructionsButtonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InstructionsButtonPressed.png; sourceTree = "<group>"; };
+		0F4D210616B5C4F300291459 /* InfoBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InfoBar.png; sourceTree = "<group>"; };
+		0F4D210916B5C63100291459 /* InfoPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoPanel.h; sourceTree = "<group>"; };
+		0F4D210A16B5C63100291459 /* InfoPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoPanel.m; sourceTree = "<group>"; };
 		0F9697DB16B38D02005BE1C1 /* BurgerTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BurgerTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F9697DF16B38D02005BE1C1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0F9697E116B38D02005BE1C1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -309,6 +314,7 @@
 		0F4D20D516B5BBB100291459 /* Menus */ = {
 			isa = PBXGroup;
 			children = (
+				0F4D210616B5C4F300291459 /* InfoBar.png */,
 				0F4D20D716B5BBBF00291459 /* CreditsBG.png */,
 				0F4D20D816B5BBBF00291459 /* HomescreenBG.png */,
 				0F4D20D916B5BBBF00291459 /* InstructionsBG.png */,
@@ -389,6 +395,8 @@
 				0F4D1FF616B4C47000291459 /* PanlessScrollView.m */,
 				0F4D20AA16B52E1900291459 /* ZapView.h */,
 				0F4D20AB16B52E1A00291459 /* ZapView.m */,
+				0F4D210916B5C63100291459 /* InfoPanel.h */,
+				0F4D210A16B5C63100291459 /* InfoPanel.m */,
 			);
 			path = BurgerTime;
 			sourceTree = "<group>";
@@ -634,6 +642,7 @@
 				0F4D20F316B5BF4900291459 /* HomeButtonPressed.png in Resources */,
 				0F4D20F416B5BF4900291459 /* InstructionsButton.png in Resources */,
 				0F4D20F516B5BF4900291459 /* InstructionsButtonPressed.png in Resources */,
+				0F4D210716B5C4F300291459 /* InfoBar.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,6 +709,7 @@
 				0F4D20AC16B52E1A00291459 /* ZapView.m in Sources */,
 				242D70A016B55D5B00DE0BFF /* Level.m in Sources */,
 				0F4D20DF16B5BBCD00291459 /* MenuViewController.m in Sources */,
+				0F4D210B16B5C63100291459 /* InfoPanel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
