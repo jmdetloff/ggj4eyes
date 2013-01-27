@@ -27,7 +27,7 @@
 
 
 - (void)showLevel:(NSInteger)level {
-    NSDictionary *levelParams = @{@"startingBotNum":@100};
+    NSDictionary *levelParams = @{@"startingBotNum":@100, @"levelNum":[NSNumber numberWithInt:level]};
     self.window.rootViewController = [[PrototypeViewController alloc] initWithLevelParameters:levelParams];
 }
 
