@@ -13,8 +13,9 @@
 #import "LivingGuyManager.h"
 #import "CollidingRectsCreator.h"
 #import "MovingCollidingGuy.h"
+#import "PanlessScrollView.h"
 
-@interface PrototypeViewController () <DeathDelegate>
+@interface PrototypeViewController () <DeathDelegate, UIScrollViewDelegate>
 @end
 
 
@@ -29,6 +30,9 @@
     LivingGuyManager *_livingGuyManager;
     double _timeInterval;
     BOOL _currentSwipeValid;
+    PanlessScrollView *_pinchView;
+    UIView *_zoomingContentView;
+    UIView *_gestureView;
 }
 
 
@@ -64,20 +68,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _pinchView = [[PanlessScrollView alloc] initWithFrame:self.view.bounds];
+    _pinchView.minimumZoomScale = 1;
+    _pinchView.maximumZoomScale = 2;
+    _pinchView.contentSize = self.view.frame.size;
+    _pinchView.delegate = self;
+    [_pinchView setBouncesZoom:NO];
+    [_pinchView setBounces:NO];
+    [self.view addSubview:_pinchView];
+    
     UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"heart_bg.png"]];
     background.frame = self.view.bounds;
-    [self.view addSubview:background];
+    _zoomingContentView = background;
+    [_pinchView addSubview:_zoomingContentView];
     
     for (HeartGuardBot *bot in _livingGuyManager.bots) {
-        [self.view addSubview:bot];
+        [_zoomingContentView addSubview:bot];
     }
     
     UIPanGestureRecognizer *gestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
     [self.view addGestureRecognizer:gestureRecognizer];
     
     _timeInterval = 1/30.0;
-    _moveTimer = [NSTimer scheduledTimerWithTimeInterval:_timeInterval target:self selector:@selector(moveBots) userInfo:nil repeats:YES];
-    _rerollTimer = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(rerollAllBots) userInfo:nil repeats:YES];
+    _moveTimer = [NSTimer timerWithTimeInterval:_timeInterval target:self selector:@selector(moveBots) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:_moveTimer forMode:NSRunLoopCommonModes];
+    _rerollTimer = [NSTimer timerWithTimeInterval:5 target:self selector:@selector(rerollAllBots) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:_rerollTimer forMode:NSRunLoopCommonModes];
     [self rerollAllBots];
 }
 
@@ -108,8 +124,6 @@
 
 - (void)swipe:(UIPanGestureRecognizer *)gestureRecognizer {
     CGPoint stopLocation = [gestureRecognizer locationInView:self.view];
-    
-    
     
     if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
         _currentSwipeValid = YES;
@@ -186,7 +200,7 @@
             botFrame.origin = [self randomPointWithinRects:spawnRects];
             enemy.frame = botFrame;
             enemy.livingGuyManager = _livingGuyManager;
-            [self.view insertSubview:enemy atIndex:1];
+            [_zoomingContentView insertSubview:enemy atIndex:1];
         }
         break;
             
@@ -200,6 +214,11 @@
 
 - (void)viewDied:(UIView *)view {
     [view removeFromSuperview];
+}
+
+
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
+    return _zoomingContentView;
 }
 
 @end
