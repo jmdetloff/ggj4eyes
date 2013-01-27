@@ -143,17 +143,22 @@
     return CGPointMake(self.cyclePivot.x + dx, self.cyclePivot.y + dy);
 }
 
+- (void)pingEnemy {
+    if (self.enemyKey) {
+        [self.enemyKey destinationReached:self];
+    }
+}
+
 - (void)reachedDestination {
     if (self.cycleState == 1) {
+        [self pingEnemy];
         self.cycleState = 2;
     }
     if (self.cycleState == 2) {
         [self setDestinationPoint:[self nextCycleDestination]];
         return;
     }
-    if (self.enemyKey) {
-        [self.enemyKey destinationReached:self];
-    }
+    [self pingEnemy];
     [self clearDestination];
 }
             

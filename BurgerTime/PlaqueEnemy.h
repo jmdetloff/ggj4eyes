@@ -7,6 +7,7 @@
 //
 
 #import "ParentEnemy.h"
+#import "HeartGuardBot.h"
 
 @interface PlaqueEnemy : ParentEnemy
 
@@ -14,8 +15,10 @@
 @property (nonatomic, strong) UIImageView *plaqueView;
 @property (nonatomic, strong) NSMutableArray *spreadPoints;
 @property (nonatomic) int numSpreadPoints;
+@property (nonatomic, strong) NSTimer *megaTimer;
 
 - (id)initWithHP:(int)hp_ spreadRadius:(float)sr_;
 - (CGPoint)findASpreadPoint;
+- (void)track:(HeartGuardBot *)bot;
 
 @end

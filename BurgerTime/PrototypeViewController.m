@@ -320,7 +320,7 @@
 }
 
 - (void)spawnEnemyWave {
-    ParentEnemy *firstBot = [EnemySpawner createEnemyForType:TEAR];
+    ParentEnemy *firstBot = [EnemySpawner createEnemyForType:PLAQUE];
     [self placeEnemy:firstBot];
 }
 
