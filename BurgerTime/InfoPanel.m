@@ -101,6 +101,10 @@
 }
 
 - (void)setNeutralCount:(int)neutrals {
+    if (neutrals == 0) {
+        NSLog(@"test");
+    }
+    
     _neutralCount = neutrals;
     _neutralCountLabel.text = [NSString stringWithFormat:@"%i", neutrals];
 }
