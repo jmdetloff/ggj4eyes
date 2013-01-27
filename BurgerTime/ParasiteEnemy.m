@@ -85,6 +85,12 @@
 }
 
 
+- (void)clearDestination {
+    [super clearDestination];
+    _victim =  nil;
+}
+
+
 - (void)zap:(HeartGuardBot *)attacker {
     self.hp--;
     if (self.hp <= 0) {
