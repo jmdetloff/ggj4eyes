@@ -30,8 +30,8 @@
     switch (botType) {
         case TEAR:
             return @"Myocardial rupture";
-        case MYOCARDITIS:
-            return @"Myocarditis";
+        case PLAQUE:
+            return @"Atheromatous plaque";
         case ATHEROSCLEROSIS:
             return @"Atherosclerosis";
         case ISCHAEMIA:
