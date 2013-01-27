@@ -8,17 +8,20 @@
 
 #import "PlaqueEnemy.h"
 #import "Utils.h"
+#import "CollidingRectsCreator.h"
+#import "EnemyBot.h"
+#import "HeartGuardBot.h"
 
 static const float _sideLength = 40;
 
 @implementation PlaqueEnemy
 
-@synthesize position, plaqueView, spreadPoints, numSpreadPoints;
+@synthesize plaqueView, spreadPoints, numSpreadPoints;
 
-- (id)initWithPosition:(CGPoint)position_ hp:(int)hp_ spreadRadius:(float)sr_ {
+- (id)initWithHP:(int)hp_ spreadRadius:(float)sr_ {
     self = [super init];
     if (self) {
-        self.position = position_;
+//        self.position = position_;
         self.maxhp = hp_;
         self.hp = hp_;
         self.botType = PLAQUE;
@@ -26,10 +29,16 @@ static const float _sideLength = 40;
         //randomly pick a plaque image
         NSString *plaqueImageName = [NSString stringWithFormat:@"_plaqu%02d.png", arc4random()%3 + 1];
         self.plaqueView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:plaqueImageName]];
-        self.plaqueView.frame = CGRectMake(-_sideLength/2,
-                                           -_sideLength/2,
-                                           _sideLength,
-                                           _sideLength);
+        [self addSubview:self.plaqueView];
+        self.frame = CGRectMake(0,
+                                0,
+                                _sideLength,
+                                _sideLength);
+//        self.plaqueView.frame = CGRectMake(0,
+//                                           0,
+//                                           _sideLength,
+//                                           _sideLength);
+//        self.plaqueView.center = CGPointMake(_sideLength/2, _sideLength/2);
         
         self.numSpreadPoints = 4;
         
@@ -39,20 +48,38 @@ static const float _sideLength = 40;
         while (i > 0) {
             float x = [Utils randomFloatBetween:-sr_/2 And:sr_/2];
             float y = [Utils randomFloatBetween:-sr_/2 And:sr_/2];
-            if (x*x + y*y <= sr_*sr_) {
+            if (x*x + y*y <= sr_*sr_ && [CollidingRectsCreator validPos:CGPointMake(self.center.x + x, self.center.y + y)]) {
                 [self.spreadPoints addObject:[NSValue valueWithCGPoint:CGPointMake(x, y)]];
                 i--;
             }
         }
         
+//        self.alpha = 0.1f;
         
-        [self addSubview:self.plaqueView];
     }
     return self;
 }
 
+- (void)die {
+    for (HeartGuardBot *bot in self.trackingBots) {
+        if (bot.enemyKey == self) bot.enemyKey = nil;
+    }
+    [self.trackingBots removeAllObjects];
+}
+
+
+- (void)track:(HeartGuardBot *)bot {
+    [self.trackingBots addObject:bot];
+    bot.enemyKey = self;
+}
+
 - (CGPoint)findASpreadPoint {
-    return [[self.spreadPoints objectAtIndex:arc4random()%self.numSpreadPoints] CGPointValue];
+//    CGPoint p = self.center;
+//    CGRect r = self.frame;
+//    return self.center;
+//    return CGPointMake(self.center.x + self.plaqueView.center.x, self.center.y + self.plaqueView.center.y);
+    CGPoint p = [[self.spreadPoints objectAtIndex:arc4random()%self.numSpreadPoints] CGPointValue];
+    return CGPointMake(self.center.x + p.x, self.center.y + p.y);
 }
 
 - (void)updateAlpha {

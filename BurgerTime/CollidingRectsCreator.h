@@ -13,5 +13,7 @@
 
 + (NSArray *)collidingRectsForHeartWithScale:(CGFloat)scale;
 + (NSArray *)validSpawningLocationsWithScale:(CGFloat)scale;
++ (BOOL)validPos:(CGPoint)pos;
+
 
 @end

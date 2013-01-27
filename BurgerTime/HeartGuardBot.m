@@ -67,7 +67,7 @@ static NSArray *_botColors;
                 if (self.enemyKey != pe) {
                     CGPoint p = [pe findASpreadPoint];
 //                    [self setDestinationPoint:p];
-                    [self orderCycleWithPivot:p radius:5];
+                    [self orderCycleWithPivot:p radius:10];
                 }
             }
         }

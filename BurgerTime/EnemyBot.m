@@ -9,10 +9,12 @@
 #import "EnemyBot.h"
 
 @implementation EnemyBot
+
 @synthesize botType;
 @synthesize hp;
 @synthesize atk;
 @synthesize maxhp;
+@synthesize trackingBots;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -22,6 +24,7 @@
         maxhp = 20;
         hp = maxhp;
         atk = 20;
+        self.trackingBots = [NSMutableArray array];
         // Probably not what we want to do.
     }
     return self;

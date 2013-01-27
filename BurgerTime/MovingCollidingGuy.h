@@ -40,7 +40,6 @@ typedef enum {
 
 - (void)advance:(double)dt;
 - (CGPoint)nextPos:(double)dt withAngle:(float)ang;
-+ (BOOL)validPos:(CGPoint)pos;
 - (void)rerollAngle:(double)dt;
 - (void)orderCycleWithPivot:(CGPoint)pivot_ radius:(float)radius_;
 

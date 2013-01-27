@@ -22,7 +22,6 @@
         self.backgroundColor = [UIColor whiteColor];
         self.layer.borderColor = [UIColor blackColor].CGColor;
         self.layer.borderWidth = 3;
-        _trackingBots = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -45,15 +44,15 @@
 
 
 - (void)die {
-    for (HeartGuardBot *bot in _trackingBots) {
+    for (HeartGuardBot *bot in self.trackingBots) {
         if (bot.enemyKey == self) bot.enemyKey = nil;
     }
-    [_trackingBots removeAllObjects];
+    [self.trackingBots removeAllObjects];
 }
 
 
 - (void)track:(HeartGuardBot *)bot {
-    [_trackingBots addObject:bot];
+    [self.trackingBots addObject:bot];
     bot.enemyKey = self;
 }
 

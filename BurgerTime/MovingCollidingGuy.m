@@ -44,6 +44,9 @@
 }
 
 - (void)orderCycleWithPivot:(CGPoint)pivot_ radius:(float)radius_ {
+    if (self.cycleState != 0)
+        return;
+    
     self.cycleState = 1;
     self.cyclePivot = pivot_;
     self.cycleRadius = radius_;
@@ -66,7 +69,7 @@
             [self reachedDestination];
         self.angle = atan2(_destinationPoint.y - self.position.y, _destinationPoint.x - self.position.x);
     }
-    if (![MovingCollidingGuy validPos:[self nextPos:dt withAngle:self.angle]]) {
+    if (![CollidingRectsCreator validPos:[self nextPos:dt withAngle:self.angle]]) {
         [self clearDestination];
         [self rerollAngle:dt];
     }
@@ -81,18 +84,7 @@
     return CGPointMake(self.position.x + dx, self.position.y + dy);
 }
 
-+ (BOOL)validPos:(CGPoint)pos {
-    for (NSValue *v in [CollidingRectsCreator collidingRectsForHeartWithScale:1]) {
-        CGRect r = [v CGRectValue];
-        if (pos.x >= r.origin.x &&
-            pos.y >= r.origin.y &&
-            pos.x <= r.origin.x + r.size.width &&
-            pos.y <= r.origin.y + r.size.height) {
-            return NO;
-        }
-    }
-    return YES;
-}
+
 
 - (void)rerollAngle:(double)dt {
     if (_destinationValid)
@@ -108,7 +100,7 @@
         ang = [self ithAngle:index];
         if (dt == 0)
             break;
-        if ([MovingCollidingGuy validPos:[self nextPos:multiplier * dt withAngle:ang]])
+        if ([CollidingRectsCreator validPos:[self nextPos:multiplier * dt withAngle:ang]])
             break;
         tries++;
         if (tries > 15)
@@ -148,14 +140,16 @@
         ang -= 2 * M_PI;
     float dx = self.cycleRadius * cosf(ang);
     float dy = self.cycleRadius * sinf(ang);
-    return CGPointMake(self.position.x + dx, self.position.y + dy);
+    return CGPointMake(self.cyclePivot.x + dx, self.cyclePivot.y + dy);
 }
 
 - (void)reachedDestination {
     if (self.cycleState == 1) {
         self.cycleState = 2;
-    } else if (self.cycleState == 2) {
+    }
+    if (self.cycleState == 2) {
         [self setDestinationPoint:[self nextCycleDestination]];
+        return;
     }
     if (self.enemyKey) {
         [self.enemyKey destinationReached:self];

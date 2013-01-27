@@ -91,5 +91,17 @@
     [NSValue valueWithCGRect:CGRectMake(516,380,89,399)]];
 }
 
++ (BOOL)validPos:(CGPoint)pos {
+    for (NSValue *v in [CollidingRectsCreator collidingRectsForHeartWithScale:1]) {
+        CGRect r = [v CGRectValue];
+        if (pos.x >= r.origin.x &&
+            pos.y >= r.origin.y &&
+            pos.x <= r.origin.x + r.size.width &&
+            pos.y <= r.origin.y + r.size.height) {
+            return NO;
+        }
+    }
+    return YES;
+}
 
 @end

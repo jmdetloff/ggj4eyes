@@ -244,7 +244,7 @@
         _currentSwipeValid = YES;
     }
     
-    if (![MovingCollidingGuy validPos:stopLocation]) {
+    if (![CollidingRectsCreator validPos:stopLocation]) {
         _currentSwipeValid = NO;
     }
     
@@ -316,7 +316,7 @@
             CGPoint p = [self randomPointWithinRects:spawnRects];
             enemy.frame = CGRectMake(p.x, p.y, enemy.frame.size.width, enemy.frame.size.height);
             enemy.livingGuyManager = _livingGuyManager;
-            [self.view insertSubview:enemy atIndex:1];
+            [_zoomingContentView insertSubview:enemy atIndex:1];
         }
             break;
         default:
@@ -338,7 +338,7 @@
 
 - (void)transformBotsToType:(NanabotType)type atPoint:(CGPoint)loc {
     for (HeartGuardBot *bot in _livingGuyManager.bots) {
-        if ([self distanceBetween:bot.center and:loc] < kPowerRadius) {
+        if ([Utils distanceBetween:bot.center and:loc] < kPowerRadius) {
             bot.nanobotType = type;
             if (type == SPAWNBOT) break;
         }

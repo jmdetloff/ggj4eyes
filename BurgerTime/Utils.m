@@ -11,7 +11,7 @@
 @implementation Utils
 
 + (float)randomFloatBetween:(float)a And:(float)b {
-    return ((arc4random()%ULONG_MAX)/ULONG_MAX) * (b-a) + a;
+    return (((double)(arc4random()%ULONG_MAX))/ULONG_MAX) * (b-a) + a;
 }
 
 + (CGFloat) distanceBetween:(CGPoint)point1 and:(CGPoint)point2 {
@@ -19,5 +19,7 @@
     CGFloat dy = point2.y - point1.y;
     return sqrtf(dx*dx + dy*dy);
 }
+
+
 
 @end

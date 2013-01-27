@@ -18,6 +18,7 @@ typedef enum { TEAR, PLAQUE, PARASITE, ATHEROSCLEROSIS, ISCHAEMIA, CARDIOMYOPATH
 @property (nonatomic, assign) int maxhp;
 @property (nonatomic, assign) int atk;
 @property (nonatomic, assign) int splash_radius;
+@property (nonatomic, strong) NSMutableArray *trackingBots;
 
 -(NSString *)name;
 -(UIColor *)color;

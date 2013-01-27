@@ -10,12 +10,12 @@
 
 @interface PlaqueEnemy : EnemyBot
 
-@property (nonatomic) CGPoint position;
+//@property (nonatomic) CGPoint position;
 @property (nonatomic, strong) UIImageView *plaqueView;
 @property (nonatomic, strong) NSMutableArray *spreadPoints;
 @property (nonatomic) int numSpreadPoints;
 
-- (id)initWithPosition:(CGPoint)position_ hp:(int)hp_ spreadRadius:(float)sr_;
+- (id)initWithHP:(int)hp_ spreadRadius:(float)sr_;
 - (CGPoint)findASpreadPoint;
 
 @end

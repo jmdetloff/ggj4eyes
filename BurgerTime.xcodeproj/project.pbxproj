@@ -18,11 +18,6 @@
 		0F4D201116B4D5C800291459 /* MomButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D200916B4D5C800291459 /* MomButton.png */; };
 		0F4D201216B4D5C800291459 /* MomDrag.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D200A16B4D5C800291459 /* MomDrag.png */; };
 		0F4D201416B4D5D700291459 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D201316B4D5D700291459 /* background.png */; };
-		0F4D203716B4E80400291459 /* nanobot_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D203216B4E80400291459 /* nanobot_blue.png */; };
-		0F4D203816B4E80400291459 /* nanobot_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D203316B4E80400291459 /* nanobot_green.png */; };
-		0F4D203916B4E80400291459 /* nanobot_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D203416B4E80400291459 /* nanobot_red.png */; };
-		0F4D203A16B4E80400291459 /* nanobot_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D203516B4E80400291459 /* nanobot_white.png */; };
-		0F4D203B16B4E80400291459 /* nanobot_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D203616B4E80400291459 /* nanobot_yellow.png */; };
 		0F4D205116B4EA6000291459 /* Cleanerbot.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D204C16B4EA6000291459 /* Cleanerbot.png */; };
 		0F4D205216B4EA6000291459 /* Fighterbot.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D204D16B4EA6000291459 /* Fighterbot.png */; };
 		0F4D205316B4EA6000291459 /* Healerbot.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D204E16B4EA6000291459 /* Healerbot.png */; };
