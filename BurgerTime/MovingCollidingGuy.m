@@ -129,7 +129,7 @@ static float _boundRects[] = {
         }
     }
     
-    if (arc4random()%10 != 1 && ![blockedDirections containsObject:[NSNumber numberWithInt:_previousMovementDirection]]) {
+    if (arc4random()%10 != 1 && ![blockedDirections containsObject:[NSNumber numberWithInt:_previousMovementDirection]] && _previousMovementDirection != -1) {
         moveDirection = _previousMovementDirection;
     } else {
         NSMutableArray *validMoveDirections = [@[[NSNumber numberWithInt:Left],
