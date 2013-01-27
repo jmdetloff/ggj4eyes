@@ -15,6 +15,8 @@
 #import "MovingCollidingGuy.h"
 #import "PanlessScrollView.h"
 
+#define kPowerRadius 80
+
 @interface PrototypeViewController () <DeathDelegate, UIScrollViewDelegate, UIGestureRecognizerDelegate>
 @end
 
@@ -152,6 +154,7 @@
             break;
     }
     
+    _draggingView.tag = sender.tag;
     _draggingView.center = CGPointMake(sender.frame.origin.x + 92/2, 900 + 92/2);
     [self.view addSubview:_draggingView];
     _pinchView.userInteractionEnabled = NO;
@@ -193,6 +196,11 @@
 
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    UITouch *touch = [touches anyObject];
+    CGPoint loc = [touch locationInView:_zoomingContentView];
+    
+    [self transformBotsToType:_draggingView.tag atPoint:loc];
+    
     [_draggingView removeFromSuperview];
     _draggingView = nil;
     _pinchView.userInteractionEnabled = YES;
@@ -325,6 +333,14 @@
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
     return _zoomingContentView;
+}
+
+- (void)transformBotsToType:(NanabotType)type atPoint:(CGPoint)loc {
+    for (HeartGuardBot *bot in _livingGuyManager.bots) {
+        if ([self distanceBetween:bot.center and:loc] < kPowerRadius) {
+            bot.nanobotType = type;
+        }
+    }
 }
 
 @end
