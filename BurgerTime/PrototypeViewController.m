@@ -429,7 +429,9 @@
         if ([Utils distanceBetween:bot.center and:loc] < kPowerRadius) {
             if (bot.nanobotType != SPAWNBOT) {
                 bot.nanobotType = type;
-                break;
+                if (type == SPAWNBOT) {
+                    break;
+                }
             }
         }
     }
