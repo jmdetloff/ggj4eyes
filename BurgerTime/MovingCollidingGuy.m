@@ -43,6 +43,10 @@
     return self.velocity / self.cycleRadius;
 }
 
+- (BOOL)moves {
+    return YES;
+}
+
 - (void)orderCycleWithPivot:(CGPoint)pivot_ radius:(float)radius_ {
     if (self.cycleState != 0)
         return;
@@ -62,6 +66,10 @@
 }
 
 - (void)advance:(double)dt {
+    if (![self moves]){
+        return;
+    }
+    
     if (_destinationValid) {
         float dy = _destinationPoint.y - self.position.y;
         float dx = _destinationPoint.x - self.position.x;
@@ -70,8 +78,7 @@
         self.angle = atan2(_destinationPoint.y - self.position.y, _destinationPoint.x - self.position.x);
     }
     if (![CollidingRectsCreator validPos:[self nextPos:dt withAngle:self.angle]]) {
-        [self clearDestination];
-        [self rerollAngle:dt];
+        [self collided:dt];
     }
     self.position = [self nextPos:dt withAngle:self.angle];
     
@@ -84,7 +91,10 @@
     return CGPointMake(self.position.x + dx, self.position.y + dy);
 }
 
-
+- (void)collided:(double)dt {
+    [self clearDestination];
+    [self rerollAngle:dt];
+}
 
 - (void)rerollAngle:(double)dt {
     if (_destinationValid)

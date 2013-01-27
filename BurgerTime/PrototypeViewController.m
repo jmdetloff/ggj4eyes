@@ -16,6 +16,7 @@
 #import "PanlessScrollView.h"
 #import "AudioManagement.h"
 #import "Utils.h"
+#import "ZapView.h"
 
 #define kPowerRadius 80
 
@@ -143,6 +144,8 @@
     
     _buttons = @[fightButton, healButton, cleanButton, momButton];
     [[AudioManagement sharedInstance] playBackground];
+    
+    [self.view addSubview:[ZapView sharedInstance]];
 }
 
 - (void)startDragging:(UIView *)sender {
@@ -261,6 +264,9 @@
         [bot doAction];
         [bot advance:_timeInterval];
     }
+    for (ParentEnemy *enemy in [_livingGuyManager.enemies copy]) {
+        [enemy advance:_timeInterval];
+    }
 }
 
 - (void)rerollAllBots {
@@ -335,36 +341,17 @@
 }
 
 - (void)spawnEnemyWave {
-    ParentEnemy *firstBot = [EnemySpawner createEnemyForType:PLAQUE];
+    ParentEnemy *firstBot = [EnemySpawner createEnemyForType:PARASITE];
     [self placeEnemy:firstBot];
 }
 
 
 - (void)placeEnemy:(ParentEnemy *)enemy {
-    switch (enemy.botType) {
-        case TEAR:
-        {
-            CGRect botFrame = CGRectMake(0, 0, 20, 50);
-            NSArray *spawnRects = [CollidingRectsCreator validSpawningLocationsWithScale:scaleFactor];
-            botFrame.origin = [self randomPointWithinRects:spawnRects];
-            enemy.frame = botFrame;
-            enemy.livingGuyManager = _livingGuyManager;
-            [_zoomingContentView insertSubview:enemy atIndex:1];
-        }
-        break;
-        case PLAQUE: {
-            NSArray *spawnRects = [CollidingRectsCreator validSpawningLocationsWithScale:1];
-            CGPoint p = [self randomPointWithinRects:spawnRects];
-            enemy.frame = CGRectMake(p.x, p.y, enemy.frame.size.width, enemy.frame.size.height);
-            enemy.livingGuyManager = _livingGuyManager;
-            [_zoomingContentView insertSubview:enemy atIndex:1];
-        }
-            break;
-        default:
-            break;
-            
-    }
-    
+    NSArray *spawnRects = [CollidingRectsCreator validSpawningLocationsWithScale:scaleFactor];
+    CGPoint p = [self randomPointWithinRects:spawnRects];
+    enemy.frame = CGRectMake(p.x, p.y, enemy.frame.size.width, enemy.frame.size.height);
+    enemy.livingGuyManager = _livingGuyManager;
+    [_zoomingContentView insertSubview:enemy atIndex:1];
     [_livingGuyManager.enemies addObject:enemy];
 }
 
