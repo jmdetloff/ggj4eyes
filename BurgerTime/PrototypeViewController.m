@@ -87,7 +87,7 @@
     }
     
     UIPanGestureRecognizer *gestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
-    [self.view addGestureRecognizer:gestureRecognizer];
+    [_zoomingContentView addGestureRecognizer:gestureRecognizer];
     
     _timeInterval = 1/30.0;
     _moveTimer = [NSTimer timerWithTimeInterval:_timeInterval target:self selector:@selector(moveBots) userInfo:nil repeats:YES];
@@ -123,7 +123,7 @@
 
 
 - (void)swipe:(UIPanGestureRecognizer *)gestureRecognizer {
-    CGPoint stopLocation = [gestureRecognizer locationInView:self.view];
+    CGPoint stopLocation = [gestureRecognizer locationInView:_zoomingContentView];
     
     if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
         _currentSwipeValid = YES;
