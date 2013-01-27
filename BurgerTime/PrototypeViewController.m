@@ -188,9 +188,9 @@
     [self.view addSubview:_healthBar];
 }
 
-- (void)heartTakesDamage:(int)damage {
+- (void)dealHeartDamage:(int)damage {
     _fattyHealth -= damage;
-    CGFloat percentHealth = _fattyHealth/kFullHealth;
+    CGFloat percentHealth = _fattyHealth/(CGFloat)kFullHealth;
     CGRect frame = _healthBar.frame;
     frame.size.width = percentHealth*kFullHealthbarLength;
     _healthBar.frame = frame;
@@ -315,6 +315,7 @@
     }
     for (ParentEnemy *enemy in [_livingGuyManager.enemies copy]) {
         [enemy advance:_timeInterval];
+        [enemy attack];
     }
 }
 

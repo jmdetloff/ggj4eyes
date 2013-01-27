@@ -48,4 +48,9 @@
 }
 
 
+- (void)livingGuy:(UIView <LivingGuy> *)guy dealsHeartDamage:(int)damage {
+    [self.deathDelegate dealHeartDamage:damage];
+}
+
+
 @end
