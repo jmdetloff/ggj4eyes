@@ -161,6 +161,11 @@
     [[AudioManagement sharedInstance] playBackground];
     
     [self.view addSubview:[ZapView sharedInstance]];
+    
+    NSInteger level = [_levelParams[@"levelNum"] intValue];
+    UIImageView *portrait = [[UIImageView alloc] initWithFrame:CGRectMake(548, 32, 187, 218)];
+    portrait.image = [UIImage imageNamed:[NSString stringWithFormat:@"Level%iPortrait.png",level]];
+    [self.view addSubview:portrait];
 }
 
 - (void)startDragging:(UIView *)sender {
