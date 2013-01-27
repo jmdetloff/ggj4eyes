@@ -1,3 +1,7 @@
-id	name	range	base_attack	splash_radius modifiers	description
-int	str	int	int	int	dict	str
-1	scrub	5	5	0	{}	Just a scrub.
+pk	name	hp	atk modifiers
+int	str	int	int	dict
+1	Neutral	15	1	{}
+2	Cleaner	15	1	{"Plaque":2}
+3	Healer	15	1	{"Rip":2}
+4	Fighter	15	1	{"Toxin":2}
+5	Mom	5	0	{}

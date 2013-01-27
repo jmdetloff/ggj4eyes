@@ -1,3 +1,5 @@
-id	hp	atk	num_enemies	enemy_type
+pk	hp	bot_atk	heart_atk	enemy_type
 int	int	int	int	str
-1	1	1	3	endo
+1	500	0	1	Rip
+2	400	0	1	Plaque
+3	600	1	1	Toxin
