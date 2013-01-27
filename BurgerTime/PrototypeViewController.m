@@ -418,17 +418,20 @@
     [self placeEnemy:firstBot];
 }
 
-- (void)notifyLevelDone {
-    //dunno what you want here...
-}
-
 - (void)spawnEnemyWaveByTime {
     _waveTimeElapsed += 1;
-    while (1) {
-        if (_waveCtr >= [_curLevel.wave_ids count]) {
+    
+    if (_waveCtr >= [_curLevel.wave_ids count]) {
+        if ([_livingGuyManager.enemies count] == 0) {
             [_waveTimer invalidate];
             _waveTimer = nil;
-            [self notifyLevelDone];
+            [self winGame];
+        }
+        return;
+    }
+    
+    while (1) {
+        if (_waveCtr >= [_curLevel.wave_ids count]) {
             break;
         }
         NSNumber *n = [_curLevel.wave_times objectAtIndex:_waveCtr];
