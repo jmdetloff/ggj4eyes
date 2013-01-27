@@ -52,6 +52,8 @@
 -(void)playMombo;
 -(void)playZapper;
 -(void)playHeartbeat;
+-(void)playInfoOpen;
+-(void)playInfoClose;
 
 
 @end
