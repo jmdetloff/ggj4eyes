@@ -9,6 +9,7 @@
 #import "MenuViewController.h"
 #import "AppDelegate.h"
 #import "AudioManagement.h"
+#import "StaticDataManager.h"
 
 @interface MenuViewController ()
 
@@ -24,6 +25,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //load static data from json
+    [[StaticDataManager sharedInstance] unpack];
 
     UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"HomescreenBG.png"]];
     background.frame = self.view.bounds;
