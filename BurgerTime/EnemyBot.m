@@ -32,8 +32,8 @@
             return @"Myocardial rupture";
         case PLAQUE:
             return @"Atheromatous plaque";
-        case ATHEROSCLEROSIS:
-            return @"Atherosclerosis";
+        case PARASITE:
+            return @"Toxoplasmosis";
         case ISCHAEMIA:
             return @"Ischaemia";
         case CARDIOMYOPATHY:
@@ -47,11 +47,11 @@
     switch(botType) {
         case TEAR:
             return [UIColor blackColor];
-        case MYOCARDITIS:
+        case PARASITE:
             return [UIColor redColor];
         case ATHEROSCLEROSIS:
             return [UIColor greenColor];
-        case ISCHAEMIA:
+        case PLAQUE:
             return [UIColor blueColor];
         case CARDIOMYOPATHY:
             return [UIColor yellowColor];
