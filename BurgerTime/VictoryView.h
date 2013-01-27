@@ -10,4 +10,8 @@
 
 @interface VictoryView : UIImageView
 
+@property (nonatomic,assign) int points;
+
+- (id)initWithFrame:(CGRect)frame forLevel:(int)level;
+
 @end

@@ -23,6 +23,7 @@
 #import "Nanobot.h"
 #import "InfoPanel.h"
 #import "DefeatView.h"
+#import "VictoryView.h"
 
 #define kPowerRadius 80
 #define kFullHealth 500
@@ -583,6 +584,13 @@
     
     DefeatView *defeatView = [[DefeatView alloc] initWithFrame:CGRectMake(33, 285, 702, 561) forLevel:[_levelParams[@"levelNum"] intValue]];
     [self.view addSubview:defeatView];
+}
+
+
+- (void)winGame {
+    _gameOver = YES;
+    VictoryView *victoryView = [[VictoryView alloc] initWithFrame:CGRectMake(33, 285, 702, 561) forLevel:[_levelParams[@"levelNum"] intValue]];
+    [self.view addSubview:victoryView];
 }
 
 @end
