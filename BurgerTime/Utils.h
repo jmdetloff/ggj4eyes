@@ -13,4 +13,5 @@
 + (float)randomFloatBetween:(float)a And:(float)b;
 + (CGFloat) distanceBetween:(CGPoint)point1 and:(CGPoint)point2;
 + (UIImage *)portraitImageForLevel:(int)level;
++ (UIImage *)deadPortraitImageForLevel:(int)level;
 @end
