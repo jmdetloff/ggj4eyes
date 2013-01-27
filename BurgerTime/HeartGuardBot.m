@@ -13,7 +13,6 @@
 static NSArray *_botColors;
 
 @implementation HeartGuardBot
-@synthesize botType;
 @synthesize level;
 @synthesize range;
 
@@ -22,7 +21,7 @@ static NSArray *_botColors;
 {
     self = [super initWithFrame:frame];
     if (self) {
-        botType = STANDARD;
+        _nanobotType = STANDARD;
         
         self.opaque = YES;
     }
@@ -31,8 +30,11 @@ static NSArray *_botColors;
 
 -(void)setBotImage {
     if (!_botColors)
-        _botColors = [NSArray arrayWithObjects:@"white", @"blue", @"red", @"green", @"yellow", nil];
-    UIImage *botImage = [UIImage imageNamed:[NSString stringWithFormat:@"nanobot_%@.png", [_botColors objectAtIndex:self.botType]]];
+        _botColors = [NSArray arrayWithObjects:@"red", @"white", @"green", @"blue", @"yellow", nil];
+    UIImage *botImage = [UIImage imageNamed:[NSString stringWithFormat:@"nanobot_%@.png", [_botColors objectAtIndex:self.nanobotType]]];
+    for (UIView *subview in [[self subviews] copy]) {
+        [subview removeFromSuperview];
+    }
     [self addSubview:[[UIImageView alloc] initWithImage:botImage]];
 }
 

@@ -18,6 +18,11 @@
 		0F4D201116B4D5C800291459 /* MomButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D200916B4D5C800291459 /* MomButton.png */; };
 		0F4D201216B4D5C800291459 /* MomDrag.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D200A16B4D5C800291459 /* MomDrag.png */; };
 		0F4D201416B4D5D700291459 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D201316B4D5D700291459 /* background.png */; };
+		0F4D203716B4E80400291459 /* nanobot_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D203216B4E80400291459 /* nanobot_blue.png */; };
+		0F4D203816B4E80400291459 /* nanobot_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D203316B4E80400291459 /* nanobot_green.png */; };
+		0F4D203916B4E80400291459 /* nanobot_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D203416B4E80400291459 /* nanobot_red.png */; };
+		0F4D203A16B4E80400291459 /* nanobot_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D203516B4E80400291459 /* nanobot_white.png */; };
+		0F4D203B16B4E80400291459 /* nanobot_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D203616B4E80400291459 /* nanobot_yellow.png */; };
 		0F9697E016B38D02005BE1C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9697DF16B38D02005BE1C1 /* UIKit.framework */; };
 		0F9697E216B38D02005BE1C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9697E116B38D02005BE1C1 /* Foundation.framework */; };
 		0F9697E416B38D02005BE1C1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9697E316B38D02005BE1C1 /* CoreGraphics.framework */; };
@@ -47,11 +52,6 @@
 		2415D1A416B3B82E00308B74 /* wave.json in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1A216B3B82E00308B74 /* wave.json */; };
 		2415D1AD16B3E68200308B74 /* enemy_type.json in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1AA16B3E68200308B74 /* enemy_type.json */; };
 		2415D1AF16B3E68200308B74 /* level.json in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1AB16B3E68200308B74 /* level.json */; };
-		2415D1B716B3EA3400308B74 /* nanobot_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1B216B3EA3400308B74 /* nanobot_blue.png */; };
-		2415D1B916B3EA3400308B74 /* nanobot_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1B316B3EA3400308B74 /* nanobot_green.png */; };
-		2415D1BB16B3EA3400308B74 /* nanobot_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1B416B3EA3400308B74 /* nanobot_red.png */; };
-		2415D1BD16B3EA3400308B74 /* nanobot_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1B516B3EA3400308B74 /* nanobot_white.png */; };
-		2415D1C016B3EA3400308B74 /* nanobot_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1B616B3EA3400308B74 /* nanobot_yellow.png */; };
 		675D311F16B469350071B7B9 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 675D311E16B469350071B7B9 /* Level.m */; };
 		6773E62716B4BA8700A3CBF5 /* AudioManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6773E62616B4BA8700A3CBF5 /* AudioManagement.m */; };
 		6773E62D16B4BC9400A3CBF5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6773E62C16B4BC9400A3CBF5 /* AudioToolbox.framework */; };
@@ -67,7 +67,6 @@
 		6773E65616B4D4DA00A3CBF5 /* mombo.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E65216B4D4DA00A3CBF5 /* mombo.caf */; };
 		6773E65716B4D4DA00A3CBF5 /* zapper.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E65316B4D4DA00A3CBF5 /* zapper.caf */; };
 		6773E65816B4D4DA00A3CBF5 /* heartbeat.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E65416B4D4DA00A3CBF5 /* heartbeat.caf */; };
-		675D312316B4696C0071B7B9 /* Wave.m in Sources */ = {isa = PBXBuildFile; fileRef = 675D312216B4696C0071B7B9 /* Wave.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +93,11 @@
 		0F4D200916B4D5C800291459 /* MomButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MomButton.png; sourceTree = "<group>"; };
 		0F4D200A16B4D5C800291459 /* MomDrag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MomDrag.png; sourceTree = "<group>"; };
 		0F4D201316B4D5D700291459 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		0F4D203216B4E80400291459 /* nanobot_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanobot_blue.png; sourceTree = "<group>"; };
+		0F4D203316B4E80400291459 /* nanobot_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanobot_green.png; sourceTree = "<group>"; };
+		0F4D203416B4E80400291459 /* nanobot_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanobot_red.png; sourceTree = "<group>"; };
+		0F4D203516B4E80400291459 /* nanobot_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanobot_white.png; sourceTree = "<group>"; };
+		0F4D203616B4E80400291459 /* nanobot_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanobot_yellow.png; sourceTree = "<group>"; };
 		0F9697DB16B38D02005BE1C1 /* BurgerTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BurgerTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F9697DF16B38D02005BE1C1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0F9697E116B38D02005BE1C1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -134,11 +138,6 @@
 		2415D1A216B3B82E00308B74 /* wave.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wave.json; sourceTree = "<group>"; };
 		2415D1AA16B3E68200308B74 /* enemy_type.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = enemy_type.json; sourceTree = "<group>"; };
 		2415D1AB16B3E68200308B74 /* level.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level.json; sourceTree = "<group>"; };
-		2415D1B216B3EA3400308B74 /* nanobot_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanobot_blue.png; sourceTree = "<group>"; };
-		2415D1B316B3EA3400308B74 /* nanobot_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanobot_green.png; sourceTree = "<group>"; };
-		2415D1B416B3EA3400308B74 /* nanobot_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanobot_red.png; sourceTree = "<group>"; };
-		2415D1B516B3EA3400308B74 /* nanobot_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanobot_white.png; sourceTree = "<group>"; };
-		2415D1B616B3EA3400308B74 /* nanobot_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanobot_yellow.png; sourceTree = "<group>"; };
 		675D311D16B469350071B7B9 /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
 		675D311E16B469350071B7B9 /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
 		6773E62516B4BA8700A3CBF5 /* AudioManagement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioManagement.h; sourceTree = "<group>"; };
@@ -155,8 +154,6 @@
 		6773E65216B4D4DA00A3CBF5 /* mombo.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = mombo.caf; sourceTree = "<group>"; };
 		6773E65316B4D4DA00A3CBF5 /* zapper.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = zapper.caf; sourceTree = "<group>"; };
 		6773E65416B4D4DA00A3CBF5 /* heartbeat.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = heartbeat.caf; sourceTree = "<group>"; };
-		675D312116B4696C0071B7B9 /* Wave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wave.h; sourceTree = "<group>"; };
-		675D312216B4696C0071B7B9 /* Wave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wave.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -331,11 +328,11 @@
 		2415D1B116B3EA3400308B74 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				2415D1B216B3EA3400308B74 /* nanobot_blue.png */,
-				2415D1B316B3EA3400308B74 /* nanobot_green.png */,
-				2415D1B416B3EA3400308B74 /* nanobot_red.png */,
-				2415D1B516B3EA3400308B74 /* nanobot_white.png */,
-				2415D1B616B3EA3400308B74 /* nanobot_yellow.png */,
+				0F4D203216B4E80400291459 /* nanobot_blue.png */,
+				0F4D203316B4E80400291459 /* nanobot_green.png */,
+				0F4D203416B4E80400291459 /* nanobot_red.png */,
+				0F4D203516B4E80400291459 /* nanobot_white.png */,
+				0F4D203616B4E80400291459 /* nanobot_yellow.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -433,11 +430,6 @@
 				0F9697F616B38D02005BE1C1 /* Default@2x.png in Resources */,
 				0F9697F816B38D02005BE1C1 /* Default-568h@2x.png in Resources */,
 				0F96982816B39B38005BE1C1 /* File in Resources */,
-				2415D1B716B3EA3400308B74 /* nanobot_blue.png in Resources */,
-				2415D1B916B3EA3400308B74 /* nanobot_green.png in Resources */,
-				2415D1BB16B3EA3400308B74 /* nanobot_red.png in Resources */,
-				2415D1BD16B3EA3400308B74 /* nanobot_white.png in Resources */,
-				0F4D1FC816B46D0F00291459 /* heart_bg.png in Resources */,
 				6773E63516B4C99C00A3CBF5 /* ingame.caf in Resources */,
 				0F4D200B16B4D5C800291459 /* CleanButton.png in Resources */,
 				0F4D200C16B4D5C800291459 /* CleanDrag.png in Resources */,
@@ -448,6 +440,11 @@
 				0F4D201116B4D5C800291459 /* MomButton.png in Resources */,
 				0F4D201216B4D5C800291459 /* MomDrag.png in Resources */,
 				0F4D201416B4D5D700291459 /* background.png in Resources */,
+				0F4D203716B4E80400291459 /* nanobot_blue.png in Resources */,
+				0F4D203816B4E80400291459 /* nanobot_green.png in Resources */,
+				0F4D203916B4E80400291459 /* nanobot_red.png in Resources */,
+				0F4D203A16B4E80400291459 /* nanobot_white.png in Resources */,
+				0F4D203B16B4E80400291459 /* nanobot_yellow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,7 +456,6 @@
 				2415D1A416B3B82E00308B74 /* wave.json in Resources */,
 				2415D1AD16B3E68200308B74 /* enemy_type.json in Resources */,
 				2415D1AF16B3E68200308B74 /* level.json in Resources */,
-				2415D1C016B3EA3400308B74 /* nanobot_yellow.png in Resources */,
 				6773E63616B4C99C00A3CBF5 /* ingame.caf in Resources */,
 				6773E64C16B4D05100A3CBF5 /* clothability.caf in Resources */,
 				6773E64D16B4D05100A3CBF5 /* icon.caf in Resources */,

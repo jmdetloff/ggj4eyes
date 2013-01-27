@@ -13,8 +13,7 @@
 
 @interface HeartGuardBot : MovingCollidingGuy <LivingGuy>
 
-typedef   enum    { STANDARD, SCRUB, PLUG, FIGHT, HEALER, SPAWNBOT } NanabotType;
-@property NanabotType  botType;
+typedef   enum    { STANDARD, SCRUB, HEALER, SPAWNBOT, FIGHT } NanabotType;
 
 @property int level;
 @property int range;
