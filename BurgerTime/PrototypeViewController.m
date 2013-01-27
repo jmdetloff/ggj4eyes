@@ -441,7 +441,8 @@
         } else {
             int wid = [[_curLevel.wave_ids objectAtIndex:_waveCtr] intValue];
             [self spawnSpecificWave:wid];
-             _waveCtr++;
+            _waveCtr++;
+            _infoPanel.wave = _waveCtr;
         }
     }
 }
