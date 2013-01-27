@@ -14,7 +14,9 @@
 
 static NSArray *_botColors;
 
-@implementation HeartGuardBot
+@implementation HeartGuardBot {
+    int _actionCounter;
+}
 @synthesize level;
 @synthesize range;
 
@@ -23,7 +25,7 @@ static NSArray *_botColors;
 {
     self = [super initWithFrame:frame];
     if (self) {
-        _nanobotType = STANDARD;
+        self.nanobotType = STANDARD;
         
         self.opaque = YES;
     }
@@ -42,6 +44,7 @@ static NSArray *_botColors;
 
 
 - (void)setNanobotType:(NanabotType)nanobotType {
+    _actionCounter = 0;
     _nanobotType = nanobotType;
     [self setBotImage];
 }
@@ -83,6 +86,24 @@ static NSArray *_botColors;
 
 - (void)die {
     
+}
+
+
+- (void)doAction {
+    switch (self.nanobotType) {
+        case SPAWNBOT: {
+            if (_actionCounter > 50) {
+                _actionCounter = 0;
+                [self.livingGuyManager livingGuyReproduces:self];
+            }
+        }
+        break;
+            
+        default:
+            break;
+    }
+    
+    _actionCounter++;
 }
 
 @end
