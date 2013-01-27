@@ -43,13 +43,15 @@
 - (id)initWithLevelParameters:(NSDictionary *)levelParameters {
     self = [super init];
     if (self) {
+        scaleFactor = [[UIScreen mainScreen] bounds].size.width / 768;
+
         
-        _collidingRects = [CollidingRectsCreator collidingRectsForHeartWithScale:1];
+        _collidingRects = [CollidingRectsCreator collidingRectsForHeartWithScale:scaleFactor];
         
         _livingGuyManager = [[LivingGuyManager alloc] init];
         _livingGuyManager.deathDelegate = self;
         
-        NSArray *spawningRects = [CollidingRectsCreator validSpawningLocationsWithScale:1];
+        NSArray *spawningRects = [CollidingRectsCreator validSpawningLocationsWithScale:scaleFactor];
         for (int i = 0; i < [levelParameters[@"startingBotNum"] intValue]; i++) {
             CGRect botFrame = CGRectMake(0, 0, 5, 5);
             botFrame.origin = [self randomPointWithinRects:spawningRects];
@@ -308,9 +310,11 @@
 
 - (void)placeEnemy:(EnemyBot *)enemy {
     switch (enemy.botType) {
-        case TEAR: {
+        case TEAR:
+        default:
+        {
             CGRect botFrame = CGRectMake(0, 0, 20, 100);
-            NSArray *spawnRects = [CollidingRectsCreator validSpawningLocationsWithScale:1];
+            NSArray *spawnRects = [CollidingRectsCreator validSpawningLocationsWithScale:scaleFactor];
             botFrame.origin = [self randomPointWithinRects:spawnRects];
             enemy.frame = botFrame;
             enemy.livingGuyManager = _livingGuyManager;
@@ -318,11 +322,9 @@
         }
         break;
             
-        default:
-            break;
     }
     
-    [_livingGuyManager.enemies addObject:enemy];
+    //[_livingGuyManager.enemies addObject:enemy];
 }
 
 

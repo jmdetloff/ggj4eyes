@@ -9,7 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface PrototypeViewController : UIViewController
+{
+    float scaleFactor;
+}
 
 - (id)initWithLevelParameters:(NSDictionary *)levelParameters;
+
 
 @end
