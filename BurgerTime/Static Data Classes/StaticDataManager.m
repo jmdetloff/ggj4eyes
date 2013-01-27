@@ -56,4 +56,8 @@
     }
 }
 
++(id)objectOfType:(NSString*)type atIndex:(int)index {
+    return [[[StaticDataManager sharedInstance].allStaticObjects objectForKey:type] objectAtIndex:index];
+}
+
 @end

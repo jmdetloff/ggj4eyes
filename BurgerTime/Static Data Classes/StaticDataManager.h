@@ -21,5 +21,6 @@
 
 +(StaticDataManager*)sharedInstance;
 -(void)unpack;
++(id)objectOfType:(NSString*)type atIndex:(int)index;
 
 @end

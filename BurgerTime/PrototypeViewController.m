@@ -30,6 +30,12 @@
     NSDictionary *_levelParams;
     NSTimer *_moveTimer;
     NSTimer *_rerollTimer;
+    
+    Level *_curLevel;
+    NSTimer *_waveTimer;
+    int _waveCtr;
+    double _waveTimeElapsed;
+    
     NSArray *_collidingRects;
     NSMutableArray *_nanobotsBeingSwiped;
     CGPoint _lastSwipePoint;
@@ -350,8 +356,18 @@
     [self placeEnemy:firstBot];
 }
 
+- (void)spawnEnemyWaveAtCtr {
+//    ParentEnemy *firstBot = [EnemySpawner createEnemyForType:PARASITE];
+//    [self placeEnemy:firstBot];
+    _waveTimeElapsed += 1;
+    NSNumber *n = [_curLevel.wave_times objectAtIndex:_waveCtr];
+}
+
 - (void)loadLevel:(int)level {
-    Level *l = [[[StaticDataManager sharedInstance].allStaticObjects objectForKey:@"level"] objectAtIndex:level];
+    _curLevel = [StaticDataManager objectOfType:@"level" atIndex:level-1];
+    _waveCtr = 0;
+    _waveTimeElapsed = 0;
+    NSTimer *wt = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(spawnEnemyWaveAtCtr) userInfo:nil repeats:YES];
     
 }
 

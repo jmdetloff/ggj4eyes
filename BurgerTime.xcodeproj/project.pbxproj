@@ -58,18 +58,18 @@
 		0FACD3F416B44B09006BB9EC /* EnemySpawner.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FACD3F316B44B09006BB9EC /* EnemySpawner.m */; };
 		0FACD3F716B44B61006BB9EC /* HeartLeakEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FACD3F616B44B61006BB9EC /* HeartLeakEnemy.m */; };
 		0FACD3FB16B457A1006BB9EC /* LivingGuyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FACD3FA16B457A0006BB9EC /* LivingGuyManager.m */; };
+		2414C82116B55847003C2F5D /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 2414C81F16B55847003C2F5D /* Level.m */; };
 		24237C3416B4B7C600F7E8E8 /* _plaqu03.png in Resources */ = {isa = PBXBuildFile; fileRef = 24237C3116B4B7C600F7E8E8 /* _plaqu03.png */; };
 		24237C3516B4B7C600F7E8E8 /* _plaqu02.png in Resources */ = {isa = PBXBuildFile; fileRef = 24237C3216B4B7C600F7E8E8 /* _plaqu02.png */; };
 		24237C3616B4B7C600F7E8E8 /* _plaqu01.png in Resources */ = {isa = PBXBuildFile; fileRef = 24237C3316B4B7C600F7E8E8 /* _plaqu01.png */; };
 		24237C3A16B4B88200F7E8E8 /* PlaqueEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 24237C3916B4B88200F7E8E8 /* PlaqueEnemy.m */; };
 		24237C3D16B4D36B00F7E8E8 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 24237C3C16B4D36B00F7E8E8 /* Utils.m */; };
-		243B52FA16B51427008AD5D2 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 243B52F616B51427008AD5D2 /* Level.m */; };
 		243B52FB16B51427008AD5D2 /* StaticDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 243B52F816B51427008AD5D2 /* StaticDataManager.m */; };
 		243B52FF16B51463008AD5D2 /* Nanobot.m in Sources */ = {isa = PBXBuildFile; fileRef = 243B52FE16B51463008AD5D2 /* Nanobot.m */; };
 		243B530216B514C8008AD5D2 /* Wave.m in Sources */ = {isa = PBXBuildFile; fileRef = 243B530116B514C8008AD5D2 /* Wave.m */; };
 		249B884516B50F4600E5E707 /* class_map.json in Resources */ = {isa = PBXBuildFile; fileRef = 249B884316B50F4600E5E707 /* class_map.json */; };
 		249B884616B50F4600E5E707 /* everything.json in Resources */ = {isa = PBXBuildFile; fileRef = 249B884416B50F4600E5E707 /* everything.json */; };
-		675D311F16B469350071B7B9 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 675D311E16B469350071B7B9 /* Level.m */; };
+		675D311F16B469350071B7B9 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6773E62716B4BA8700A3CBF5 /* AudioManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6773E62616B4BA8700A3CBF5 /* AudioManagement.m */; };
 		6773E62D16B4BC9400A3CBF5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6773E62C16B4BC9400A3CBF5 /* AudioToolbox.framework */; };
 		6773E63616B4C99C00A3CBF5 /* ingame.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E63416B4C99C00A3CBF5 /* ingame.caf */; };
@@ -174,6 +174,8 @@
 		0FACD3F616B44B61006BB9EC /* HeartLeakEnemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartLeakEnemy.m; sourceTree = "<group>"; };
 		0FACD3F916B457A0006BB9EC /* LivingGuyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivingGuyManager.h; sourceTree = "<group>"; };
 		0FACD3FA16B457A0006BB9EC /* LivingGuyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LivingGuyManager.m; sourceTree = "<group>"; };
+		2414C81F16B55847003C2F5D /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
+		2414C82016B55847003C2F5D /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
 		24237C3116B4B7C600F7E8E8 /* _plaqu03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _plaqu03.png; sourceTree = "<group>"; };
 		24237C3216B4B7C600F7E8E8 /* _plaqu02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _plaqu02.png; sourceTree = "<group>"; };
 		24237C3316B4B7C600F7E8E8 /* _plaqu01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _plaqu01.png; sourceTree = "<group>"; };
@@ -181,8 +183,6 @@
 		24237C3916B4B88200F7E8E8 /* PlaqueEnemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaqueEnemy.m; sourceTree = "<group>"; };
 		24237C3B16B4D36B00F7E8E8 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		24237C3C16B4D36B00F7E8E8 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
-		243B52F516B51427008AD5D2 /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
-		243B52F616B51427008AD5D2 /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
 		243B52F716B51427008AD5D2 /* StaticDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticDataManager.h; sourceTree = "<group>"; };
 		243B52F816B51427008AD5D2 /* StaticDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticDataManager.m; sourceTree = "<group>"; };
 		243B52FD16B51463008AD5D2 /* Nanobot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nanobot.h; sourceTree = "<group>"; };
@@ -370,8 +370,6 @@
 		0FACD3F816B44C8B006BB9EC /* enemies and bots */ = {
 			isa = PBXGroup;
 			children = (
-				675D311D16B469350071B7B9 /* Level.h */,
-				675D311E16B469350071B7B9 /* Level.m */,
 				0FACD3F216B44B09006BB9EC /* EnemySpawner.h */,
 				0FACD3F316B44B09006BB9EC /* EnemySpawner.m */,
 				0F96982916B3A008005BE1C1 /* MovingCollidingGuy.h */,
@@ -417,8 +415,8 @@
 			children = (
 				243B52F716B51427008AD5D2 /* StaticDataManager.h */,
 				243B52F816B51427008AD5D2 /* StaticDataManager.m */,
-				243B52F516B51427008AD5D2 /* Level.h */,
-				243B52F616B51427008AD5D2 /* Level.m */,
+				2414C82016B55847003C2F5D /* Level.h */,
+				2414C81F16B55847003C2F5D /* Level.m */,
 				243B52FD16B51463008AD5D2 /* Nanobot.h */,
 				243B52FE16B51463008AD5D2 /* Nanobot.m */,
 				243B530016B514C8008AD5D2 /* Wave.h */,
@@ -617,7 +615,6 @@
 				24237C3D16B4D36B00F7E8E8 /* Utils.m in Sources */,
 				6773E62716B4BA8700A3CBF5 /* AudioManagement.m in Sources */,
 				0F4D1FF716B4C47000291459 /* PanlessScrollView.m in Sources */,
-				243B52FA16B51427008AD5D2 /* Level.m in Sources */,
 				243B52FB16B51427008AD5D2 /* StaticDataManager.m in Sources */,
 				243B52FF16B51463008AD5D2 /* Nanobot.m in Sources */,
 				243B530216B514C8008AD5D2 /* Wave.m in Sources */,
@@ -631,7 +628,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F96981116B38D02005BE1C1 /* BurgerTimeTests.m in Sources */,
-				675D311F16B469350071B7B9 /* Level.m in Sources */,
+				675D311F16B469350071B7B9 /* (null) in Sources */,
+				2414C82116B55847003C2F5D /* Level.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

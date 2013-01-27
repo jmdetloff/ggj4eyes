@@ -40,7 +40,7 @@ for fn in FILES:
 				d[fields[j]] = int(entries[j])
 			elif types[j] == 'str':
 				d[fields[j]] = entries[j]
-			elif types[j] == 'dict':
+			elif types[j] == 'dict' or types[j] == 'array':
 				d[fields[j]] = json.loads(entries[j])
 		ret.append(d)
 		i += 1
