@@ -87,7 +87,7 @@
     }
     
     UIPanGestureRecognizer *gestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
-    [_zoomingContentView addGestureRecognizer:gestureRecognizer];
+    [self.view addGestureRecognizer:gestureRecognizer];
     
     _timeInterval = 1/30.0;
     _moveTimer = [NSTimer timerWithTimeInterval:_timeInterval target:self selector:@selector(moveBots) userInfo:nil repeats:YES];
