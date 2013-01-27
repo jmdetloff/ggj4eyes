@@ -451,6 +451,9 @@
 
 
 - (void)viewDied:(UIView *)view {
+    if ([view isKindOfClass:[ParentEnemy class]]) {
+        _infoPanel.points += ((ParentEnemy*)view).kill_reward;
+    }
     [view removeFromSuperview];
 }
 
@@ -478,6 +481,14 @@
 
 
 - (void)transformBotsToType:(NanabotType)type atPoint:(CGPoint)loc {
+    Nanobot *nb = [StaticDataManager objectOfType:@"nanobot" atIndex:type];
+    if (_infoPanel.points >= nb.cost) {
+        _infoPanel.points -= nb.cost;
+    } else {
+        //not enough cash
+        return;
+    }
+    
     bool flag = false;
     for (HeartGuardBot *bot in _livingGuyManager.bots) {
         if ([Utils distanceBetween:bot.center and:loc] < kPowerRadius) {

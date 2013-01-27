@@ -10,6 +10,6 @@
 
 @implementation Wave
 
-@synthesize pk, hp, bot_atk, heart_atk, enemy_type;
+@synthesize pk, hp, bot_atk, heart_atk, enemy_type, reward;
 
 @end
