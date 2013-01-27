@@ -19,4 +19,7 @@
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 
+- (void)showLevel:(NSInteger)level;
+- (void)showMenu;
+
 @end

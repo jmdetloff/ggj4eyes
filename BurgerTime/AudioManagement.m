@@ -45,6 +45,12 @@
     
     CFURLRef iconRef  = (__bridge CFURLRef)[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"icon" ofType:@"caf"]];
     AudioServicesCreateSystemSoundID(iconRef, &(iconCaf));
+
+    CFURLRef openRef  = (__bridge CFURLRef)[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"info_open" ofType:@"caf"]];
+    AudioServicesCreateSystemSoundID(openRef, &(infoOpenCaf));
+    
+    CFURLRef closeRef  = (__bridge CFURLRef)[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"info_close" ofType:@"caf"]];
+    AudioServicesCreateSystemSoundID(closeRef, &(infoCloseCaf));
     
     
     NSString *s = [[NSBundle mainBundle] pathForResource:@"ingame" ofType:@"caf"];
@@ -113,5 +119,13 @@
 -(void)playHeartbeat
 {
     AudioServicesPlaySystemSound(heartbeatCaf);
+}
+-(void)playInfoOpen
+{
+    AudioServicesPlaySystemSound(infoOpenCaf);
+}
+-(void)playInfoClose
+{
+    AudioServicesPlaySystemSound(infoCloseCaf);
 }
 @end

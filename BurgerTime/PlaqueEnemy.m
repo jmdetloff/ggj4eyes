@@ -111,6 +111,11 @@ static const float _sideLength = 40;
     return CGPointMake(self.center.x + p.x, self.center.y + p.y);
 }
 
+- (void)setHp:(int)hp {
+    [super setHp:hp];
+    [self updateAlpha];
+}
+
 - (void)updateAlpha {
     self.alpha = (double)MAX(0, self.hp) / self.maxhp;
 }

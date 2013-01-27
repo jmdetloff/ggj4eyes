@@ -27,6 +27,10 @@
     SystemSoundID zapperCaf;
     SystemSoundID heartbeatCaf;
     
+    // Sounds 3
+    SystemSoundID infoOpenCaf;
+    SystemSoundID infoCloseCaf;
+    
     // The following is from Sounds 1
     AVAudioPlayer *backgroundMusic;
     AVAudioPlayer *menuMusic;
@@ -48,6 +52,8 @@
 -(void)playMombo;
 -(void)playZapper;
 -(void)playHeartbeat;
+-(void)playInfoOpen;
+-(void)playInfoClose;
 
 
 @end

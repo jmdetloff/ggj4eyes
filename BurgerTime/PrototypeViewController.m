@@ -161,6 +161,11 @@
     [[AudioManagement sharedInstance] playBackground];
     
     [self.view addSubview:[ZapView sharedInstance]];
+    
+    NSInteger level = [_levelParams[@"levelNum"] intValue];
+    UIImageView *portrait = [[UIImageView alloc] initWithFrame:CGRectMake(548, 32, 187, 218)];
+    portrait.image = [UIImage imageNamed:[NSString stringWithFormat:@"Level%iPortrait.png",level]];
+    [self.view addSubview:portrait];
 }
 
 - (void)startDragging:(UIView *)sender {
@@ -168,22 +173,22 @@
     switch (type) {
         case FIGHT:
             _draggingView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"FightDrag.png"]];
-            [[AudioManagement sharedInstance] playZapper];
+            //[[AudioManagement sharedInstance] playZapper];
             break;
             
         case SCRUB:
             _draggingView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CleanDrag.png"]];
-            [[AudioManagement sharedInstance] playCleaning];
+            //[[AudioManagement sharedInstance] playCleaning];
             break;
             
         case SPAWNBOT:
             _draggingView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MomDrag.png"]];
-            [[AudioManagement sharedInstance] playMombo];
+            //[[AudioManagement sharedInstance] playMombo];
             break;
             
         case HEALER:
             _draggingView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"HealDrag.png"]];
-            [[AudioManagement sharedInstance] playCloth];
+            //[[AudioManagement sharedInstance] playCloth];
             break;
             
         default:
@@ -239,6 +244,7 @@
     if (_descriptionView && !_draggingView) {
         [_descriptionView removeFromSuperview];
         _descriptionView = nil;
+        [[AudioManagement sharedInstance] playInfoClose];
     }
     
     for (UIView *button in _buttons) {
@@ -273,7 +279,7 @@
 
 - (void)moveBots {
     for (HeartGuardBot *bot in [_livingGuyManager.bots copy]) {
-        for (ParentEnemy *enemy in _livingGuyManager.enemies) {
+        for (ParentEnemy *enemy in [_livingGuyManager.enemies copy]) {
             [bot interactWithEnemy:enemy];
         }
         [bot doAction];
@@ -319,7 +325,7 @@
         }
         
         [_nanobotsBeingSwiped removeAllObjects];
-        [[AudioManagement sharedInstance] playRobotDamage];
+        if(!arc4random() % 5)   {[[AudioManagement sharedInstance] playRobotDamage];}
         return;
     }
     
@@ -425,8 +431,10 @@
 }
 
 - (void)transformBotsToType:(NanabotType)type atPoint:(CGPoint)loc {
+    bool flag = false;
     for (HeartGuardBot *bot in _livingGuyManager.bots) {
         if ([Utils distanceBetween:bot.center and:loc] < kPowerRadius) {
+            flag = true;
             if (bot.nanobotType != SPAWNBOT) {
                 bot.nanobotType = type;
                 if (type == SPAWNBOT) {
@@ -435,6 +443,25 @@
             }
         }
     }
+    // Play audio here
+    switch (type)
+    {
+        case SCRUB:
+            [[AudioManagement sharedInstance] playCleaning];
+            break;
+        case SPAWNBOT:
+            [[AudioManagement sharedInstance] playMombo];
+            break;
+        case HEALER:
+            [[AudioManagement sharedInstance] playCloth];
+            break;
+        case FIGHT:
+            [[AudioManagement sharedInstance] playZapper];
+            break;
+        default:
+            break;
+    }
+    
 }
 
 
@@ -445,18 +472,22 @@
     switch (type) {
         case FIGHT:
             _descriptionView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"FighterDescription.png"]];
+            [[AudioManagement sharedInstance] playInfoOpen];
             break;
             
         case SCRUB:
             _descriptionView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CleanerDescription.png"]];
+            [[AudioManagement sharedInstance] playInfoOpen];
             break;
             
         case SPAWNBOT:
             _descriptionView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MomDescription.png"]];
+            [[AudioManagement sharedInstance] playInfoOpen];
             break;
             
         case HEALER:
             _descriptionView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"HealerDescription.png"]];
+            [[AudioManagement sharedInstance] playInfoOpen];
             break;
             
         default:

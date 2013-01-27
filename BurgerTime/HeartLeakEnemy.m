@@ -19,8 +19,24 @@
     if (self) {
         self.maxhp = hp;
         self.hp = hp;
+        UIImageView *uiv;
+        switch(arc4random() % 3)
+        {
+            case 0:
+                uiv = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rip_01.png"]];
+                break;
+            case 1:
+                uiv = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rip_02.png"]];
+                break;
+            case 2:
+                uiv = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rip_03.png"]];
+                break;
+            default:
+                uiv = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rip_02.png"]];
+                NSLog(@"Someone forgot how to mod");
+                
+        }
 
-        UIImageView *uiv = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rip_01.png"]];
         [self addSubview:uiv];
         self.frame = CGRectMake(0, 0, 20, 50);
     }

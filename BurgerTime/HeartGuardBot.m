@@ -67,25 +67,27 @@ static NSArray *_botColors;
 }
 
 - (void)interactWithEnemy:(ParentEnemy *)enemy {
+    CGFloat distance = [Utils distanceBetween:self.center and:enemy.center];
+    
     switch (enemy.botType) {
         case TEAR: {
-            CGFloat distance = [Utils distanceBetween:self.center and:enemy.center];
             if (distance < 75) {
                 HeartLeakEnemy *leak = (HeartLeakEnemy*)enemy;
                 if (self.enemyKey != leak) {
-                    [self setDestinationPoint:[self randomPointWithinRect:enemy.frame]];
-                    [leak track:self];
+                    if ([self setOptionalDestinationPoint:[self randomPointWithinRect:enemy.frame]]) {
+                        [leak track:self];
+                    }
+//                    [self setDestinationPoint:[self randomPointWithinRect:enemy.frame]];
+
                 }
             }
         }
             break;
         case PLAQUE: {
-            CGFloat distance = [Utils distanceBetween:self.center and:enemy.center];
             if (distance < 75) {
                 PlaqueEnemy *pe = (PlaqueEnemy*)enemy;
                 if (self.enemyKey != pe && pe.hp > 0) {
                     CGPoint p = [pe findASpreadPoint];
-//                    [self setDestinationPoint:p];
                     [self orderCycleWithPivot:p radius:10];
                     [pe track:self];
                 }
@@ -94,7 +96,6 @@ static NSArray *_botColors;
             break;
         case PARASITE: {
             ParasiteEnemy *parasite = (ParasiteEnemy *)enemy;
-            CGFloat distance = [Utils distanceBetween:self.center and:parasite.center];
             if (distance < 20) {
                 if (self == parasite.victim) parasite.victim = nil;
                 [self.livingGuyManager livingGuy:enemy killsLivingGuy:self];
