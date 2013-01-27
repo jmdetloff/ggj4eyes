@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 GlobalGameJam. All rights reserved.
 //
 
-#import "EnemyBot.h"
+#import "ParentEnemy.h"
 
-@interface PlaqueEnemy : EnemyBot
+@interface PlaqueEnemy : ParentEnemy
 
 //@property (nonatomic) CGPoint position;
 @property (nonatomic, strong) UIImageView *plaqueView;

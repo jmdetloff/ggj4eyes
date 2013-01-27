@@ -6,10 +6,9 @@
 //  Copyright (c) 2013 GlobalGameJam. All rights reserved.
 //
 
-#import "EnemyBot.h"
+#import "ParentEnemy.h"
 
-@implementation EnemyBot
-
+@implementation ParentEnemy
 @synthesize botType;
 @synthesize hp;
 @synthesize atk;
@@ -39,10 +38,6 @@
             return @"Atheromatous plaque";
         case PARASITE:
             return @"Toxoplasmosis";
-        case ISCHAEMIA:
-            return @"Ischaemia";
-        case CARDIOMYOPATHY:
-            return @"Cardiomyopathy";
         default:
             return nil;
     }
@@ -54,12 +49,9 @@
             return [UIColor blackColor];
         case PARASITE:
             return [UIColor redColor];
-        case ATHEROSCLEROSIS:
-            return [UIColor greenColor];
         case PLAQUE:
             return [UIColor blueColor];
-        case CARDIOMYOPATHY:
-            return [UIColor yellowColor];
+
         default:
             return nil;
     }

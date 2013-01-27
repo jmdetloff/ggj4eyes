@@ -23,6 +23,10 @@
 		0F4D205316B4EA6000291459 /* Healerbot.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D204E16B4EA6000291459 /* Healerbot.png */; };
 		0F4D205416B4EA6000291459 /* Mombot.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D204F16B4EA6000291459 /* Mombot.png */; };
 		0F4D205516B4EA6000291459 /* Neutralbot.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D205016B4EA6000291459 /* Neutralbot.png */; };
+		0F4D207416B4F07C00291459 /* CleanerDescription.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D207016B4F07C00291459 /* CleanerDescription.png */; };
+		0F4D207516B4F07C00291459 /* FighterDescription.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D207116B4F07C00291459 /* FighterDescription.png */; };
+		0F4D207616B4F07C00291459 /* HealerDescription.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D207216B4F07C00291459 /* HealerDescription.png */; };
+		0F4D207716B4F07C00291459 /* MomDescription.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D207316B4F07C00291459 /* MomDescription.png */; };
 		0F9697E016B38D02005BE1C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9697DF16B38D02005BE1C1 /* UIKit.framework */; };
 		0F9697E216B38D02005BE1C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9697E116B38D02005BE1C1 /* Foundation.framework */; };
 		0F9697E416B38D02005BE1C1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9697E316B38D02005BE1C1 /* CoreGraphics.framework */; };
@@ -45,7 +49,7 @@
 		0F96982616B39390005BE1C1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F96982516B39390005BE1C1 /* QuartzCore.framework */; };
 		0F96982816B39B38005BE1C1 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 0F96982716B39B38005BE1C1 /* File */; };
 		0F96982B16B3A008005BE1C1 /* MovingCollidingGuy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F96982A16B3A008005BE1C1 /* MovingCollidingGuy.m */; };
-		0FACD3F016B449FF006BB9EC /* EnemyBot.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FACD3EF16B449FF006BB9EC /* EnemyBot.m */; };
+		0FACD3F016B449FF006BB9EC /* ParentEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FACD3EF16B449FF006BB9EC /* ParentEnemy.m */; };
 		0FACD3F416B44B09006BB9EC /* EnemySpawner.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FACD3F316B44B09006BB9EC /* EnemySpawner.m */; };
 		0FACD3F716B44B61006BB9EC /* HeartLeakEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FACD3F616B44B61006BB9EC /* HeartLeakEnemy.m */; };
 		0FACD3FB16B457A1006BB9EC /* LivingGuyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FACD3FA16B457A0006BB9EC /* LivingGuyManager.m */; };
@@ -108,6 +112,10 @@
 		0F4D204E16B4EA6000291459 /* Healerbot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Healerbot.png; sourceTree = "<group>"; };
 		0F4D204F16B4EA6000291459 /* Mombot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mombot.png; sourceTree = "<group>"; };
 		0F4D205016B4EA6000291459 /* Neutralbot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Neutralbot.png; sourceTree = "<group>"; };
+		0F4D207016B4F07C00291459 /* CleanerDescription.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CleanerDescription.png; sourceTree = "<group>"; };
+		0F4D207116B4F07C00291459 /* FighterDescription.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FighterDescription.png; sourceTree = "<group>"; };
+		0F4D207216B4F07C00291459 /* HealerDescription.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HealerDescription.png; sourceTree = "<group>"; };
+		0F4D207316B4F07C00291459 /* MomDescription.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MomDescription.png; sourceTree = "<group>"; };
 		0F9697DB16B38D02005BE1C1 /* BurgerTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BurgerTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F9697DF16B38D02005BE1C1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0F9697E116B38D02005BE1C1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -137,8 +145,8 @@
 		0F96982716B39B38005BE1C1 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
 		0F96982916B3A008005BE1C1 /* MovingCollidingGuy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovingCollidingGuy.h; sourceTree = "<group>"; };
 		0F96982A16B3A008005BE1C1 /* MovingCollidingGuy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovingCollidingGuy.m; sourceTree = "<group>"; };
-		0FACD3EE16B449FF006BB9EC /* EnemyBot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyBot.h; sourceTree = "<group>"; };
-		0FACD3EF16B449FF006BB9EC /* EnemyBot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyBot.m; sourceTree = "<group>"; };
+		0FACD3EE16B449FF006BB9EC /* ParentEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParentEnemy.h; sourceTree = "<group>"; };
+		0FACD3EF16B449FF006BB9EC /* ParentEnemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParentEnemy.m; sourceTree = "<group>"; };
 		0FACD3F216B44B09006BB9EC /* EnemySpawner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemySpawner.h; sourceTree = "<group>"; };
 		0FACD3F316B44B09006BB9EC /* EnemySpawner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemySpawner.m; sourceTree = "<group>"; };
 		0FACD3F516B44B61006BB9EC /* HeartLeakEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartLeakEnemy.h; sourceTree = "<group>"; };
@@ -223,6 +231,10 @@
 				0F4D204E16B4EA6000291459 /* Healerbot.png */,
 				0F4D204F16B4EA6000291459 /* Mombot.png */,
 				0F4D205016B4EA6000291459 /* Neutralbot.png */,
+				0F4D207016B4F07C00291459 /* CleanerDescription.png */,
+				0F4D207116B4F07C00291459 /* FighterDescription.png */,
+				0F4D207216B4F07C00291459 /* HealerDescription.png */,
+				0F4D207316B4F07C00291459 /* MomDescription.png */,
 			);
 			name = artwork;
 			sourceTree = "<group>";
@@ -332,8 +344,8 @@
 				0F96982A16B3A008005BE1C1 /* MovingCollidingGuy.m */,
 				0F96982216B3937C005BE1C1 /* HeartGuardBot.h */,
 				0F96982316B3937C005BE1C1 /* HeartGuardBot.m */,
-				0FACD3EE16B449FF006BB9EC /* EnemyBot.h */,
-				0FACD3EF16B449FF006BB9EC /* EnemyBot.m */,
+				0FACD3EE16B449FF006BB9EC /* ParentEnemy.h */,
+				0FACD3EF16B449FF006BB9EC /* ParentEnemy.m */,
 				0FACD3F516B44B61006BB9EC /* HeartLeakEnemy.h */,
 				0FACD3F616B44B61006BB9EC /* HeartLeakEnemy.m */,
 				24237C3816B4B88200F7E8E8 /* PlaqueEnemy.h */,
@@ -481,6 +493,10 @@
 				0F4D205316B4EA6000291459 /* Healerbot.png in Resources */,
 				0F4D205416B4EA6000291459 /* Mombot.png in Resources */,
 				0F4D205516B4EA6000291459 /* Neutralbot.png in Resources */,
+				0F4D207416B4F07C00291459 /* CleanerDescription.png in Resources */,
+				0F4D207516B4F07C00291459 /* FighterDescription.png in Resources */,
+				0F4D207616B4F07C00291459 /* HealerDescription.png in Resources */,
+				0F4D207716B4F07C00291459 /* MomDescription.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,7 +550,7 @@
 				0F96982016B39283005BE1C1 /* PrototypeViewController.m in Sources */,
 				0F96982416B3937C005BE1C1 /* HeartGuardBot.m in Sources */,
 				0F96982B16B3A008005BE1C1 /* MovingCollidingGuy.m in Sources */,
-				0FACD3F016B449FF006BB9EC /* EnemyBot.m in Sources */,
+				0FACD3F016B449FF006BB9EC /* ParentEnemy.m in Sources */,
 				0FACD3F416B44B09006BB9EC /* EnemySpawner.m in Sources */,
 				0FACD3F716B44B61006BB9EC /* HeartLeakEnemy.m in Sources */,
 				0FACD3FB16B457A1006BB9EC /* LivingGuyManager.m in Sources */,
@@ -594,6 +610,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jethro Bell (Y36M9HWW85)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -609,6 +626,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "6877E784-4D1F-464B-ADD8-DC3045E32981";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -623,6 +641,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jethro Bell (Y36M9HWW85)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -631,6 +650,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "6877E784-4D1F-464B-ADD8-DC3045E32981";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

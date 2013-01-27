@@ -9,7 +9,7 @@
 #import "PlaqueEnemy.h"
 #import "Utils.h"
 #import "CollidingRectsCreator.h"
-#import "EnemyBot.h"
+#import "ParentEnemy.h"
 #import "HeartGuardBot.h"
 
 static const float _sideLength = 40;

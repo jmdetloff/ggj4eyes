@@ -47,7 +47,7 @@ static NSArray *_botColors;
 }
 
 
-- (void)interactWithEnemy:(EnemyBot *)enemy {
+- (void)interactWithEnemy:(ParentEnemy *)enemy {
     switch (enemy.botType) {
         case TEAR: {
             CGFloat distance = [Utils distanceBetween:self.center and:enemy.center];

@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "EnemyBot.h"
+#import "ParentEnemy.h"
 
 @interface EnemySpawner : NSObject
-+ (EnemyBot *)createEnemyForType:(EnemyType)enemyType;
++ (ParentEnemy *)createEnemyForType:(EnemyType)enemyType;
 @end
