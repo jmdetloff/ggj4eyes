@@ -22,6 +22,7 @@
 #import "Wave.h"
 #import "Nanobot.h"
 #import "InfoPanel.h"
+#import "DefeatView.h"
 
 #define kPowerRadius 80
 #define kFullHealth 500
@@ -59,6 +60,7 @@
     UILabel *_fightCount;
     NSInteger _fattyHealth;
     UIView *_healthBar;
+    BOOL _gameOver;
 }
 
 
@@ -180,7 +182,6 @@
     portrait.image = [UIImage imageNamed:[NSString stringWithFormat:@"Level%iPortrait.png",level]];
     [self.view addSubview:portrait];
     
-    _infoPanel = [[InfoPanel alloc] initWithFrame:CGRectMake(32, 900, 245, 92)];
     [self.view addSubview:_infoPanel];
     
     _healthBar = [[UIView alloc] initWithFrame:CGRectMake(622, 219, 95, 12)];
@@ -194,6 +195,10 @@
     CGRect frame = _healthBar.frame;
     frame.size.width = percentHealth*kFullHealthbarLength;
     _healthBar.frame = frame;
+    
+    if (_fattyHealth <= 0) {
+        [self loseGame];
+    }
 }
 
 - (void)startDragging:(UIView *)sender {
@@ -231,7 +236,7 @@
 
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
-    if (_draggingView) {
+    if (_draggingView || _gameOver) {
         return NO;
     } else {
         for (UIView *view in _buttons) {
@@ -246,6 +251,8 @@
 
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    if (_gameOver)return;
+    
     UITouch *touch = [touches anyObject];
     for (UIView *view in _buttons) {
         CGPoint loc = [touch locationInView:view];
@@ -258,6 +265,8 @@
 
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+    if (_gameOver)return;
+    
     UITouch *touch = [touches anyObject];
     CGPoint loc = [touch locationInView:self.view];
     _draggingView.center = loc;
@@ -265,6 +274,8 @@
 
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    if (_gameOver)return;
+    
     UITouch *touch = [touches anyObject];
 
     UIView *tappedButton = nil;
@@ -454,6 +465,14 @@
     if ([view isKindOfClass:[ParentEnemy class]]) {
         _infoPanel.points += ((ParentEnemy*)view).kill_reward;
     }
+    if ([view isKindOfClass:[HeartGuardBot class]]) {
+        HeartGuardBot *bot = (HeartGuardBot *)view;
+        [self incrementType:bot.nanobotType by:-1];
+        
+        if (_infoPanel.fighterCount + _infoPanel.healCount + _infoPanel.cleanerCount + _infoPanel.neutralCount <= 0) {
+            [self loseGame];
+        }
+    }
     [view removeFromSuperview];
 }
 
@@ -463,16 +482,16 @@
 }
 
 
-- (void)incrementType:(NanabotType)type {
+- (void)incrementType:(NanabotType)type by:(int)incrementer {
     switch (type) {
         case FIGHT:
-            _infoPanel.fighterCount++;
+            _infoPanel.fighterCount+=incrementer;
             break;
         case SCRUB:
-            _infoPanel.cleanerCount++;
+            _infoPanel.cleanerCount+=incrementer;
             break;
         case HEALER:
-            _infoPanel.healCount++;
+            _infoPanel.healCount+=incrementer;
             break;
         default:
             break;
@@ -494,8 +513,9 @@
         if ([Utils distanceBetween:bot.center and:loc] < kPowerRadius) {
             flag = true;
             if (bot.nanobotType != SPAWNBOT) {
+                [self incrementType:bot.nanobotType by:-1];
                 bot.nanobotType = type;
-                [self incrementType:type];
+                [self incrementType:type by:1];
                 if (type == SPAWNBOT) {
                     break;
                 }
@@ -556,6 +576,13 @@
     _descriptionView.tag = button.tag;
     _descriptionView.center = CGPointMake(button.frame.origin.x + 92/2, 900 - 140 );
     [self.view addSubview:_descriptionView];
+}
+
+- (void)loseGame {
+    _gameOver = YES;
+    
+    DefeatView *defeatView = [[DefeatView alloc] initWithFrame:CGRectMake(33, 285, 702, 561) forLevel:[_levelParams[@"levelNum"] intValue]];
+    [self.view addSubview:defeatView];
 }
 
 @end

@@ -20,6 +20,8 @@
     return sqrtf(dx*dx + dy*dy);
 }
 
-
++ (UIImage *)portraitImageForLevel:(int)level {
+    return [UIImage imageNamed:[NSString stringWithFormat:@"Level%iPortrait.png",level]];
+}
 
 @end
