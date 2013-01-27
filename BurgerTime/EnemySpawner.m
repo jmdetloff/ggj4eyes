@@ -11,7 +11,7 @@
 
 @implementation EnemySpawner
 
-+ (EnemyBot *)createEnemyForType:(EnemyType)enemyType {
++ (ParentEnemy *)createEnemyForType:(EnemyType)enemyType {
     switch (enemyType) {
         case TEAR :
             return [[HeartLeakEnemy alloc] initWithHP:30];

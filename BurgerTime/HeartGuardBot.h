@@ -7,7 +7,7 @@
 //
 
 #import "MovingCollidingGuy.h"
-#import "EnemyBot.h"
+#import "ParentEnemy.h"
 #import "LivingGuyManager.h"
 #import <UIKit/UIKit.h>
 
@@ -19,7 +19,7 @@ typedef   enum    { STANDARD, SCRUB, HEALER, SPAWNBOT, FIGHT } NanabotType;
 @property int range;
 @property (nonatomic, assign) NanabotType nanobotType;
 
-- (void)interactWithEnemy:(EnemyBot *)enemy;
+- (void)interactWithEnemy:(ParentEnemy *)enemy;
 - (void)setBotImage;
 
 @end

@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 GlobalGameJam. All rights reserved.
 //
 
-#import "EnemyBot.h"
+#import "ParentEnemy.h"
 
-@implementation EnemyBot
+@implementation ParentEnemy
 @synthesize botType;
 @synthesize hp;
 @synthesize atk;

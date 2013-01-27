@@ -12,7 +12,7 @@
 
 typedef enum { TEAR, PLAQUE, PARASITE, ATHEROSCLEROSIS, ISCHAEMIA, CARDIOMYOPATHY } EnemyType;
 
-@interface EnemyBot : MovingCollidingGuy <DestinationDelegate, LivingGuy>
+@interface ParentEnemy : MovingCollidingGuy <DestinationDelegate, LivingGuy>
 @property  (nonatomic, assign) EnemyType botType;
 @property (nonatomic, assign) int hp;
 @property (nonatomic, assign) int atk;

@@ -8,7 +8,7 @@
 
 #import "PrototypeViewController.h"
 #import "HeartGuardBot.h"
-#import "EnemyBot.h"
+#import "ParentEnemy.h"
 #import "EnemySpawner.h"
 #import "LivingGuyManager.h"
 #import "CollidingRectsCreator.h"
@@ -240,7 +240,7 @@
 
 - (void)moveBots {
     for (HeartGuardBot *bot in [_livingGuyManager.bots copy]) {
-        for (EnemyBot *enemy in _livingGuyManager.enemies) {
+        for (ParentEnemy *enemy in _livingGuyManager.enemies) {
             [bot interactWithEnemy:enemy];
         }
         [bot advance:_timeInterval];
@@ -327,12 +327,12 @@
 
 
 - (void)spawnEnemyWave {
-    EnemyBot *firstBot = [EnemySpawner createEnemyForType:TEAR];
+    ParentEnemy *firstBot = [EnemySpawner createEnemyForType:TEAR];
     [self placeEnemy:firstBot];
 }
 
 
-- (void)placeEnemy:(EnemyBot *)enemy {
+- (void)placeEnemy:(ParentEnemy *)enemy {
     switch (enemy.botType) {
         case TEAR:
         default:

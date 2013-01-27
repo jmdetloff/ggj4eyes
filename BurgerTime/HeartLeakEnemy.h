@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 GlobalGameJam. All rights reserved.
 //
 
-#import "EnemyBot.h"
+#import "ParentEnemy.h"
 
 @class HeartGuardBot;
-@interface HeartLeakEnemy : EnemyBot
+@interface HeartLeakEnemy : ParentEnemy
 
 @property (nonatomic, strong) NSMutableArray *trackingBots;
 
