@@ -15,7 +15,6 @@
 static NSArray *_botColors;
 
 @implementation HeartGuardBot
-@synthesize botType;
 @synthesize level;
 @synthesize range;
 
@@ -24,37 +23,27 @@ static NSArray *_botColors;
 {
     self = [super initWithFrame:frame];
     if (self) {
-        botType = arc4random() % 5;
-        // Probably not what we want to do.
+        _nanobotType = STANDARD;
         
         self.opaque = YES;
     }
     return self;
 }
 
--(UIColor *)botColor  // color blind people are screwed
-{
-    switch(botType) {
-        case SCRUB:
-            return [UIColor blackColor];
-        case PLUG:
-            return [UIColor blueColor];
-        case FIGHT:
-            return [UIColor redColor];
-        case HEALER:
-            return [UIColor greenColor];
-        case SPAWNBOT:
-            return [UIColor yellowColor];
-    }
-    NSLog(@"Made it through color switch without picking a color");
-    return [UIColor blackColor]; // removes warning
-}
-
 -(void)setBotImage {
     if (!_botColors)
-        _botColors = [NSArray arrayWithObjects:@"white", @"blue", @"red", @"green", @"yellow", nil];
-    UIImage *botImage = [UIImage imageNamed:[NSString stringWithFormat:@"nanobot_%@.png", [_botColors objectAtIndex:self.botType]]];
+        _botColors = [NSArray arrayWithObjects:@"Neutral", @"Cleaner", @"Healer", @"Mom", @"Fighter", nil];
+    UIImage *botImage = [UIImage imageNamed:[NSString stringWithFormat:@"%@bot.png", [_botColors objectAtIndex:self.nanobotType]]];
+    for (UIView *subview in [[self subviews] copy]) {
+        [subview removeFromSuperview];
+    }
     [self addSubview:[[UIImageView alloc] initWithImage:botImage]];
+}
+
+
+- (void)setNanobotType:(NanabotType)nanobotType {
+    _nanobotType = nanobotType;
+    [self setBotImage];
 }
 
 
