@@ -58,7 +58,8 @@
 - (id)initWithLevelParameters:(NSDictionary *)levelParameters {
     self = [super init];
     if (self) {
-        scaleFactor = [[UIScreen mainScreen] bounds].size.width / 768;
+        //scaleFactor = [[UIScreen mainScreen] bounds].size.width / 768;  // This should work but for sanity we should use
+        scaleFactor = 1;
 
         //load static data from json
         [[StaticDataManager sharedInstance] unpack];
