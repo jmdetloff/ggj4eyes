@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "PrototypeViewController.h"
+#import "MenuViewController.h"
 
 @implementation AppDelegate
 
@@ -18,12 +19,21 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-
-    NSDictionary *levelParams = @{@"startingBotNum":@100};
-    self.window.rootViewController = [[PrototypeViewController alloc] initWithLevelParameters:levelParams];
+    [self showMenu];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+
+- (void)showLevel:(NSInteger)level {
+    NSDictionary *levelParams = @{@"startingBotNum":@100};
+    self.window.rootViewController = [[PrototypeViewController alloc] initWithLevelParameters:levelParams];
+}
+
+
+- (void)showMenu {
+    self.window.rootViewController = [[MenuViewController alloc] init];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
