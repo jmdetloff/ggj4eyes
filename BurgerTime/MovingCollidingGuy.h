@@ -44,5 +44,6 @@ typedef enum {
 - (void)rerollAngle:(double)dt;
 - (void)orderCycleWithPivot:(CGPoint)pivot_ radius:(float)radius_;
 - (void)collided:(double)dt;
+- (BOOL)setOptionalDestinationPoint:(CGPoint)destinationPoint;
 
 @end
