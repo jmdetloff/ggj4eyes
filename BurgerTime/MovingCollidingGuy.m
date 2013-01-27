@@ -8,6 +8,7 @@
 
 #import "MovingCollidingGuy.h"
 #import "CollidingRectsCreator.h"
+#import "Utils.h"
 
 #define N_DIRECTIONS 8
 
@@ -17,8 +18,7 @@
     BOOL _destinationValid;
 }
 
-
-@synthesize angle, velocity, position;
+@synthesize angle, velocity, position, cycleState, cyclePivot, cycleRadius, cycleParticleStart;
 
 - (float)ithAngle:(int)i {
     //i should be in [0, N_DIRECTIONS-1]
@@ -32,8 +32,30 @@
         self.position = frame.origin;
         self.angle = 0;
         self.velocity = 30;
+        self.cycleState = 0;
     }
     return self;
+}
+
+- (float)cycleAngularVelocity {
+    if (cycleState != 2)
+        return 0;
+    return self.velocity / self.cycleRadius;
+}
+
+- (void)orderCycleWithPivot:(CGPoint)pivot_ radius:(float)radius_ {
+    self.cycleState = 1;
+    self.cyclePivot = pivot_;
+    self.cycleRadius = radius_;
+    
+    float currentDist = [Utils distanceBetween:self.position and:pivot_];
+    float dx = self.position.y - pivot_.y;
+    float dy = self.position.x - pivot_.x;
+    float scale = radius_ / currentDist;
+    
+    self.cycleParticleStart = CGPointMake(pivot_.x + dx * scale, pivot_.y + dy * scale);
+    
+    [self setDestinationPoint:self.cycleParticleStart];
 }
 
 - (void)advance:(double)dt {
@@ -95,7 +117,7 @@
     self.angle = ang;
 }
 
-- (void)setDestinationPoint:(CGPoint)destinationPoint withDuration:(NSTimeInterval)duration {
+- (void)setDestinationPoint:(CGPoint)destinationPoint {
     [self clearDestination];
     
     _destinationPoint = destinationPoint;
@@ -108,17 +130,37 @@
     [self rerollAngle:0];
 }
 
+- (void)stopCycling {
+    self.cycleState = 0;
+    [self clearDestination];
+}
+
+- (float)currentCycleAngle {
+    if (self.cycleState != 2)
+        return 0;
+    return atan2f(self.position.y - self.cyclePivot.y, self.position.x - self.cyclePivot.x);
+}
+
+- (CGPoint)nextCycleDestination {
+    float ang = [self currentCycleAngle];
+    ang += [self cycleAngularVelocity];
+    if (ang > M_PI)
+        ang -= 2 * M_PI;
+    float dx = self.cycleRadius * cosf(ang);
+    float dy = self.cycleRadius * sinf(ang);
+    return CGPointMake(self.position.x + dx, self.position.y + dy);
+}
+
 - (void)reachedDestination {
+    if (self.cycleState == 1) {
+        self.cycleState = 2;
+    } else if (self.cycleState == 2) {
+        [self setDestinationPoint:[self nextCycleDestination]];
+    }
     if (self.enemyKey) {
         [self.enemyKey destinationReached:self];
     }
     [self clearDestination];
-}
-
-- (CGFloat) distanceBetween:(CGPoint)point1 and:(CGPoint)point2 {
-    CGFloat dx = point2.x - point1.x;
-    CGFloat dy = point2.y - point1.y;
-    return sqrtf(dx*dx + dy*dy);
 }
             
 @end

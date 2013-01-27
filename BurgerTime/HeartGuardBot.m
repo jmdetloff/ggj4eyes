@@ -10,6 +10,7 @@
 #import "HeartLeakEnemy.h"
 #import <QuartzCore/QuartzCore.h>
 #import "PlaqueEnemy.h"
+#import "Utils.h"
 
 static NSArray *_botColors;
 
@@ -60,22 +61,24 @@ static NSArray *_botColors;
 - (void)interactWithEnemy:(EnemyBot *)enemy {
     switch (enemy.botType) {
         case TEAR: {
-            CGFloat distance = [self distanceBetween:self.center and:enemy.center];
+            CGFloat distance = [Utils distanceBetween:self.center and:enemy.center];
             if (distance < 75) {
                 HeartLeakEnemy *leak = (HeartLeakEnemy*)enemy;
                 if (self.enemyKey != leak) {
-                    [self setDestinationPoint:[self randomPointWithinRect:enemy.frame] withDuration:-1];
+                    [self setDestinationPoint:[self randomPointWithinRect:enemy.frame]];
                     [leak track:self];
                 }
             }
         }
             break;
         case PLAQUE: {
-            CGFloat distance = [self distanceBetween:self.center and:enemy.center];
+            CGFloat distance = [Utils distanceBetween:self.center and:enemy.center];
             if (distance < 75) {
                 PlaqueEnemy *pe = (PlaqueEnemy*)enemy;
                 if (self.enemyKey != pe) {
-//                    [self setDestinationPoint:<#(CGPoint)#> withDuration:<#(NSTimeInterval)#>
+                    CGPoint p = [pe findASpreadPoint];
+//                    [self setDestinationPoint:p];
+                    [self orderCycleWithPivot:p radius:5];
                 }
             }
         }
@@ -84,14 +87,6 @@ static NSArray *_botColors;
             break;
     }
 }
-
-
-- (CGFloat) distanceBetween:(CGPoint)point1 and:(CGPoint)point2 {
-    CGFloat dx = point2.x - point1.x;
-    CGFloat dy = point2.y - point1.y;
-    return sqrt(dx*dx + dy*dy);
-}
-
 
 - (CGPoint)randomPointWithinRect:(CGRect)rect {
     return CGPointMake(rect.origin.x + arc4random()%(int)rect.size.width, rect.origin.y + arc4random()%(int)rect.size.height);

@@ -14,6 +14,7 @@
 #import "CollidingRectsCreator.h"
 #import "MovingCollidingGuy.h"
 #import "PanlessScrollView.h"
+#import "Utils.h"
 
 @interface PrototypeViewController () <DeathDelegate, UIScrollViewDelegate>
 @end
@@ -146,12 +147,12 @@
         return;
     }
     
-    if ([self distanceBetween:_lastSwipePoint and:stopLocation] < 60) {
+    if ([Utils distanceBetween:_lastSwipePoint and:stopLocation] < 60) {
         return;
     }
     
     for (HeartGuardBot *bot in _livingGuyManager.bots) {
-        if ([self distanceBetween:stopLocation and:bot.center] < 60) {
+        if ([Utils distanceBetween:stopLocation and:bot.center] < 60) {
             if (![_nanobotsBeingSwiped containsObject:bot]) {
                 [_nanobotsBeingSwiped addObject:bot];
                 bot.swipeKey = nil;
@@ -161,7 +162,7 @@
     
     if (_currentSwipeValid) {
         for (HeartGuardBot *bot in _nanobotsBeingSwiped) {
-            [bot setDestinationPoint:stopLocation withDuration:8];
+            [bot setDestinationPoint:stopLocation];
         }
     }
     
@@ -178,17 +179,9 @@
     }
 }
 
-
-- (CGFloat) distanceBetween:(CGPoint)point1 and:(CGPoint)point2 {
-    CGFloat dx = point2.x - point1.x;
-    CGFloat dy = point2.y - point1.y;
-    return sqrt(dx*dx + dy*dy);
-}
-
-
 - (void)spawnEnemyWave {
-    EnemyBot *firstBot = [EnemySpawner createEnemyForType:TEAR];
-//    EnemyBot *firstBot = [EnemySpawner createEnemyForType:PLAQUE];
+//    EnemyBot *firstBot = [EnemySpawner createEnemyForType:TEAR];
+    EnemyBot *firstBot = [EnemySpawner createEnemyForType:PLAQUE];
     [self placeEnemy:firstBot];
 }
 
@@ -205,7 +198,8 @@
         }
         break;
         case PLAQUE: {
-            CGPoint p = [self randomPointWithinBounds:CGRectMake(200, 200, 200, 200) excludingRects:_collidingRects];
+            NSArray *spawnRects = [CollidingRectsCreator validSpawningLocationsWithScale:1];
+            CGPoint p = [self randomPointWithinRects:spawnRects];
             enemy.frame = CGRectMake(p.x, p.y, enemy.frame.size.width, enemy.frame.size.height);
             enemy.livingGuyManager = _livingGuyManager;
             [self.view insertSubview:enemy atIndex:1];
