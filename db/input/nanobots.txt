@@ -1,7 +1,7 @@
 pk	name	hp	atk	modifiers
 int	str	int	int	dict
-1	Neutral	15	1	{}
-2	Cleaner	15	1	{"Plaque":2}
-3	Healer	15	1	{"Rip":2}
-4	Fighter	15	1	{"Toxin":2}
-5	Mom	5	0	{}
+0	Neutral	15	1	{}
+1	Cleaner	15	1	{"Plaque":2}
+2	Healer	15	1	{"Rip":2}
+3	Fighter	15	1	{"Toxin":2}
+4	Mom	5	0	{}

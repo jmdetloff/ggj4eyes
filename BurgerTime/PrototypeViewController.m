@@ -19,6 +19,8 @@
 #import "StaticDataManager.h"
 #import "ZapView.h"
 #import "Level.h"
+#import "Wave.h"
+#import "Nanobot.h"
 
 #define kPowerRadius 80
 
@@ -58,6 +60,9 @@
     if (self) {
         scaleFactor = [[UIScreen mainScreen] bounds].size.width / 768;
 
+        //load static data from json
+        [[StaticDataManager sharedInstance] unpack];
+        
         _levelParams = levelParameters;
         
         _collidingRects = [CollidingRectsCreator collidingRectsForHeartWithScale:scaleFactor];
@@ -68,7 +73,9 @@
         _lastSwipePoint = CGPointMake(INFINITY, INFINITY);
         _nanobotsBeingSwiped = [[NSMutableArray alloc] init];
         
-        _enemySpawnTimer = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(spawnEnemyWave) userInfo:nil repeats:NO]; // should repeat later
+//        _enemySpawnTimer = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(spawnEnemyWave) userInfo:nil repeats:NO]; // should repeat later
+        
+        [self loadLevel:0];
     }
     return self;
 }
@@ -90,9 +97,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    //load static data from json
-    [[StaticDataManager sharedInstance] unpack];
     
     _pinchView = [[PanlessScrollView alloc] initWithFrame:self.view.bounds];
     _pinchView.minimumZoomScale = 1;
@@ -356,19 +360,49 @@
     [self placeEnemy:firstBot];
 }
 
-- (void)spawnEnemyWaveAtCtr {
-//    ParentEnemy *firstBot = [EnemySpawner createEnemyForType:PARASITE];
-//    [self placeEnemy:firstBot];
+- (void)spawnSpecificWave:(int)wave_id {
+    Wave *w = [StaticDataManager objectOfType:@"wave" atIndex:wave_id];
+    EnemyType et = 0;
+    if ([w.enemy_type isEqualToString:@"Tear"])
+        et = TEAR;
+    else if ([w.enemy_type isEqualToString:@"Plaque"])
+        et = PLAQUE;
+    else if ([w.enemy_type isEqualToString:@"Parasite"])
+        et = PARASITE;
+    NSLog(@"t=%f Placing enemy: %@", _waveTimeElapsed, w.enemy_type);
+    ParentEnemy *firstBot = [EnemySpawner createEnemyForType:et];
+    [self placeEnemy:firstBot];
+}
+
+- (void)notifyLevelDone {
+    //dunno what you want here...
+}
+
+- (void)spawnEnemyWaveByTime {
     _waveTimeElapsed += 1;
-    NSNumber *n = [_curLevel.wave_times objectAtIndex:_waveCtr];
+    while (1) {
+        if (_waveCtr >= [_curLevel.wave_ids count]) {
+            [_waveTimer invalidate];
+            _waveTimer = nil;
+            [self notifyLevelDone];
+            break;
+        }
+        NSNumber *n = [_curLevel.wave_times objectAtIndex:_waveCtr];
+        if (_waveTimeElapsed < [n intValue]) {
+            break;
+        } else {
+            int wid = [[_curLevel.wave_ids objectAtIndex:_waveCtr] intValue];
+            [self spawnSpecificWave:wid];
+             _waveCtr++;
+        }
+    }
 }
 
 - (void)loadLevel:(int)level {
-    _curLevel = [StaticDataManager objectOfType:@"level" atIndex:level-1];
+    _curLevel = [StaticDataManager objectOfType:@"level" atIndex:level];
     _waveCtr = 0;
     _waveTimeElapsed = 0;
-    NSTimer *wt = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(spawnEnemyWaveAtCtr) userInfo:nil repeats:YES];
-    
+    _waveTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(spawnEnemyWaveByTime) userInfo:nil repeats:YES];
 }
 
 - (void)placeEnemy:(ParentEnemy *)enemy {

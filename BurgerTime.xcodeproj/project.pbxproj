@@ -64,6 +64,7 @@
 		24237C3616B4B7C600F7E8E8 /* _plaqu01.png in Resources */ = {isa = PBXBuildFile; fileRef = 24237C3316B4B7C600F7E8E8 /* _plaqu01.png */; };
 		24237C3A16B4B88200F7E8E8 /* PlaqueEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 24237C3916B4B88200F7E8E8 /* PlaqueEnemy.m */; };
 		24237C3D16B4D36B00F7E8E8 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 24237C3C16B4D36B00F7E8E8 /* Utils.m */; };
+		242D70A016B55D5B00DE0BFF /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 2414C81F16B55847003C2F5D /* Level.m */; };
 		243B52FB16B51427008AD5D2 /* StaticDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 243B52F816B51427008AD5D2 /* StaticDataManager.m */; };
 		243B52FF16B51463008AD5D2 /* Nanobot.m in Sources */ = {isa = PBXBuildFile; fileRef = 243B52FE16B51463008AD5D2 /* Nanobot.m */; };
 		243B530216B514C8008AD5D2 /* Wave.m in Sources */ = {isa = PBXBuildFile; fileRef = 243B530116B514C8008AD5D2 /* Wave.m */; };
@@ -620,6 +621,7 @@
 				243B530216B514C8008AD5D2 /* Wave.m in Sources */,
 				0F4D20A316B50D9300291459 /* ParasiteEnemy.m in Sources */,
 				0F4D20AC16B52E1A00291459 /* ZapView.m in Sources */,
+				242D70A016B55D5B00DE0BFF /* Level.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
