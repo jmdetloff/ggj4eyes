@@ -28,6 +28,7 @@
         return nil;
     }
     pe.hp = w.hp * hpmult;
+    pe.maxhp = pe.hp;
     pe.bot_atk = w.bot_atk;
     pe.heart_atk = w.heart_atk;
     return pe;
