@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "PrototypeViewController.h"
 #import "MenuViewController.h"
+#import "HelpScreen.h"
 
 @implementation AppDelegate
 
@@ -26,7 +27,10 @@
     return YES;
 }
 
-
+-(void)showHelp:(NSInteger)level{
+    NSDictionary *levelParams = @{@"startingBotNum":@100, @"levelNum":[NSNumber numberWithInt:level]};
+    self.window.rootViewController = [[HelpScreen alloc] initWithLevelParameters:levelParams];
+}
 - (void)showLevel:(NSInteger)level {
     NSDictionary *levelParams = @{@"startingBotNum":@100, @"levelNum":[NSNumber numberWithInt:level]};
     self.window.rootViewController = [[PrototypeViewController alloc] initWithLevelParameters:levelParams];

@@ -116,6 +116,9 @@
 		67CF4ABD16B5122700129B56 /* rip_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 67CF4ABA16B5122700129B56 /* rip_01.png */; };
 		67CF4AC416B5B6CB00129B56 /* info_close.caf in Resources */ = {isa = PBXBuildFile; fileRef = 67CF4AC216B5B6CB00129B56 /* info_close.caf */; };
 		67CF4AC516B5B6CB00129B56 /* info_open.caf in Resources */ = {isa = PBXBuildFile; fileRef = 67CF4AC316B5B6CB00129B56 /* info_open.caf */; };
+		67CF4AD616B5D9BD00129B56 /* HelpScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CF4AD516B5D9BD00129B56 /* HelpScreen.m */; };
+		67CF4AD816B5DA8900129B56 /* InstructionsPopup.png in Resources */ = {isa = PBXBuildFile; fileRef = 67CF4AD716B5DA8900129B56 /* InstructionsPopup.png */; };
+		67CF4ADC16B5E2AA00129B56 /* ClosePopupButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 67CF4ADB16B5E2A900129B56 /* ClosePopupButton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -251,6 +254,10 @@
 		67CF4ABA16B5122700129B56 /* rip_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rip_01.png; sourceTree = "<group>"; };
 		67CF4AC216B5B6CB00129B56 /* info_close.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = info_close.caf; sourceTree = "<group>"; };
 		67CF4AC316B5B6CB00129B56 /* info_open.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = info_open.caf; sourceTree = "<group>"; };
+		67CF4AD416B5D9BD00129B56 /* HelpScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpScreen.h; sourceTree = "<group>"; };
+		67CF4AD516B5D9BD00129B56 /* HelpScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpScreen.m; sourceTree = "<group>"; };
+		67CF4AD716B5DA8900129B56 /* InstructionsPopup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InstructionsPopup.png; sourceTree = "<group>"; };
+		67CF4ADB16B5E2A900129B56 /* ClosePopupButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ClosePopupButton.png; path = ../../../../Downloads/PopupInstructions/ClosePopupButton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +323,8 @@
 		0F4D20D516B5BBB100291459 /* Menus */ = {
 			isa = PBXGroup;
 			children = (
+				67CF4AD716B5DA8900129B56 /* InstructionsPopup.png */,
+				67CF4ADB16B5E2A900129B56 /* ClosePopupButton.png */,
 				0F4D210616B5C4F300291459 /* InfoBar.png */,
 				0F4D20D716B5BBBF00291459 /* CreditsBG.png */,
 				0F4D20D816B5BBBF00291459 /* HomescreenBG.png */,
@@ -327,6 +336,8 @@
 				0F4D20E416B5BCC400291459 /* Level3PortraitLocked.png */,
 				0F4D20DD16B5BBCD00291459 /* MenuViewController.h */,
 				0F4D20DE16B5BBCD00291459 /* MenuViewController.m */,
+				67CF4AD416B5D9BD00129B56 /* HelpScreen.h */,
+				67CF4AD516B5D9BD00129B56 /* HelpScreen.m */,
 				0F4D20EA16B5BF4900291459 /* CreditsButton.png */,
 				0F4D20EB16B5BF4900291459 /* CreditsButtonPressed.png */,
 				0F4D20EC16B5BF4900291459 /* HomeButton.png */,
@@ -657,6 +668,8 @@
 				0F4D210716B5C4F300291459 /* InfoBar.png in Resources */,
 				0F4D211D16B5CB4900291459 /* background.png in Resources */,
 				0F4D212016B5CBCD00291459 /* ingame.caf in Resources */,
+				67CF4AD816B5DA8900129B56 /* InstructionsPopup.png in Resources */,
+				67CF4ADC16B5E2AA00129B56 /* ClosePopupButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -723,6 +736,7 @@
 				242D70A016B55D5B00DE0BFF /* Level.m in Sources */,
 				0F4D20DF16B5BBCD00291459 /* MenuViewController.m in Sources */,
 				0F4D210B16B5C63100291459 /* InfoPanel.m in Sources */,
+				67CF4AD616B5D9BD00129B56 /* HelpScreen.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

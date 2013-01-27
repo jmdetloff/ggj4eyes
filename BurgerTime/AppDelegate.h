@@ -20,6 +20,7 @@
 - (NSURL *)applicationDocumentsDirectory;
 
 - (void)showLevel:(NSInteger)level;
+- (void)showHelp:(NSInteger)level;
 - (void)showMenu;
 
 @end
