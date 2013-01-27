@@ -30,32 +30,32 @@
 - (void)setup {
     UIFont *f =  [UIFont fontWithName:@"Hooge0557" size:20];
     
-    _fightCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(74 - self.frame.origin.x, 58, 40, 23)];
+    _fightCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(74 - self.frame.origin.x, 54, 40, 23)];
     _fightCountLabel.backgroundColor = [UIColor clearColor];
     _fightCountLabel.textColor = [UIColor whiteColor];
     [self addSubview:_fightCountLabel];
     
-    _healCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(129- self.frame.origin.x, 58, 40, 23)];
+    _healCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(129- self.frame.origin.x, 54, 40, 23)];
     _healCountLabel.backgroundColor = [UIColor clearColor];
     _healCountLabel.textColor = [UIColor whiteColor];
     [self addSubview:_healCountLabel];
     
-    _cleanCountLabel= [[UILabel alloc] initWithFrame:CGRectMake(184- self.frame.origin.x, 58, 40, 23)];
+    _cleanCountLabel= [[UILabel alloc] initWithFrame:CGRectMake(184- self.frame.origin.x, 54, 40, 23)];
     _cleanCountLabel.backgroundColor = [UIColor clearColor];
     _cleanCountLabel.textColor = [UIColor whiteColor];
     [self addSubview:_cleanCountLabel];
     
-    _neutralCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(238- self.frame.origin.x, 58, 40, 23)];
+    _neutralCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(238- self.frame.origin.x, 54, 40, 23)];
     _neutralCountLabel.backgroundColor = [UIColor clearColor];
     _neutralCountLabel.textColor = [UIColor whiteColor];
     [self addSubview:_neutralCountLabel];
     
-    _waveCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(48 + 30, 23, 40, 23)];
+    _waveCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(48 + 30, 19, 40, 23)];
     _waveCountLabel.backgroundColor = [UIColor clearColor];
     _waveCountLabel.textColor = [UIColor whiteColor];
     [self addSubview:_waveCountLabel];
     
-    _pointsCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(150 + 30, 23, 40, 23)];
+    _pointsCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(150 + 35, 19, 40, 23)];
     _pointsCountLabel.backgroundColor = [UIColor clearColor];
     _pointsCountLabel.textColor = [UIColor whiteColor];
     [self addSubview:_pointsCountLabel];
