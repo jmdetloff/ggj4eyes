@@ -1,4 +1,4 @@
-pk	name	hp	atk modifiers
+pk	name	hp	atk	modifiers
 int	str	int	int	dict
 1	Neutral	15	1	{}
 2	Cleaner	15	1	{"Plaque":2}

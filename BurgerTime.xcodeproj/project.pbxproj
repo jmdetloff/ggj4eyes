@@ -58,6 +58,10 @@
 		24237C3616B4B7C600F7E8E8 /* _plaqu01.png in Resources */ = {isa = PBXBuildFile; fileRef = 24237C3316B4B7C600F7E8E8 /* _plaqu01.png */; };
 		24237C3A16B4B88200F7E8E8 /* PlaqueEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 24237C3916B4B88200F7E8E8 /* PlaqueEnemy.m */; };
 		24237C3D16B4D36B00F7E8E8 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 24237C3C16B4D36B00F7E8E8 /* Utils.m */; };
+		243B52FA16B51427008AD5D2 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 243B52F616B51427008AD5D2 /* Level.m */; };
+		243B52FB16B51427008AD5D2 /* StaticDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 243B52F816B51427008AD5D2 /* StaticDataManager.m */; };
+		243B52FF16B51463008AD5D2 /* Nanobot.m in Sources */ = {isa = PBXBuildFile; fileRef = 243B52FE16B51463008AD5D2 /* Nanobot.m */; };
+		243B530216B514C8008AD5D2 /* Wave.m in Sources */ = {isa = PBXBuildFile; fileRef = 243B530116B514C8008AD5D2 /* Wave.m */; };
 		249B884516B50F4600E5E707 /* class_map.json in Resources */ = {isa = PBXBuildFile; fileRef = 249B884316B50F4600E5E707 /* class_map.json */; };
 		249B884616B50F4600E5E707 /* everything.json in Resources */ = {isa = PBXBuildFile; fileRef = 249B884416B50F4600E5E707 /* everything.json */; };
 		675D311F16B469350071B7B9 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 675D311E16B469350071B7B9 /* Level.m */; };
@@ -162,6 +166,14 @@
 		24237C3916B4B88200F7E8E8 /* PlaqueEnemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaqueEnemy.m; sourceTree = "<group>"; };
 		24237C3B16B4D36B00F7E8E8 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		24237C3C16B4D36B00F7E8E8 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		243B52F516B51427008AD5D2 /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
+		243B52F616B51427008AD5D2 /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
+		243B52F716B51427008AD5D2 /* StaticDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticDataManager.h; sourceTree = "<group>"; };
+		243B52F816B51427008AD5D2 /* StaticDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticDataManager.m; sourceTree = "<group>"; };
+		243B52FD16B51463008AD5D2 /* Nanobot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nanobot.h; sourceTree = "<group>"; };
+		243B52FE16B51463008AD5D2 /* Nanobot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Nanobot.m; sourceTree = "<group>"; };
+		243B530016B514C8008AD5D2 /* Wave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wave.h; sourceTree = "<group>"; };
+		243B530116B514C8008AD5D2 /* Wave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wave.m; sourceTree = "<group>"; };
 		249B884316B50F4600E5E707 /* class_map.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = class_map.json; sourceTree = "<group>"; };
 		249B884416B50F4600E5E707 /* everything.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = everything.json; sourceTree = "<group>"; };
 		675D311D16B469350071B7B9 /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
@@ -278,6 +290,7 @@
 				6773E62E16B4BD6200A3CBF5 /* sounds */,
 				0F4D200116B4D5BA00291459 /* artwork */,
 				0FACD3F816B44C8B006BB9EC /* enemies and bots */,
+				243B52F216B51427008AD5D2 /* Static Data Classes */,
 				6773E62516B4BA8700A3CBF5 /* AudioManagement.h */,
 				6773E62616B4BA8700A3CBF5 /* AudioManagement.m */,
 				0F9697F016B38D02005BE1C1 /* AppDelegate.h */,
@@ -371,6 +384,21 @@
 				24237C3316B4B7C600F7E8E8 /* _plaqu01.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		243B52F216B51427008AD5D2 /* Static Data Classes */ = {
+			isa = PBXGroup;
+			children = (
+				243B52F716B51427008AD5D2 /* StaticDataManager.h */,
+				243B52F816B51427008AD5D2 /* StaticDataManager.m */,
+				243B52F516B51427008AD5D2 /* Level.h */,
+				243B52F616B51427008AD5D2 /* Level.m */,
+				243B52FD16B51463008AD5D2 /* Nanobot.h */,
+				243B52FE16B51463008AD5D2 /* Nanobot.m */,
+				243B530016B514C8008AD5D2 /* Wave.h */,
+				243B530116B514C8008AD5D2 /* Wave.m */,
+			);
+			path = "Static Data Classes";
 			sourceTree = "<group>";
 		};
 		6773E62E16B4BD6200A3CBF5 /* sounds */ = {
@@ -557,6 +585,10 @@
 				24237C3D16B4D36B00F7E8E8 /* Utils.m in Sources */,
 				6773E62716B4BA8700A3CBF5 /* AudioManagement.m in Sources */,
 				0F4D1FF716B4C47000291459 /* PanlessScrollView.m in Sources */,
+				243B52FA16B51427008AD5D2 /* Level.m in Sources */,
+				243B52FB16B51427008AD5D2 /* StaticDataManager.m in Sources */,
+				243B52FF16B51463008AD5D2 /* Nanobot.m in Sources */,
+				243B530216B514C8008AD5D2 /* Wave.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

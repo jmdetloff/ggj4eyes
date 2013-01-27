@@ -16,6 +16,7 @@
 #import "PanlessScrollView.h"
 #import "AudioManagement.h"
 #import "Utils.h"
+#import "StaticDataManager.h"
 
 #define kPowerRadius 80
 
@@ -81,6 +82,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //load static data from json
+    [[StaticDataManager sharedInstance] unpack];
     
     _pinchView = [[PanlessScrollView alloc] initWithFrame:self.view.bounds];
     _pinchView.minimumZoomScale = 1;
