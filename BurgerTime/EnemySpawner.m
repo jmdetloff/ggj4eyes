@@ -16,16 +16,18 @@
 
 + (ParentEnemy *)createEnemyForWave:(Wave*)w {
     ParentEnemy *pe;
+    int hpmult = 1;
     if ([w.enemy_type isEqualToString:@"Tear"]) {
         pe = [[HeartLeakEnemy alloc] initWithHP:w.hp];
     } else if ([w.enemy_type isEqualToString:@"Plaque"]) {
         pe = [[PlaqueEnemy alloc] initWithHP:w.hp spreadRadius:30];
+        hpmult = PLAQUE_HP_MULTIPLIER;
     } else if ([w.enemy_type isEqualToString:@"Parasite"]) {
         pe = [[ParasiteEnemy alloc] init];
     } else {
         return nil;
     }
-    pe.hp = w.hp;
+    pe.hp = w.hp * hpmult;
     pe.bot_atk = w.bot_atk;
     pe.heart_atk = w.heart_atk;
     return pe;

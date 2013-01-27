@@ -1,5 +1,16 @@
 pk	hp	bot_atk	heart_atk	enemy_type
 int	int	int	int	str
 0	20	0	1	Tear
-1	1000	0	1	Plaque
+1	20	0	1	Plaque
 2	20	1	1	Parasite
+3	60	2	2	Parasite
+4	30	0	2	Tear
+5	30	0	2	Plaque
+6	30	2	2	Parasite
+7	70	3	3	Parasite
+
+8	40	0	3	Tear
+9	40	0	3	Plaque
+10	40	3	3	Parasite
+11	80	4	4	Parasite
+12	30	0	2	Plaque
