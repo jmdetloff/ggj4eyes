@@ -19,7 +19,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
-    NSDictionary *levelParams = @{@"startingBotNum":@400};
+    NSDictionary *levelParams = @{@"startingBotNum":@100};
     self.window.rootViewController = [[PrototypeViewController alloc] initWithLevelParameters:levelParams];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
