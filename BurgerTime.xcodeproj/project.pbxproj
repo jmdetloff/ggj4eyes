@@ -23,6 +23,11 @@
 		0F4D203916B4E80400291459 /* nanobot_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D203416B4E80400291459 /* nanobot_red.png */; };
 		0F4D203A16B4E80400291459 /* nanobot_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D203516B4E80400291459 /* nanobot_white.png */; };
 		0F4D203B16B4E80400291459 /* nanobot_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D203616B4E80400291459 /* nanobot_yellow.png */; };
+		0F4D205116B4EA6000291459 /* Cleanerbot.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D204C16B4EA6000291459 /* Cleanerbot.png */; };
+		0F4D205216B4EA6000291459 /* Fighterbot.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D204D16B4EA6000291459 /* Fighterbot.png */; };
+		0F4D205316B4EA6000291459 /* Healerbot.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D204E16B4EA6000291459 /* Healerbot.png */; };
+		0F4D205416B4EA6000291459 /* Mombot.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D204F16B4EA6000291459 /* Mombot.png */; };
+		0F4D205516B4EA6000291459 /* Neutralbot.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D205016B4EA6000291459 /* Neutralbot.png */; };
 		0F9697E016B38D02005BE1C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9697DF16B38D02005BE1C1 /* UIKit.framework */; };
 		0F9697E216B38D02005BE1C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9697E116B38D02005BE1C1 /* Foundation.framework */; };
 		0F9697E416B38D02005BE1C1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9697E316B38D02005BE1C1 /* CoreGraphics.framework */; };
@@ -98,6 +103,11 @@
 		0F4D203416B4E80400291459 /* nanobot_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanobot_red.png; sourceTree = "<group>"; };
 		0F4D203516B4E80400291459 /* nanobot_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanobot_white.png; sourceTree = "<group>"; };
 		0F4D203616B4E80400291459 /* nanobot_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanobot_yellow.png; sourceTree = "<group>"; };
+		0F4D204C16B4EA6000291459 /* Cleanerbot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cleanerbot.png; sourceTree = "<group>"; };
+		0F4D204D16B4EA6000291459 /* Fighterbot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fighterbot.png; sourceTree = "<group>"; };
+		0F4D204E16B4EA6000291459 /* Healerbot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Healerbot.png; sourceTree = "<group>"; };
+		0F4D204F16B4EA6000291459 /* Mombot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mombot.png; sourceTree = "<group>"; };
+		0F4D205016B4EA6000291459 /* Neutralbot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Neutralbot.png; sourceTree = "<group>"; };
 		0F9697DB16B38D02005BE1C1 /* BurgerTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BurgerTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F9697DF16B38D02005BE1C1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0F9697E116B38D02005BE1C1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -197,6 +207,11 @@
 				0F4D200816B4D5C800291459 /* HealDrag.png */,
 				0F4D200916B4D5C800291459 /* MomButton.png */,
 				0F4D200A16B4D5C800291459 /* MomDrag.png */,
+				0F4D204C16B4EA6000291459 /* Cleanerbot.png */,
+				0F4D204D16B4EA6000291459 /* Fighterbot.png */,
+				0F4D204E16B4EA6000291459 /* Healerbot.png */,
+				0F4D204F16B4EA6000291459 /* Mombot.png */,
+				0F4D205016B4EA6000291459 /* Neutralbot.png */,
 			);
 			name = artwork;
 			sourceTree = "<group>";
@@ -445,6 +460,11 @@
 				0F4D203916B4E80400291459 /* nanobot_red.png in Resources */,
 				0F4D203A16B4E80400291459 /* nanobot_white.png in Resources */,
 				0F4D203B16B4E80400291459 /* nanobot_yellow.png in Resources */,
+				0F4D205116B4EA6000291459 /* Cleanerbot.png in Resources */,
+				0F4D205216B4EA6000291459 /* Fighterbot.png in Resources */,
+				0F4D205316B4EA6000291459 /* Healerbot.png in Resources */,
+				0F4D205416B4EA6000291459 /* Mombot.png in Resources */,
+				0F4D205516B4EA6000291459 /* Neutralbot.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
