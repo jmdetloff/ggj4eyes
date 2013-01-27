@@ -11,6 +11,8 @@
 #import <QuartzCore/QuartzCore.h>
 #import "PlaqueEnemy.h"
 #import "Utils.h"
+#import "ParasiteEnemy.h"
+#import "ZapView.h"
 
 static NSArray *_botColors;
 
@@ -26,7 +28,7 @@ static NSArray *_botColors;
     self = [super initWithFrame:frame];
     if (self) {
         self.nanobotType = STANDARD;
-        
+        self.layer.masksToBounds = NO;
         self.opaque = YES;
     }
     return self;
@@ -76,6 +78,25 @@ static NSArray *_botColors;
             }
         }
             break;
+        case PARASITE: {
+            ParasiteEnemy *parasite = (ParasiteEnemy *)enemy;
+            CGFloat distance = [Utils distanceBetween:self.center and:parasite.center];
+            if (distance < 20) {
+                if (self == parasite.victim) parasite.victim = nil;
+                [self.livingGuyManager livingGuy:enemy killsLivingGuy:self];
+            } else if (distance < 70) {
+                if (parasite.victim == nil || (self.nanobotType == SPAWNBOT && parasite.victim.nanobotType != SPAWNBOT)) {
+                    parasite.victim = self;
+                }
+            }
+            
+            if (self.nanobotType == FIGHT && distance < 70) {
+                if (_actionCounter > 50) {
+                    [self zapEnemy:parasite];
+                    _actionCounter = 0;
+                }
+            }
+        }
         default:
             break;
     }
@@ -106,5 +127,12 @@ static NSArray *_botColors;
     
     _actionCounter++;
 }
+
+
+- (void)zapEnemy:(ParasiteEnemy *)enemy {
+    [enemy zap:self];
+    [[ZapView sharedInstance] displayZapFrom:self.center to:enemy.center];
+}
+
 
 @end
