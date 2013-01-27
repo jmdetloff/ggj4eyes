@@ -13,19 +13,15 @@
 
 @implementation EnemySpawner
 
-+ (ParentEnemy *)createEnemyForType:(EnemyType)enemyType {
-    switch (enemyType) {
-        case TEAR :
-            return [[HeartLeakEnemy alloc] initWithHP:30];
-            break;
-        case PLAQUE :
-            return [[PlaqueEnemy alloc] initWithHP:20 spreadRadius:20];
-            break;
-        case PARASITE :
-            return [[ParasiteEnemy alloc] init];
-        default:
-            return nil;
-            break;
++ (ParentEnemy *)createEnemyForWave:(Wave*)w {
+    if ([w.enemy_type isEqualToString:@"Tear"]) {
+        return [[HeartLeakEnemy alloc] initWithHP:w.hp];
+    } else if ([w.enemy_type isEqualToString:@"Plaque"]) {
+        return [[PlaqueEnemy alloc] initWithHP:w.hp spreadRadius:30];
+    } else if ([w.enemy_type isEqualToString:@"Parasite"]) {
+        return [[ParasiteEnemy alloc] init];
+    } else {
+        return nil;
     }
 }
 

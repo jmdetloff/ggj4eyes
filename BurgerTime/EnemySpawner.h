@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "ParentEnemy.h"
+#import "Wave.h"
 
 @interface EnemySpawner : NSObject
-+ (ParentEnemy *)createEnemyForType:(EnemyType)enemyType;
++ (ParentEnemy *)createEnemyForWave:(Wave*)w;
 @end

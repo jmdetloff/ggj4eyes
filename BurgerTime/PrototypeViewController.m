@@ -355,22 +355,22 @@
     }
 }
 
-- (void)spawnEnemyWave {
-    ParentEnemy *firstBot = [EnemySpawner createEnemyForType:PARASITE];
-    [self placeEnemy:firstBot];
-}
+//- (void)spawnEnemyWave {
+//    ParentEnemy *firstBot = [EnemySpawner createEnemyForType:PARASITE];
+//    [self placeEnemy:firstBot];
+//}
 
 - (void)spawnSpecificWave:(int)wave_id {
     Wave *w = [StaticDataManager objectOfType:@"wave" atIndex:wave_id];
-    EnemyType et = 0;
-    if ([w.enemy_type isEqualToString:@"Tear"])
-        et = TEAR;
-    else if ([w.enemy_type isEqualToString:@"Plaque"])
-        et = PLAQUE;
-    else if ([w.enemy_type isEqualToString:@"Parasite"])
-        et = PARASITE;
+//    EnemyType et = 0;
+//    if ([w.enemy_type isEqualToString:@"Tear"])
+//        et = TEAR;
+//    else if ([w.enemy_type isEqualToString:@"Plaque"])
+//        et = PLAQUE;
+//    else if ([w.enemy_type isEqualToString:@"Parasite"])
+//        et = PARASITE;
     NSLog(@"t=%f Placing enemy: %@", _waveTimeElapsed, w.enemy_type);
-    ParentEnemy *firstBot = [EnemySpawner createEnemyForType:et];
+    ParentEnemy *firstBot = [EnemySpawner createEnemyForWave:w];
     [self placeEnemy:firstBot];
 }
 
