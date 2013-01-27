@@ -28,7 +28,7 @@
 }
 
 - (void)setup {
-    UIImageView *portrait = [[UIImageView alloc] initWithImage:[Utils portraitImageForLevel:_level]];
+    UIImageView *portrait = [[UIImageView alloc] initWithImage:[Utils deadPortraitImageForLevel:_level]];
     portrait.frame = CGRectMake(150 - self.frame.origin.x, 465- self.frame.origin.y,  portrait.frame.size.width, portrait.frame.size.height);
     [self addSubview:portrait];
     
