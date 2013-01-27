@@ -28,6 +28,8 @@
 }
 
 - (void)setup {
+    UIFont *f =  [UIFont fontWithName:@"Hooge0557" size:20];
+    
     _fightCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(74 - self.frame.origin.x, 58, 40, 23)];
     _fightCountLabel.backgroundColor = [UIColor clearColor];
     _fightCountLabel.textColor = [UIColor whiteColor];
@@ -57,6 +59,13 @@
     _pointsCountLabel.backgroundColor = [UIColor clearColor];
     _pointsCountLabel.textColor = [UIColor whiteColor];
     [self addSubview:_pointsCountLabel];
+    
+    _fightCountLabel.font = f;
+    _healCountLabel.font = f;
+    _cleanCountLabel.font = f;
+    _neutralCountLabel.font = f;
+    _waveCountLabel.font = f;
+    _pointsCountLabel.font = f;
     
     self.wave = 0;
     self.points = 0;

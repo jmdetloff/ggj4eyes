@@ -24,6 +24,8 @@
 #import "InfoPanel.h"
 
 #define kPowerRadius 80
+#define kFullHealth 500
+#define kFullHealthbarLength 95
 
 @interface PrototypeViewController () <DeathDelegate, UIScrollViewDelegate, UIGestureRecognizerDelegate>
 @end
@@ -55,12 +57,16 @@
     UIView *_descriptionView;
     InfoPanel *_infoPanel;
     UILabel *_fightCount;
+    NSInteger _fattyHealth;
+    UIView *_healthBar;
 }
 
 
 - (id)initWithLevelParameters:(NSDictionary *)levelParameters {
     self = [super init];
     if (self) {
+        _fattyHealth = kFullHealth;
+        
         //scaleFactor = [[UIScreen mainScreen] bounds].size.width / 768;  // This should work but for sanity we should use
         scaleFactor = 1;
 
@@ -176,6 +182,18 @@
     
     _infoPanel = [[InfoPanel alloc] initWithFrame:CGRectMake(32, 900, 245, 92)];
     [self.view addSubview:_infoPanel];
+    
+    _healthBar = [[UIView alloc] initWithFrame:CGRectMake(622, 219, 95, 12)];
+    _healthBar.backgroundColor = [UIColor colorWithRed:83/255.f green:249/255.f blue:99/255.f alpha:1];
+    [self.view addSubview:_healthBar];
+}
+
+- (void)heartTakesDamage:(int)damage {
+    _fattyHealth -= damage;
+    CGFloat percentHealth = _fattyHealth/kFullHealth;
+    CGRect frame = _healthBar.frame;
+    frame.size.width = percentHealth*kFullHealthbarLength;
+    _healthBar.frame = frame;
 }
 
 - (void)startDragging:(UIView *)sender {
