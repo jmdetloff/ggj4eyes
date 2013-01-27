@@ -42,4 +42,10 @@
     [self.deathDelegate viewDied:victim];
 }
 
+
+- (void)livingGuyReproduces:(UIView <LivingGuy> *)mom {
+    [self.deathDelegate viewWasBornAtPoint:mom.center];
+}
+
+
 @end

@@ -24,6 +24,7 @@
 
 
 @implementation PrototypeViewController {
+    NSDictionary *_levelParams;
     NSTimer *_moveTimer;
     NSTimer *_rerollTimer;
     NSArray *_collidingRects;
@@ -48,21 +49,12 @@
     if (self) {
         scaleFactor = [[UIScreen mainScreen] bounds].size.width / 768;
 
+        _levelParams = levelParameters;
         
         _collidingRects = [CollidingRectsCreator collidingRectsForHeartWithScale:scaleFactor];
         
         _livingGuyManager = [[LivingGuyManager alloc] init];
         _livingGuyManager.deathDelegate = self;
-        
-        NSArray *spawningRects = [CollidingRectsCreator validSpawningLocationsWithScale:scaleFactor];
-        for (int i = 0; i < [levelParameters[@"startingBotNum"] intValue]; i++) {
-            CGRect botFrame = CGRectMake(0, 0, 5, 5);
-            botFrame.origin = [self randomPointWithinRects:spawningRects];
-            HeartGuardBot *bot = [[HeartGuardBot alloc] initWithFrame:botFrame];
-            [bot setBotImage];
-            bot.livingGuyManager = _livingGuyManager;
-            [_livingGuyManager.bots addObject:bot];
-        }
         
         _lastSwipePoint = CGPointMake(INFINITY, INFINITY);
         _nanobotsBeingSwiped = [[NSMutableArray alloc] init];
@@ -72,6 +64,19 @@
     return self;
 }
 
+
+- (void)viewWasBornAtPoint:(CGPoint)point {
+    [self spawnHeartGuardAtPoint:point];
+}
+
+- (void)spawnHeartGuardAtPoint:(CGPoint)point {
+    CGRect botFrame = CGRectMake(0, 0, 5, 5);
+    botFrame.origin = point;
+    HeartGuardBot *bot = [[HeartGuardBot alloc] initWithFrame:botFrame];
+    bot.livingGuyManager = _livingGuyManager;
+    [_livingGuyManager.bots addObject:bot];
+    [_zoomingContentView addSubview:bot];
+}
 
 
 - (void)viewDidLoad {
@@ -90,9 +95,12 @@
     background.frame = self.view.bounds;
     _zoomingContentView = background;
     [_pinchView addSubview:_zoomingContentView];
-    
-    for (HeartGuardBot *bot in _livingGuyManager.bots) {
-        [_zoomingContentView addSubview:bot];
+   
+    scaleFactor = [[UIScreen mainScreen] bounds].size.width / 768;
+ 
+    NSArray *spawningRects = [CollidingRectsCreator validSpawningLocationsWithScale:scaleFactor];
+    for (int i = 0; i < [_levelParams[@"startingBotNum"] intValue]; i++) {
+        [self spawnHeartGuardAtPoint:[self randomPointWithinRects:spawningRects]];
     }
     
     UIPanGestureRecognizer *gestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
@@ -250,6 +258,7 @@
         for (ParentEnemy *enemy in _livingGuyManager.enemies) {
             [bot interactWithEnemy:enemy];
         }
+        [bot doAction];
         [bot advance:_timeInterval];
     }
 }
@@ -326,7 +335,7 @@
 }
 
 - (void)spawnEnemyWave {
-    ParentEnemy *firstBot = [EnemySpawner createEnemyForType:TEAR];
+    ParentEnemy *firstBot = [EnemySpawner createEnemyForType:PLAQUE];
     [self placeEnemy:firstBot];
 }
 
