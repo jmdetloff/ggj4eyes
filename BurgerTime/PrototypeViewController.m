@@ -339,6 +339,7 @@
     for (HeartGuardBot *bot in _livingGuyManager.bots) {
         if ([self distanceBetween:bot.center and:loc] < kPowerRadius) {
             bot.nanobotType = type;
+            if (type == SPAWNBOT) break;
         }
     }
 }
