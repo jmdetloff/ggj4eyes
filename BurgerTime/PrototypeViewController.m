@@ -26,7 +26,7 @@
 #import "VictoryView.h"
 
 #define kPowerRadius 80
-#define kFullHealth 500
+#define kFullHealth 5000
 #define kFullHealthbarLength 95
 
 @interface PrototypeViewController () <DeathDelegate, UIScrollViewDelegate, UIGestureRecognizerDelegate>
@@ -188,6 +188,8 @@
 }
 
 - (void)dealHeartDamage:(int)damage {
+    if (_gameOver) return;
+    
     _fattyHealth -= damage;
     CGFloat percentHealth = _fattyHealth/(CGFloat)kFullHealth;
     CGRect frame = _healthBar.frame;
