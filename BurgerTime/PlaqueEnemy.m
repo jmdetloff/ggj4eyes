@@ -67,6 +67,7 @@ static const float _sideLength = 40;
 - (void)die {
     [self.megaTimer invalidate];
     [self updateAlpha];
+    
     for (HeartGuardBot *bot in self.trackingBots) {
         if (bot.enemyKey == self)
             bot.enemyKey = nil;
@@ -80,7 +81,7 @@ static const float _sideLength = 40;
         self.hp -= [hgb damageAgainst:self];
         [self updateAlpha];
         if (self.hp <= 0) {
-            [self die];
+            [self.livingGuyManager livingGuyDies:self];
             return;
         }
     }
