@@ -8,7 +8,10 @@
 
 #import "ParentEnemy.h"
 
-@implementation ParentEnemy
+@implementation ParentEnemy {
+    NSInteger _attackTimer;
+}
+
 @synthesize botType;
 @synthesize hp;
 @synthesize bot_atk, heart_atk;
@@ -73,6 +76,14 @@
         return @"Parasite";
     } else {
         return @"Should never get here.";
+    }
+}
+
+- (void)attack {
+    _attackTimer++;
+    if (_attackTimer > 40) {
+        _attackTimer = 0;
+        [self.livingGuyManager livingGuy:self dealsHeartDamage:5];
     }
 }
 

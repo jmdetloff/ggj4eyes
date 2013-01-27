@@ -15,6 +15,7 @@
 @protocol DeathDelegate <NSObject>
 - (void)viewDied:(UIView *)victim;
 - (void)viewWasBornAtPoint:(CGPoint)point;
+- (void)dealHeartDamage:(int)damage;
 @end
 
 @interface LivingGuyManager : NSObject
@@ -26,5 +27,6 @@
 - (void)livingGuy:(UIView <LivingGuy> *)killer killsLivingGuy:(UIView <LivingGuy> *)victim;
 - (void)livingGuyDies:(UIView <LivingGuy> *)victim;
 - (void)livingGuyReproduces:(UIView <LivingGuy> *)mom;
+- (void)livingGuy:(UIView <LivingGuy> *)guy dealsHeartDamage:(int)damage;
 
 @end
