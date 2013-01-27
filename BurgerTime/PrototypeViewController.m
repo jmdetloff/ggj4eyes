@@ -350,7 +350,7 @@
             
     }
     
-    //[_livingGuyManager.enemies addObject:enemy];
+    [_livingGuyManager.enemies addObject:enemy];
 }
 
 
