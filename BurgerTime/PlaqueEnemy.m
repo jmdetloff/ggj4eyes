@@ -16,7 +16,7 @@ static const float _sideLength = 40;
 
 @implementation PlaqueEnemy
 
-@synthesize plaqueView, spreadPoints, numSpreadPoints;
+@synthesize plaqueView, spreadPoints, numSpreadPoints, megaTimer;
 
 - (id)initWithHP:(int)hp_ spreadRadius:(float)sr_ {
     self = [super init];
@@ -54,6 +54,7 @@ static const float _sideLength = 40;
             }
         }
         
+        self.megaTimer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(dealDamageToMe) userInfo:nil repeats:YES];
 //        self.alpha = 0.1f;
         
     }
@@ -67,6 +68,21 @@ static const float _sideLength = 40;
     [self.trackingBots removeAllObjects];
 }
 
+- (void)dealDamageToMe {
+    for (HeartGuardBot *hgb in self.trackingBots) {
+        //THIS IS WHERE BOTS DAMAGE THE PLAQUE
+    }
+}
+
+- (void)destinationReached:(id)sender {
+//    HeartGuardBot *bot = (HeartGuardBot *)sender;
+//    self.hp--;
+//    [self stainAtPoint:[self convertPoint:bot.frame.origin fromView:[self superview]]];
+//    [self.livingGuyManager livingGuy:self killsLivingGuy:bot];
+//    if (self.hp <= 0) {
+//        [self.livingGuyManager livingGuyDies:self];
+//    }
+}
 
 - (void)track:(HeartGuardBot *)bot {
     [self.trackingBots addObject:bot];
