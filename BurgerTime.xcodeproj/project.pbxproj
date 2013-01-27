@@ -17,7 +17,6 @@
 		0F4D201016B4D5C800291459 /* HealDrag.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D200816B4D5C800291459 /* HealDrag.png */; };
 		0F4D201116B4D5C800291459 /* MomButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D200916B4D5C800291459 /* MomButton.png */; };
 		0F4D201216B4D5C800291459 /* MomDrag.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D200A16B4D5C800291459 /* MomDrag.png */; };
-		0F4D201416B4D5D700291459 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D201316B4D5D700291459 /* background.png */; };
 		0F4D205116B4EA6000291459 /* Cleanerbot.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D204C16B4EA6000291459 /* Cleanerbot.png */; };
 		0F4D205216B4EA6000291459 /* Fighterbot.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D204D16B4EA6000291459 /* Fighterbot.png */; };
 		0F4D205316B4EA6000291459 /* Healerbot.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D204E16B4EA6000291459 /* Healerbot.png */; };
@@ -47,6 +46,10 @@
 		0F4D20F316B5BF4900291459 /* HomeButtonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D20ED16B5BF4900291459 /* HomeButtonPressed.png */; };
 		0F4D20F416B5BF4900291459 /* InstructionsButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D20EE16B5BF4900291459 /* InstructionsButton.png */; };
 		0F4D20F516B5BF4900291459 /* InstructionsButtonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D20EF16B5BF4900291459 /* InstructionsButtonPressed.png */; };
+		0F4D210716B5C4F300291459 /* InfoBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D210616B5C4F300291459 /* InfoBar.png */; };
+		0F4D210B16B5C63100291459 /* InfoPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4D210A16B5C63100291459 /* InfoPanel.m */; };
+		0F4D211D16B5CB4900291459 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D211C16B5CB4800291459 /* background.png */; };
+		0F4D212016B5CBCD00291459 /* ingame.caf in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D211F16B5CBCD00291459 /* ingame.caf */; };
 		0F9697E016B38D02005BE1C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9697DF16B38D02005BE1C1 /* UIKit.framework */; };
 		0F9697E216B38D02005BE1C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9697E116B38D02005BE1C1 /* Foundation.framework */; };
 		0F9697E416B38D02005BE1C1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9697E316B38D02005BE1C1 /* CoreGraphics.framework */; };
@@ -89,7 +92,6 @@
 		675D311F16B469350071B7B9 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6773E62716B4BA8700A3CBF5 /* AudioManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6773E62616B4BA8700A3CBF5 /* AudioManagement.m */; };
 		6773E62D16B4BC9400A3CBF5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6773E62C16B4BC9400A3CBF5 /* AudioToolbox.framework */; };
-		6773E63616B4C99C00A3CBF5 /* ingame.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E63416B4C99C00A3CBF5 /* ingame.caf */; };
 		6773E63A16B4CBD100A3CBF5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6773E63916B4CBD000A3CBF5 /* AVFoundation.framework */; };
 		6773E64C16B4D05100A3CBF5 /* clothability.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E64716B4D05100A3CBF5 /* clothability.caf */; };
 		6773E64D16B4D05100A3CBF5 /* icon.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E64816B4D05100A3CBF5 /* icon.caf */; };
@@ -139,7 +141,6 @@
 		0F4D200816B4D5C800291459 /* HealDrag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HealDrag.png; sourceTree = "<group>"; };
 		0F4D200916B4D5C800291459 /* MomButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MomButton.png; sourceTree = "<group>"; };
 		0F4D200A16B4D5C800291459 /* MomDrag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MomDrag.png; sourceTree = "<group>"; };
-		0F4D201316B4D5D700291459 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		0F4D204C16B4EA6000291459 /* Cleanerbot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cleanerbot.png; sourceTree = "<group>"; };
 		0F4D204D16B4EA6000291459 /* Fighterbot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fighterbot.png; sourceTree = "<group>"; };
 		0F4D204E16B4EA6000291459 /* Healerbot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Healerbot.png; sourceTree = "<group>"; };
@@ -172,6 +173,11 @@
 		0F4D20ED16B5BF4900291459 /* HomeButtonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeButtonPressed.png; sourceTree = "<group>"; };
 		0F4D20EE16B5BF4900291459 /* InstructionsButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InstructionsButton.png; sourceTree = "<group>"; };
 		0F4D20EF16B5BF4900291459 /* InstructionsButtonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InstructionsButtonPressed.png; sourceTree = "<group>"; };
+		0F4D210616B5C4F300291459 /* InfoBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InfoBar.png; sourceTree = "<group>"; };
+		0F4D210916B5C63100291459 /* InfoPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoPanel.h; sourceTree = "<group>"; };
+		0F4D210A16B5C63100291459 /* InfoPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoPanel.m; sourceTree = "<group>"; };
+		0F4D211C16B5CB4800291459 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		0F4D211F16B5CBCD00291459 /* ingame.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ingame.caf; sourceTree = "<group>"; };
 		0F9697DB16B38D02005BE1C1 /* BurgerTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BurgerTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F9697DF16B38D02005BE1C1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0F9697E116B38D02005BE1C1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -230,7 +236,6 @@
 		6773E62516B4BA8700A3CBF5 /* AudioManagement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioManagement.h; sourceTree = "<group>"; };
 		6773E62616B4BA8700A3CBF5 /* AudioManagement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioManagement.m; sourceTree = "<group>"; };
 		6773E62C16B4BC9400A3CBF5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		6773E63416B4C99C00A3CBF5 /* ingame.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ingame.caf; sourceTree = "<group>"; };
 		6773E63916B4CBD000A3CBF5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		6773E64716B4D05100A3CBF5 /* clothability.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = clothability.caf; sourceTree = "<group>"; };
 		6773E64816B4D05100A3CBF5 /* icon.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = icon.caf; sourceTree = "<group>"; };
@@ -291,7 +296,7 @@
 				0F4D200516B4D5C800291459 /* FightButton.png */,
 				0F4D200616B4D5C800291459 /* FightDrag.png */,
 				0F4D200716B4D5C800291459 /* HealButton.png */,
-				0F4D201316B4D5D700291459 /* background.png */,
+				0F4D211C16B5CB4800291459 /* background.png */,
 				0F4D200816B4D5C800291459 /* HealDrag.png */,
 				0F4D200916B4D5C800291459 /* MomButton.png */,
 				0F4D200A16B4D5C800291459 /* MomDrag.png */,
@@ -311,6 +316,7 @@
 		0F4D20D516B5BBB100291459 /* Menus */ = {
 			isa = PBXGroup;
 			children = (
+				0F4D210616B5C4F300291459 /* InfoBar.png */,
 				0F4D20D716B5BBBF00291459 /* CreditsBG.png */,
 				0F4D20D816B5BBBF00291459 /* HomescreenBG.png */,
 				0F4D20D916B5BBBF00291459 /* InstructionsBG.png */,
@@ -392,6 +398,8 @@
 				0F4D1FF616B4C47000291459 /* PanlessScrollView.m */,
 				0F4D20AA16B52E1900291459 /* ZapView.h */,
 				0F4D20AB16B52E1A00291459 /* ZapView.m */,
+				0F4D210916B5C63100291459 /* InfoPanel.h */,
+				0F4D210A16B5C63100291459 /* InfoPanel.m */,
 			);
 			path = BurgerTime;
 			sourceTree = "<group>";
@@ -500,12 +508,12 @@
 		6773E62E16B4BD6200A3CBF5 /* sounds */ = {
 			isa = PBXGroup;
 			children = (
+				0F4D211F16B5CBCD00291459 /* ingame.caf */,
 				6773E64716B4D05100A3CBF5 /* clothability.caf */,
 				6773E64816B4D05100A3CBF5 /* icon.caf */,
 				6773E64916B4D05100A3CBF5 /* pointspurchase.caf */,
 				6773E64A16B4D05100A3CBF5 /* robotdamage.caf */,
 				6773E64B16B4D05100A3CBF5 /* menu.caf */,
-				6773E63416B4C99C00A3CBF5 /* ingame.caf */,
 				6773E65116B4D4DA00A3CBF5 /* cleaning.caf */,
 				6773E65216B4D4DA00A3CBF5 /* mombo.caf */,
 				6773E65316B4D4DA00A3CBF5 /* zapper.caf */,
@@ -603,7 +611,6 @@
 				0F4D201016B4D5C800291459 /* HealDrag.png in Resources */,
 				0F4D201116B4D5C800291459 /* MomButton.png in Resources */,
 				0F4D201216B4D5C800291459 /* MomDrag.png in Resources */,
-				0F4D201416B4D5D700291459 /* background.png in Resources */,
 				0F4D205116B4EA6000291459 /* Cleanerbot.png in Resources */,
 				0F4D205216B4EA6000291459 /* Fighterbot.png in Resources */,
 				0F4D205316B4EA6000291459 /* Healerbot.png in Resources */,
@@ -647,6 +654,9 @@
 				0F4D20F316B5BF4900291459 /* HomeButtonPressed.png in Resources */,
 				0F4D20F416B5BF4900291459 /* InstructionsButton.png in Resources */,
 				0F4D20F516B5BF4900291459 /* InstructionsButtonPressed.png in Resources */,
+				0F4D210716B5C4F300291459 /* InfoBar.png in Resources */,
+				0F4D211D16B5CB4900291459 /* background.png in Resources */,
+				0F4D212016B5CBCD00291459 /* ingame.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -655,7 +665,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F96980E16B38D02005BE1C1 /* InfoPlist.strings in Resources */,
-				6773E63616B4C99C00A3CBF5 /* ingame.caf in Resources */,
 				6773E64C16B4D05100A3CBF5 /* clothability.caf in Resources */,
 				6773E64D16B4D05100A3CBF5 /* icon.caf in Resources */,
 				6773E64E16B4D05100A3CBF5 /* pointspurchase.caf in Resources */,
@@ -713,6 +722,7 @@
 				0F4D20AC16B52E1A00291459 /* ZapView.m in Sources */,
 				242D70A016B55D5B00DE0BFF /* Level.m in Sources */,
 				0F4D20DF16B5BBCD00291459 /* MenuViewController.m in Sources */,
+				0F4D210B16B5C63100291459 /* InfoPanel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

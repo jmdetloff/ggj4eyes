@@ -21,6 +21,7 @@
 #import "Level.h"
 #import "Wave.h"
 #import "Nanobot.h"
+#import "InfoPanel.h"
 
 #define kPowerRadius 80
 
@@ -52,6 +53,8 @@
     UIView *_draggingView;
     NSArray *_buttons;
     UIView *_descriptionView;
+    InfoPanel *_infoPanel;
+    UILabel *_fightCount;
 }
 
 
@@ -93,11 +96,14 @@
     bot.livingGuyManager = _livingGuyManager;
     [_livingGuyManager.bots addObject:bot];
     [_zoomingContentView addSubview:bot];
+    _infoPanel.neutralCount++;
 }
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _infoPanel = [[InfoPanel alloc] initWithFrame:CGRectMake(32, 900, 245, 92)];
     
     _pinchView = [[PanlessScrollView alloc] initWithFrame:self.view.bounds];
     _pinchView.minimumZoomScale = 1;
@@ -167,6 +173,9 @@
     UIImageView *portrait = [[UIImageView alloc] initWithFrame:CGRectMake(548, 32, 187, 218)];
     portrait.image = [UIImage imageNamed:[NSString stringWithFormat:@"Level%iPortrait.png",level]];
     [self.view addSubview:portrait];
+    
+    _infoPanel = [[InfoPanel alloc] initWithFrame:CGRectMake(32, 900, 245, 92)];
+    [self.view addSubview:_infoPanel];
 }
 
 - (void)startDragging:(UIView *)sender {
@@ -431,6 +440,24 @@
     return _zoomingContentView;
 }
 
+
+- (void)incrementType:(NanabotType)type {
+    switch (type) {
+        case FIGHT:
+            _infoPanel.fighterCount++;
+            break;
+        case SCRUB:
+            _infoPanel.cleanerCount++;
+            break;
+        case HEALER:
+            _infoPanel.healCount++;
+            break;
+        default:
+            break;
+    }
+}
+
+
 - (void)transformBotsToType:(NanabotType)type atPoint:(CGPoint)loc {
     bool flag = false;
     for (HeartGuardBot *bot in _livingGuyManager.bots) {
@@ -438,6 +465,7 @@
             flag = true;
             if (bot.nanobotType != SPAWNBOT) {
                 bot.nanobotType = type;
+                [self incrementType:type];
                 if (type == SPAWNBOT) {
                     break;
                 }
