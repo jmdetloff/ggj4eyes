@@ -36,8 +36,6 @@
 		0FACD3F716B44B61006BB9EC /* HeartLeakEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FACD3F616B44B61006BB9EC /* HeartLeakEnemy.m */; };
 		0FACD3FB16B457A1006BB9EC /* LivingGuyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FACD3FA16B457A0006BB9EC /* LivingGuyManager.m */; };
 		2415D1A416B3B82E00308B74 /* wave.json in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1A216B3B82E00308B74 /* wave.json */; };
-		675D311F16B469350071B7B9 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 675D311E16B469350071B7B9 /* Level.m */; };
-		675D312316B4696C0071B7B9 /* Wave.m in Sources */ = {isa = PBXBuildFile; fileRef = 675D312216B4696C0071B7B9 /* Wave.m */; };
 		2415D1AD16B3E68200308B74 /* enemy_type.json in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1AA16B3E68200308B74 /* enemy_type.json */; };
 		2415D1AF16B3E68200308B74 /* level.json in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1AB16B3E68200308B74 /* level.json */; };
 		2415D1B716B3EA3400308B74 /* nanobot_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1B216B3EA3400308B74 /* nanobot_blue.png */; };
@@ -45,6 +43,21 @@
 		2415D1BB16B3EA3400308B74 /* nanobot_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1B416B3EA3400308B74 /* nanobot_red.png */; };
 		2415D1BD16B3EA3400308B74 /* nanobot_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1B516B3EA3400308B74 /* nanobot_white.png */; };
 		2415D1C016B3EA3400308B74 /* nanobot_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 2415D1B616B3EA3400308B74 /* nanobot_yellow.png */; };
+		675D311F16B469350071B7B9 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 675D311E16B469350071B7B9 /* Level.m */; };
+		6773E62716B4BA8700A3CBF5 /* AudioManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6773E62616B4BA8700A3CBF5 /* AudioManagement.m */; };
+		6773E62D16B4BC9400A3CBF5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6773E62C16B4BC9400A3CBF5 /* AudioToolbox.framework */; };
+		6773E63516B4C99C00A3CBF5 /* ingame.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E63416B4C99C00A3CBF5 /* ingame.caf */; };
+		6773E63616B4C99C00A3CBF5 /* ingame.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E63416B4C99C00A3CBF5 /* ingame.caf */; };
+		6773E63A16B4CBD100A3CBF5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6773E63916B4CBD000A3CBF5 /* AVFoundation.framework */; };
+		6773E64C16B4D05100A3CBF5 /* clothability.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E64716B4D05100A3CBF5 /* clothability.caf */; };
+		6773E64D16B4D05100A3CBF5 /* icon.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E64816B4D05100A3CBF5 /* icon.caf */; };
+		6773E64E16B4D05100A3CBF5 /* pointspurchase.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E64916B4D05100A3CBF5 /* pointspurchase.caf */; };
+		6773E64F16B4D05100A3CBF5 /* robotdamage.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E64A16B4D05100A3CBF5 /* robotdamage.caf */; };
+		6773E65016B4D05100A3CBF5 /* menu.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E64B16B4D05100A3CBF5 /* menu.caf */; };
+		6773E65516B4D4DA00A3CBF5 /* cleaning.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E65116B4D4DA00A3CBF5 /* cleaning.caf */; };
+		6773E65616B4D4DA00A3CBF5 /* mombo.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E65216B4D4DA00A3CBF5 /* mombo.caf */; };
+		6773E65716B4D4DA00A3CBF5 /* zapper.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E65316B4D4DA00A3CBF5 /* zapper.caf */; };
+		6773E65816B4D4DA00A3CBF5 /* heartbeat.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E65416B4D4DA00A3CBF5 /* heartbeat.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,11 +112,6 @@
 		0FACD3F916B457A0006BB9EC /* LivingGuyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivingGuyManager.h; sourceTree = "<group>"; };
 		0FACD3FA16B457A0006BB9EC /* LivingGuyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LivingGuyManager.m; sourceTree = "<group>"; };
 		2415D1A216B3B82E00308B74 /* wave.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wave.json; sourceTree = "<group>"; };
-		675D311D16B469350071B7B9 /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
-		675D311E16B469350071B7B9 /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
-		675D312116B4696C0071B7B9 /* Wave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wave.h; sourceTree = "<group>"; };
-		675D312216B4696C0071B7B9 /* Wave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wave.m; sourceTree = "<group>"; };
-		2415D1A216B3B82E00308B74 /* wave.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wave.json; sourceTree = "<group>"; };
 		2415D1AA16B3E68200308B74 /* enemy_type.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = enemy_type.json; sourceTree = "<group>"; };
 		2415D1AB16B3E68200308B74 /* level.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level.json; sourceTree = "<group>"; };
 		2415D1B216B3EA3400308B74 /* nanobot_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanobot_blue.png; sourceTree = "<group>"; };
@@ -111,6 +119,22 @@
 		2415D1B416B3EA3400308B74 /* nanobot_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanobot_red.png; sourceTree = "<group>"; };
 		2415D1B516B3EA3400308B74 /* nanobot_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanobot_white.png; sourceTree = "<group>"; };
 		2415D1B616B3EA3400308B74 /* nanobot_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nanobot_yellow.png; sourceTree = "<group>"; };
+		675D311D16B469350071B7B9 /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
+		675D311E16B469350071B7B9 /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
+		6773E62516B4BA8700A3CBF5 /* AudioManagement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioManagement.h; sourceTree = "<group>"; };
+		6773E62616B4BA8700A3CBF5 /* AudioManagement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioManagement.m; sourceTree = "<group>"; };
+		6773E62C16B4BC9400A3CBF5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		6773E63416B4C99C00A3CBF5 /* ingame.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ingame.caf; sourceTree = "<group>"; };
+		6773E63916B4CBD000A3CBF5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		6773E64716B4D05100A3CBF5 /* clothability.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = clothability.caf; sourceTree = "<group>"; };
+		6773E64816B4D05100A3CBF5 /* icon.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = icon.caf; sourceTree = "<group>"; };
+		6773E64916B4D05100A3CBF5 /* pointspurchase.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pointspurchase.caf; sourceTree = "<group>"; };
+		6773E64A16B4D05100A3CBF5 /* robotdamage.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = robotdamage.caf; sourceTree = "<group>"; };
+		6773E64B16B4D05100A3CBF5 /* menu.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = menu.caf; sourceTree = "<group>"; };
+		6773E65116B4D4DA00A3CBF5 /* cleaning.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = cleaning.caf; sourceTree = "<group>"; };
+		6773E65216B4D4DA00A3CBF5 /* mombo.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = mombo.caf; sourceTree = "<group>"; };
+		6773E65316B4D4DA00A3CBF5 /* zapper.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = zapper.caf; sourceTree = "<group>"; };
+		6773E65416B4D4DA00A3CBF5 /* heartbeat.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = heartbeat.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +142,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6773E63A16B4CBD100A3CBF5 /* AVFoundation.framework in Frameworks */,
+				6773E62D16B4BC9400A3CBF5 /* AudioToolbox.framework in Frameworks */,
 				0F96982616B39390005BE1C1 /* QuartzCore.framework in Frameworks */,
 				0F9697E016B38D02005BE1C1 /* UIKit.framework in Frameworks */,
 				0F9697E216B38D02005BE1C1 /* Foundation.framework in Frameworks */,
@@ -164,6 +190,8 @@
 		0F9697DE16B38D02005BE1C1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6773E63916B4CBD000A3CBF5 /* AVFoundation.framework */,
+				6773E62C16B4BC9400A3CBF5 /* AudioToolbox.framework */,
 				0F96982516B39390005BE1C1 /* QuartzCore.framework */,
 				0F9697DF16B38D02005BE1C1 /* UIKit.framework */,
 				0F9697E116B38D02005BE1C1 /* Foundation.framework */,
@@ -177,7 +205,10 @@
 		0F9697E716B38D02005BE1C1 /* BurgerTime */ = {
 			isa = PBXGroup;
 			children = (
+				6773E62E16B4BD6200A3CBF5 /* sounds */,
 				0FACD3F816B44C8B006BB9EC /* enemies and bots */,
+				6773E62516B4BA8700A3CBF5 /* AudioManagement.h */,
+				6773E62616B4BA8700A3CBF5 /* AudioManagement.m */,
 				0F9697F016B38D02005BE1C1 /* AppDelegate.h */,
 				0F9697F116B38D02005BE1C1 /* AppDelegate.m */,
 				0F96981E16B39283005BE1C1 /* PrototypeViewController.h */,
@@ -230,8 +261,6 @@
 			children = (
 				675D311D16B469350071B7B9 /* Level.h */,
 				675D311E16B469350071B7B9 /* Level.m */,
-				675D312116B4696C0071B7B9 /* Wave.h */,
-				675D312216B4696C0071B7B9 /* Wave.m */,
 				0FACD3F216B44B09006BB9EC /* EnemySpawner.h */,
 				0FACD3F316B44B09006BB9EC /* EnemySpawner.m */,
 				0F96982916B3A008005BE1C1 /* MovingCollidingGuy.h */,
@@ -269,6 +298,23 @@
 				2415D1B616B3EA3400308B74 /* nanobot_yellow.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		6773E62E16B4BD6200A3CBF5 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				6773E64716B4D05100A3CBF5 /* clothability.caf */,
+				6773E64816B4D05100A3CBF5 /* icon.caf */,
+				6773E64916B4D05100A3CBF5 /* pointspurchase.caf */,
+				6773E64A16B4D05100A3CBF5 /* robotdamage.caf */,
+				6773E64B16B4D05100A3CBF5 /* menu.caf */,
+				6773E63416B4C99C00A3CBF5 /* ingame.caf */,
+				6773E65116B4D4DA00A3CBF5 /* cleaning.caf */,
+				6773E65216B4D4DA00A3CBF5 /* mombo.caf */,
+				6773E65316B4D4DA00A3CBF5 /* zapper.caf */,
+				6773E65416B4D4DA00A3CBF5 /* heartbeat.caf */,
+			);
+			name = sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,14 +393,12 @@
 				0F9697F616B38D02005BE1C1 /* Default@2x.png in Resources */,
 				0F9697F816B38D02005BE1C1 /* Default-568h@2x.png in Resources */,
 				0F96982816B39B38005BE1C1 /* File in Resources */,
-				2415D1AC16B3E68200308B74 /* enemy_type.json in Resources */,
-				2415D1AE16B3E68200308B74 /* level.json in Resources */,
 				2415D1B716B3EA3400308B74 /* nanobot_blue.png in Resources */,
 				2415D1B916B3EA3400308B74 /* nanobot_green.png in Resources */,
 				2415D1BB16B3EA3400308B74 /* nanobot_red.png in Resources */,
 				2415D1BD16B3EA3400308B74 /* nanobot_white.png in Resources */,
-				2415D1BF16B3EA3400308B74 /* nanobot_yellow.png in Resources */,
 				0F4D1FC816B46D0F00291459 /* heart_bg.png in Resources */,
+				6773E63516B4C99C00A3CBF5 /* ingame.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,11 +410,17 @@
 				2415D1A416B3B82E00308B74 /* wave.json in Resources */,
 				2415D1AD16B3E68200308B74 /* enemy_type.json in Resources */,
 				2415D1AF16B3E68200308B74 /* level.json in Resources */,
-				2415D1B816B3EA3400308B74 /* nanobot_blue.png in Resources */,
-				2415D1BA16B3EA3400308B74 /* nanobot_green.png in Resources */,
-				2415D1BC16B3EA3400308B74 /* nanobot_red.png in Resources */,
-				2415D1BE16B3EA3400308B74 /* nanobot_white.png in Resources */,
 				2415D1C016B3EA3400308B74 /* nanobot_yellow.png in Resources */,
+				6773E63616B4C99C00A3CBF5 /* ingame.caf in Resources */,
+				6773E64C16B4D05100A3CBF5 /* clothability.caf in Resources */,
+				6773E64D16B4D05100A3CBF5 /* icon.caf in Resources */,
+				6773E64E16B4D05100A3CBF5 /* pointspurchase.caf in Resources */,
+				6773E64F16B4D05100A3CBF5 /* robotdamage.caf in Resources */,
+				6773E65016B4D05100A3CBF5 /* menu.caf in Resources */,
+				6773E65516B4D4DA00A3CBF5 /* cleaning.caf in Resources */,
+				6773E65616B4D4DA00A3CBF5 /* mombo.caf in Resources */,
+				6773E65716B4D4DA00A3CBF5 /* zapper.caf in Resources */,
+				6773E65816B4D4DA00A3CBF5 /* heartbeat.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,8 +457,8 @@
 				0FACD3F416B44B09006BB9EC /* EnemySpawner.m in Sources */,
 				0FACD3F716B44B61006BB9EC /* HeartLeakEnemy.m in Sources */,
 				0FACD3FB16B457A1006BB9EC /* LivingGuyManager.m in Sources */,
-				675D312316B4696C0071B7B9 /* Wave.m in Sources */,
 				0F4D1FCC16B47EEC00291459 /* CollidingRectsCreator.m in Sources */,
+				6773E62716B4BA8700A3CBF5 /* AudioManagement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,7 +468,6 @@
 			files = (
 				0F96981116B38D02005BE1C1 /* BurgerTimeTests.m in Sources */,
 				675D311F16B469350071B7B9 /* Level.m in Sources */,
-				675D312416B4696C0071B7B9 /* Wave.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
