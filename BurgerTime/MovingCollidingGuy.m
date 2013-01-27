@@ -119,11 +119,22 @@
     self.angle = ang;
 }
 
+- (BOOL)setOptionalDestinationPoint:(CGPoint)destinationPoint {
+    if (!_destinationValid) {
+        [self setDestinationPoint:destinationPoint];
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
 - (void)setDestinationPoint:(CGPoint)destinationPoint {
     [self clearDestination];
     
     _destinationPoint = destinationPoint;
     _destinationValid = YES;
+    
+    self.enemyKey = nil;
 }
 
 - (void)clearDestination {
