@@ -27,6 +27,10 @@
     SystemSoundID zapperCaf;
     SystemSoundID heartbeatCaf;
     
+    // Sounds 3
+    SystemSoundID infoOpenCaf;
+    SystemSoundID infoCloseCaf;
+    
     // The following is from Sounds 1
     AVAudioPlayer *backgroundMusic;
     AVAudioPlayer *menuMusic;

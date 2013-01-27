@@ -96,6 +96,8 @@
 		67CF4ABB16B5122700129B56 /* rip_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 67CF4AB816B5122700129B56 /* rip_03.png */; };
 		67CF4ABC16B5122700129B56 /* rip_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 67CF4AB916B5122700129B56 /* rip_02.png */; };
 		67CF4ABD16B5122700129B56 /* rip_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 67CF4ABA16B5122700129B56 /* rip_01.png */; };
+		67CF4AC416B5B6CB00129B56 /* info_close.caf in Resources */ = {isa = PBXBuildFile; fileRef = 67CF4AC216B5B6CB00129B56 /* info_close.caf */; };
+		67CF4AC516B5B6CB00129B56 /* info_open.caf in Resources */ = {isa = PBXBuildFile; fileRef = 67CF4AC316B5B6CB00129B56 /* info_open.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -209,6 +211,8 @@
 		67CF4AB816B5122700129B56 /* rip_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rip_03.png; sourceTree = "<group>"; };
 		67CF4AB916B5122700129B56 /* rip_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rip_02.png; sourceTree = "<group>"; };
 		67CF4ABA16B5122700129B56 /* rip_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rip_01.png; sourceTree = "<group>"; };
+		67CF4AC216B5B6CB00129B56 /* info_close.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = info_close.caf; sourceTree = "<group>"; };
+		67CF4AC316B5B6CB00129B56 /* info_open.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = info_open.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -439,6 +443,8 @@
 				6773E65216B4D4DA00A3CBF5 /* mombo.caf */,
 				6773E65316B4D4DA00A3CBF5 /* zapper.caf */,
 				6773E65416B4D4DA00A3CBF5 /* heartbeat.caf */,
+				67CF4AC216B5B6CB00129B56 /* info_close.caf */,
+				67CF4AC316B5B6CB00129B56 /* info_open.caf */,
 			);
 			name = sounds;
 			sourceTree = "<group>";
@@ -557,6 +563,8 @@
 				0F4D20A716B5111D00291459 /* toxin_01.png in Resources */,
 				0F4D20A816B5111D00291459 /* toxin_02.png in Resources */,
 				0F4D20A916B5111D00291459 /* toxin_03.png in Resources */,
+				67CF4AC416B5B6CB00129B56 /* info_close.caf in Resources */,
+				67CF4AC516B5B6CB00129B56 /* info_open.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

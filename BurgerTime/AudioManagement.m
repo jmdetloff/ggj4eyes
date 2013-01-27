@@ -45,6 +45,12 @@
     
     CFURLRef iconRef  = (__bridge CFURLRef)[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"icon" ofType:@"caf"]];
     AudioServicesCreateSystemSoundID(iconRef, &(iconCaf));
+
+    CFURLRef openRef  = (__bridge CFURLRef)[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"icon" ofType:@"caf"]];
+    AudioServicesCreateSystemSoundID(openRef, &(infoOpenCaf));
+    
+    CFURLRef closeRef  = (__bridge CFURLRef)[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"icon" ofType:@"caf"]];
+    AudioServicesCreateSystemSoundID(closeRef, &(infoCloseCaf));
     
     
     NSString *s = [[NSBundle mainBundle] pathForResource:@"ingame" ofType:@"caf"];
