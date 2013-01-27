@@ -30,8 +30,8 @@ static NSArray *_botColors;
 
 -(void)setBotImage {
     if (!_botColors)
-        _botColors = [NSArray arrayWithObjects:@"red", @"white", @"green", @"blue", @"yellow", nil];
-    UIImage *botImage = [UIImage imageNamed:[NSString stringWithFormat:@"nanobot_%@.png", [_botColors objectAtIndex:self.nanobotType]]];
+        _botColors = [NSArray arrayWithObjects:@"Neutral", @"Cleaner", @"Healer", @"Mom", @"Fighter", nil];
+    UIImage *botImage = [UIImage imageNamed:[NSString stringWithFormat:@"%@bot.png", [_botColors objectAtIndex:self.nanobotType]]];
     for (UIView *subview in [[self subviews] copy]) {
         [subview removeFromSuperview];
     }
