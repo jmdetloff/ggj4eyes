@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0F4D1FC816B46D0F00291459 /* heart_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D1FC716B46D0F00291459 /* heart_bg.png */; };
 		0F4D1FCC16B47EEC00291459 /* CollidingRectsCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4D1FCB16B47EEC00291459 /* CollidingRectsCreator.m */; };
+		0F4D1FF716B4C47000291459 /* PanlessScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4D1FF616B4C47000291459 /* PanlessScrollView.m */; };
 		0F9697E016B38D02005BE1C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9697DF16B38D02005BE1C1 /* UIKit.framework */; };
 		0F9697E216B38D02005BE1C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9697E116B38D02005BE1C1 /* Foundation.framework */; };
 		0F9697E416B38D02005BE1C1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9697E316B38D02005BE1C1 /* CoreGraphics.framework */; };
@@ -58,6 +59,7 @@
 		6773E65616B4D4DA00A3CBF5 /* mombo.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E65216B4D4DA00A3CBF5 /* mombo.caf */; };
 		6773E65716B4D4DA00A3CBF5 /* zapper.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E65316B4D4DA00A3CBF5 /* zapper.caf */; };
 		6773E65816B4D4DA00A3CBF5 /* heartbeat.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E65416B4D4DA00A3CBF5 /* heartbeat.caf */; };
+		675D312316B4696C0071B7B9 /* Wave.m in Sources */ = {isa = PBXBuildFile; fileRef = 675D312216B4696C0071B7B9 /* Wave.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		0F4D1FC716B46D0F00291459 /* heart_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart_bg.png; sourceTree = "<group>"; };
 		0F4D1FCA16B47EEC00291459 /* CollidingRectsCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollidingRectsCreator.h; sourceTree = "<group>"; };
 		0F4D1FCB16B47EEC00291459 /* CollidingRectsCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollidingRectsCreator.m; sourceTree = "<group>"; };
+		0F4D1FF516B4C47000291459 /* PanlessScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanlessScrollView.h; sourceTree = "<group>"; };
+		0F4D1FF616B4C47000291459 /* PanlessScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanlessScrollView.m; sourceTree = "<group>"; };
 		0F9697DB16B38D02005BE1C1 /* BurgerTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BurgerTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F9697DF16B38D02005BE1C1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0F9697E116B38D02005BE1C1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -135,6 +139,8 @@
 		6773E65216B4D4DA00A3CBF5 /* mombo.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = mombo.caf; sourceTree = "<group>"; };
 		6773E65316B4D4DA00A3CBF5 /* zapper.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = zapper.caf; sourceTree = "<group>"; };
 		6773E65416B4D4DA00A3CBF5 /* heartbeat.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = heartbeat.caf; sourceTree = "<group>"; };
+		675D312116B4696C0071B7B9 /* Wave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wave.h; sourceTree = "<group>"; };
+		675D312216B4696C0071B7B9 /* Wave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wave.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +224,8 @@
 				0F4D1FCB16B47EEC00291459 /* CollidingRectsCreator.m */,
 				0F4D1FC716B46D0F00291459 /* heart_bg.png */,
 				0F9697E816B38D02005BE1C1 /* Supporting Files */,
+				0F4D1FF516B4C47000291459 /* PanlessScrollView.h */,
+				0F4D1FF616B4C47000291459 /* PanlessScrollView.m */,
 			);
 			path = BurgerTime;
 			sourceTree = "<group>";
@@ -459,6 +467,7 @@
 				0FACD3FB16B457A1006BB9EC /* LivingGuyManager.m in Sources */,
 				0F4D1FCC16B47EEC00291459 /* CollidingRectsCreator.m in Sources */,
 				6773E62716B4BA8700A3CBF5 /* AudioManagement.m in Sources */,
+				0F4D1FF716B4C47000291459 /* PanlessScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
