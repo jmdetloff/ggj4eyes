@@ -76,6 +76,15 @@
 		6773E65616B4D4DA00A3CBF5 /* mombo.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E65216B4D4DA00A3CBF5 /* mombo.caf */; };
 		6773E65716B4D4DA00A3CBF5 /* zapper.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E65316B4D4DA00A3CBF5 /* zapper.caf */; };
 		6773E65816B4D4DA00A3CBF5 /* heartbeat.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E65416B4D4DA00A3CBF5 /* heartbeat.caf */; };
+		67CC3F1016B507DE00CD0BB1 /* icon.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E64816B4D05100A3CBF5 /* icon.caf */; };
+		67CC3F1116B507E100CD0BB1 /* clothability.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E64716B4D05100A3CBF5 /* clothability.caf */; };
+		67CC3F1216B507E400CD0BB1 /* pointspurchase.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E64916B4D05100A3CBF5 /* pointspurchase.caf */; };
+		67CC3F1316B507E700CD0BB1 /* robotdamage.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E64A16B4D05100A3CBF5 /* robotdamage.caf */; };
+		67CC3F1416B507E900CD0BB1 /* menu.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E64B16B4D05100A3CBF5 /* menu.caf */; };
+		67CC3F1516B5080700CD0BB1 /* cleaning.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E65116B4D4DA00A3CBF5 /* cleaning.caf */; };
+		67CC3F1616B5081200CD0BB1 /* mombo.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E65216B4D4DA00A3CBF5 /* mombo.caf */; };
+		67CC3F1716B5081500CD0BB1 /* zapper.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E65316B4D4DA00A3CBF5 /* zapper.caf */; };
+		67CC3F1816B5081700CD0BB1 /* heartbeat.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E65416B4D4DA00A3CBF5 /* heartbeat.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -481,6 +490,15 @@
 				0F4D207516B4F07C00291459 /* FighterDescription.png in Resources */,
 				0F4D207616B4F07C00291459 /* HealerDescription.png in Resources */,
 				0F4D207716B4F07C00291459 /* MomDescription.png in Resources */,
+				67CC3F1016B507DE00CD0BB1 /* icon.caf in Resources */,
+				67CC3F1116B507E100CD0BB1 /* clothability.caf in Resources */,
+				67CC3F1216B507E400CD0BB1 /* pointspurchase.caf in Resources */,
+				67CC3F1316B507E700CD0BB1 /* robotdamage.caf in Resources */,
+				67CC3F1416B507E900CD0BB1 /* menu.caf in Resources */,
+				67CC3F1516B5080700CD0BB1 /* cleaning.caf in Resources */,
+				67CC3F1616B5081200CD0BB1 /* mombo.caf in Resources */,
+				67CC3F1716B5081500CD0BB1 /* zapper.caf in Resources */,
+				67CC3F1816B5081700CD0BB1 /* heartbeat.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

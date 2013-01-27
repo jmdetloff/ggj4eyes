@@ -14,6 +14,7 @@
 #import "CollidingRectsCreator.h"
 #import "MovingCollidingGuy.h"
 #import "PanlessScrollView.h"
+#import "AudioManagement.h"
 
 #define kPowerRadius 80
 
@@ -132,6 +133,7 @@
     [toolPanelView addSubview:momButton];
     
     _buttons = @[fightButton, healButton, cleanButton, momButton];
+    [[AudioManagement sharedInstance] playBackground];
 }
 
 - (void)startDragging:(UIView *)sender {
@@ -139,18 +141,22 @@
     switch (type) {
         case FIGHT:
             _draggingView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"FightDrag.png"]];
+            [[AudioManagement sharedInstance] playZapper];
             break;
             
         case SCRUB:
             _draggingView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CleanDrag.png"]];
+            [[AudioManagement sharedInstance] playCleaning];
             break;
             
         case SPAWNBOT:
             _draggingView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MomDrag.png"]];
+            [[AudioManagement sharedInstance] playMombo];
             break;
             
         case HEALER:
             _draggingView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"HealDrag.png"]];
+            [[AudioManagement sharedInstance] playCloth];
             break;
             
         default:
@@ -282,7 +288,7 @@
         }
         
         [_nanobotsBeingSwiped removeAllObjects];
-        
+        [[AudioManagement sharedInstance] playRobotDamage];
         return;
     }
     
