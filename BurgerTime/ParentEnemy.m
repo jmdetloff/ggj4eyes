@@ -24,7 +24,6 @@
         hp = maxhp;
         atk = 20;
         self.trackingBots = [NSMutableArray array];
-        // Probably not what we want to do.
     }
     return self;
 }

@@ -22,9 +22,7 @@
 
         UIImageView *uiv = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rip_01.png"]];
         [self addSubview:uiv];
-   //     self.backgroundColor = [UIColor whiteColor];
-     //   self.layer.borderColor = [UIColor blackColor].CGColor;
-       // self.layer.borderWidth = 3;
+        self.frame = CGRectMake(0, 0, 20, 50);
     }
     return self;
 }
@@ -32,6 +30,10 @@
 
 - (EnemyType)botType {
     return TEAR;
+}
+
+- (BOOL)moves {
+    return NO;
 }
 
 

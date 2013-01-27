@@ -37,10 +37,12 @@ typedef enum {
 @property (nonatomic) CGPoint cyclePivot;
 @property (nonatomic) CGPoint cycleParticleStart;
 @property (nonatomic) float cycleRadius;
+@property (nonatomic, assign) BOOL moves;
 
 - (void)advance:(double)dt;
 - (CGPoint)nextPos:(double)dt withAngle:(float)ang;
 - (void)rerollAngle:(double)dt;
 - (void)orderCycleWithPivot:(CGPoint)pivot_ radius:(float)radius_;
+- (void)collided:(double)dt;
 
 @end
