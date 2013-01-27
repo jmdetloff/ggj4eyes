@@ -28,6 +28,10 @@
 		0F4D205316B4EA6000291459 /* Healerbot.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D204E16B4EA6000291459 /* Healerbot.png */; };
 		0F4D205416B4EA6000291459 /* Mombot.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D204F16B4EA6000291459 /* Mombot.png */; };
 		0F4D205516B4EA6000291459 /* Neutralbot.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D205016B4EA6000291459 /* Neutralbot.png */; };
+		0F4D207416B4F07C00291459 /* CleanerDescription.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D207016B4F07C00291459 /* CleanerDescription.png */; };
+		0F4D207516B4F07C00291459 /* FighterDescription.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D207116B4F07C00291459 /* FighterDescription.png */; };
+		0F4D207616B4F07C00291459 /* HealerDescription.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D207216B4F07C00291459 /* HealerDescription.png */; };
+		0F4D207716B4F07C00291459 /* MomDescription.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D207316B4F07C00291459 /* MomDescription.png */; };
 		0F9697E016B38D02005BE1C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9697DF16B38D02005BE1C1 /* UIKit.framework */; };
 		0F9697E216B38D02005BE1C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9697E116B38D02005BE1C1 /* Foundation.framework */; };
 		0F9697E416B38D02005BE1C1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9697E316B38D02005BE1C1 /* CoreGraphics.framework */; };
@@ -108,6 +112,10 @@
 		0F4D204E16B4EA6000291459 /* Healerbot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Healerbot.png; sourceTree = "<group>"; };
 		0F4D204F16B4EA6000291459 /* Mombot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mombot.png; sourceTree = "<group>"; };
 		0F4D205016B4EA6000291459 /* Neutralbot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Neutralbot.png; sourceTree = "<group>"; };
+		0F4D207016B4F07C00291459 /* CleanerDescription.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CleanerDescription.png; sourceTree = "<group>"; };
+		0F4D207116B4F07C00291459 /* FighterDescription.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FighterDescription.png; sourceTree = "<group>"; };
+		0F4D207216B4F07C00291459 /* HealerDescription.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HealerDescription.png; sourceTree = "<group>"; };
+		0F4D207316B4F07C00291459 /* MomDescription.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MomDescription.png; sourceTree = "<group>"; };
 		0F9697DB16B38D02005BE1C1 /* BurgerTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BurgerTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F9697DF16B38D02005BE1C1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0F9697E116B38D02005BE1C1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -212,6 +220,10 @@
 				0F4D204E16B4EA6000291459 /* Healerbot.png */,
 				0F4D204F16B4EA6000291459 /* Mombot.png */,
 				0F4D205016B4EA6000291459 /* Neutralbot.png */,
+				0F4D207016B4F07C00291459 /* CleanerDescription.png */,
+				0F4D207116B4F07C00291459 /* FighterDescription.png */,
+				0F4D207216B4F07C00291459 /* HealerDescription.png */,
+				0F4D207316B4F07C00291459 /* MomDescription.png */,
 			);
 			name = artwork;
 			sourceTree = "<group>";
@@ -465,6 +477,10 @@
 				0F4D205316B4EA6000291459 /* Healerbot.png in Resources */,
 				0F4D205416B4EA6000291459 /* Mombot.png in Resources */,
 				0F4D205516B4EA6000291459 /* Neutralbot.png in Resources */,
+				0F4D207416B4F07C00291459 /* CleanerDescription.png in Resources */,
+				0F4D207516B4F07C00291459 /* FighterDescription.png in Resources */,
+				0F4D207616B4F07C00291459 /* HealerDescription.png in Resources */,
+				0F4D207716B4F07C00291459 /* MomDescription.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

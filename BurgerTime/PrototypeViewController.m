@@ -37,6 +37,7 @@
     UIView *_gestureView;
     UIView *_draggingView;
     NSArray *_buttons;
+    UIView *_descriptionView;
 }
 
 
@@ -199,13 +200,36 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches anyObject];
-    CGPoint loc = [touch locationInView:_zoomingContentView];
+
+    UIView *tappedButton = nil;
     
-    [self transformBotsToType:_draggingView.tag atPoint:loc];
+    if (_descriptionView && !_draggingView) {
+        [_descriptionView removeFromSuperview];
+        _descriptionView = nil;
+    }
+    
+    for (UIView *button in _buttons) {
+        CGPoint loc = [touch locationInView:button];
+        if (CGRectContainsPoint(button.bounds, loc)) {
+            tappedButton = button;
+            break;
+        }
+    }
+    
+    if (!tappedButton) {
+        if (_draggingView) {
+            CGPoint loc = [touch locationInView:_zoomingContentView];
+            [self transformBotsToType:_draggingView.tag atPoint:loc];
+        }
+        if (!_descriptionView) {
+            _pinchView.userInteractionEnabled = YES;
+        }
+    } else {
+        [self tappedButton:tappedButton];
+    }
     
     [_draggingView removeFromSuperview];
     _draggingView = nil;
-    _pinchView.userInteractionEnabled = YES;
 }
 
 
@@ -344,6 +368,37 @@
             if (type == SPAWNBOT) break;
         }
     }
+}
+
+
+- (void)tappedButton:(UIView *)button {
+    [_descriptionView removeFromSuperview];
+    
+    NanabotType type = button.tag;
+    switch (type) {
+        case FIGHT:
+            _descriptionView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"FighterDescription.png"]];
+            break;
+            
+        case SCRUB:
+            _descriptionView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CleanerDescription.png"]];
+            break;
+            
+        case SPAWNBOT:
+            _descriptionView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MomDescription.png"]];
+            break;
+            
+        case HEALER:
+            _descriptionView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"HealerDescription.png"]];
+            break;
+            
+        default:
+            break;
+    }
+    
+    _descriptionView.tag = button.tag;
+    _descriptionView.center = CGPointMake(button.frame.origin.x + 92/2, 900 - 140 );
+    [self.view addSubview:_descriptionView];
 }
 
 @end
