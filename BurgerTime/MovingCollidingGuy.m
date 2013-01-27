@@ -7,13 +7,14 @@
 //
 
 #import "MovingCollidingGuy.h"
+#import "CollidingRectsCreator.h"
 
 #define N_DIRECTIONS 8
-#define N_BOUNDING_RECTS 1
-
-static float _boundRects[] = {
-    -10, -10, 20, 788
-};
+//#define N_BOUNDING_RECTS 1
+//
+//static float _boundRects[] = {
+//    -10, -10, 20, 788
+//};
 
 @implementation MovingCollidingGuy {
     MovementDirection _previousMovementDirection;
@@ -41,8 +42,18 @@ static float _boundRects[] = {
 }
 
 - (void)advance:(double)dt {
+    if (_destinationValid) {
+        float dy = _destinationPoint.y - self.position.y;
+        float dx = _destinationPoint.x - self.position.x;
+        if (sqrtf(dx*dx + dy*dy) < 4)
+            [self reachedDestination];
+        self.angle = atan2(_destinationPoint.y - self.position.y, _destinationPoint.x - self.position.x);
+    }
+    if (![MovingCollidingGuy validPos:[self nextPos:dt withAngle:self.angle]])
+        [self rerollAngle:dt];
     self.position = [self nextPos:dt withAngle:self.angle];
-    self.frame = CGRectMake(self.position.x, self.position.y, self.frame.size.width, self.frame.size.height);
+    
+    self.frame = CGRectMake(self.position.x - self.frame.size.width/2, self.position.y - self.frame.size.height/2, self.frame.size.width, self.frame.size.height);
 }
 
 - (CGPoint)nextPos:(double)dt withAngle:(float)ang {
@@ -51,25 +62,48 @@ static float _boundRects[] = {
     return CGPointMake(self.position.x + dx, self.position.y + dy);
 }
 
-- (BOOL)validPos:(CGPoint)pos {
-    for (int i = 0;i < N_BOUNDING_RECTS;i++) {
-        if (pos.x >= _boundRects[4*i + 0] &&
-            pos.y >= _boundRects[4*i + 1] &&
-            pos.x <= _boundRects[4*i + 0] + _boundRects[4*i + 2] &&
-            pos.y <= _boundRects[4*i + 1] + _boundRects[4*i + 3])
++ (BOOL)validPos:(CGPoint)pos {
+    for (NSValue *v in [CollidingRectsCreator collidingRectsForHeartWithScale:1]) {
+        CGRect r = [v CGRectValue];
+        if (pos.x >= r.origin.x &&
+            pos.y >= r.origin.y &&
+            pos.x <= r.origin.x + r.size.width &&
+            pos.y <= r.origin.y + r.size.height) {
             return NO;
+        }
     }
+//    
+//    
+//    
+//    for (int i = 0;i < N_BOUNDING_RECTS;i++) {
+//        if (pos.x >= _boundRects[4*i + 0] &&
+//            pos.y >= _boundRects[4*i + 1] &&
+//            pos.x <= _boundRects[4*i + 0] + _boundRects[4*i + 2] &&
+//            pos.y <= _boundRects[4*i + 1] + _boundRects[4*i + 3])
+//            return NO;
+//    }
     return YES;
 }
 
 - (void)rerollAngle:(double)dt {
+    if (_destinationValid)
+        return;
     int index;
     float ang;
+    
+    int tries = 0;
+    float multiplier = 1;
+    
     while (1) {
         index = arc4random()%N_DIRECTIONS;
         ang = [self ithAngle:index];
-        if ([self validPos:[self nextPos:dt withAngle:ang]])
+        if (dt == 0)
             break;
+        if ([MovingCollidingGuy validPos:[self nextPos:multiplier * dt withAngle:ang]])
+            break;
+        tries++;
+        if (tries > 15)
+            multiplier++;
     }
     self.angle = ang;
 }
@@ -123,7 +157,7 @@ static float _boundRects[] = {
         MovementDirection direction = [self destinationMovementDirectionWithInvalidDirections:blockedDirections];
         if (direction != -1) {
             [self moveInDirection:direction];
-            if (CGPointEqualToPoint(_destinationPoint, self.frame.origin)) {
+            if (CGPointEqualToPoint(_destinationPoint, self.position)) {
                 [self reachedDestination];
             }
         }
@@ -187,6 +221,7 @@ static float _boundRects[] = {
 - (void)clearDestination {
     self.enemyKey = nil;
     _destinationValid = NO;
+    [self rerollAngle:0];
 }
 
 

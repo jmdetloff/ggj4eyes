@@ -12,6 +12,7 @@
 #import "EnemySpawner.h"
 #import "LivingGuyManager.h"
 #import "CollidingRectsCreator.h"
+#import "MovingCollidingGuy.h"
 
 @interface PrototypeViewController () <DeathDelegate>
 @end
@@ -27,6 +28,7 @@
     NSInteger _currentWave;
     LivingGuyManager *_livingGuyManager;
     double _timeInterval;
+    BOOL _currentSwipeValid;
 }
 
 
@@ -122,6 +124,16 @@
 - (void)swipe:(UIPanGestureRecognizer *)gestureRecognizer {
     CGPoint stopLocation = [gestureRecognizer locationInView:self.view];
     
+    
+    
+    if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
+        _currentSwipeValid = YES;
+    }
+    
+    if (![MovingCollidingGuy validPos:stopLocation]) {
+        _currentSwipeValid = NO;
+    }
+    
     if (gestureRecognizer.state == UIGestureRecognizerStateEnded || gestureRecognizer.state == UIGestureRecognizerStateCancelled) {
         _lastSwipePoint = CGPointMake(INFINITY, INFINITY);
         
@@ -148,11 +160,14 @@
         }
     } 
     
-    for (HeartGuardBot *bot in _nanobotsBeingSwiped) {
-        [bot setDestinationPoint:stopLocation withDuration:8];
+    if (_currentSwipeValid) {
+        for (HeartGuardBot *bot in _nanobotsBeingSwiped) {
+            [bot setDestinationPoint:stopLocation withDuration:8];
+        }
     }
     
-    _lastSwipePoint = stopLocation;
+    if (_currentSwipeValid)
+        _lastSwipePoint = stopLocation;
 }
 
 
