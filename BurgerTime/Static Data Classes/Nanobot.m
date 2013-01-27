@@ -10,6 +10,6 @@
 
 @implementation Nanobot
 
-@synthesize pk, name, hp, atk, modifiers;
+@synthesize pk, name, hp, atk, modifiers, cost;
 
 @end

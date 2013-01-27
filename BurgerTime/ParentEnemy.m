@@ -64,4 +64,16 @@
     // noop
 }
 
++(NSString*)nameFromType:(EnemyType)type {
+    if (type == TEAR) {
+        return @"Tear";
+    } else if (type == PLAQUE) {
+        return @"Plaque";
+    } else if (type == PARASITE) {
+        return @"Parasite";
+    } else {
+        return @"Should never get here.";
+    }
+}
+
 @end

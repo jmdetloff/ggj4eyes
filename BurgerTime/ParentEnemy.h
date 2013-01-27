@@ -24,5 +24,6 @@ typedef enum { TEAR, PLAQUE, PARASITE } EnemyType;
 -(NSString *)name;
 -(UIColor *)color;
 - (void)die;
++(NSString*)nameFromType:(EnemyType)type;
 
 @end

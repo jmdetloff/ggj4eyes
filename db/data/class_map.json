@@ -1,5 +1,5 @@
 {
 	"level" : "Level",
-    "nanobots" : "Nanobot",
+    "nanobot" : "Nanobot",
     "wave" : "Wave"
 }

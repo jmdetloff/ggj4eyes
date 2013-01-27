@@ -54,8 +54,7 @@ static const float _sideLength = 40;
             }
         }
         
-        self.megaTimer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(dealDamageToMe) userInfo:nil repeats:YES];
-//        self.alpha = 0.1f;
+        self.megaTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(dealDamageToMe:) userInfo:nil repeats:YES];
         
     }
     return self;
@@ -66,16 +65,25 @@ static const float _sideLength = 40;
 }
 
 - (void)die {
+    [self.megaTimer invalidate];
+    [self updateAlpha];
     for (HeartGuardBot *bot in self.trackingBots) {
         if (bot.enemyKey == self) bot.enemyKey = nil;
+        bot stop
     }
     [self.trackingBots removeAllObjects];
 }
 
-- (void)dealDamageToMe {
+- (void)dealDamageToMe:(id)sender {
     for (HeartGuardBot *hgb in self.trackingBots) {
-        //THIS IS WHERE BOTS DAMAGE THE PLAQUE
+        self.hp -= [hgb damageAgainst:self];
+        [self updateAlpha];
+        if (self.hp <= 0) {
+            [self die];
+            return;
+        }
     }
+//    NSLog(@"Plaque current hp: %d", self.hp);
 }
 
 - (void)destinationReached:(id)sender {
@@ -103,7 +111,7 @@ static const float _sideLength = 40;
 }
 
 - (void)updateAlpha {
-    self.alpha = self.hp / self.maxhp;
+    self.alpha = (double)MAX(0, self.hp) / self.maxhp;
 }
 
 @end

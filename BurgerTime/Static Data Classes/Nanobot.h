@@ -15,5 +15,6 @@
 @property (nonatomic) int hp;
 @property (nonatomic) int atk;
 @property (nonatomic, strong) NSDictionary *modifiers;
+@property (nonatomic) int cost;
 
 @end

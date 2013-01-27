@@ -13,6 +13,9 @@
 #import "Utils.h"
 #import "ParasiteEnemy.h"
 #import "ZapView.h"
+#import "ParentEnemy.h"
+#import "Nanobot.h"
+#import "StaticDataManager.h"
 
 static NSArray *_botColors;
 
@@ -51,6 +54,17 @@ static NSArray *_botColors;
     [self setBotImage];
 }
 
+- (int)damageAgainst:(ParentEnemy*)enemy {
+    Nanobot *nb = [StaticDataManager objectOfType:@"nanobot" atIndex:self.nanobotType];
+    EnemyType et = enemy.botType;
+    NSString *tn = [ParentEnemy nameFromType:et];
+    NSNumber *bonus = [nb.modifiers objectForKey:tn];
+    if (bonus) {
+        return nb.atk + [bonus intValue];
+    } else {
+        return nb.atk;
+    }
+}
 
 - (void)interactWithEnemy:(ParentEnemy *)enemy {
     switch (enemy.botType) {

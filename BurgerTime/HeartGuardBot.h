@@ -22,5 +22,6 @@ typedef   enum    { STANDARD, SCRUB, HEALER, SPAWNBOT, FIGHT } NanabotType;
 - (void)interactWithEnemy:(ParentEnemy *)enemy;
 - (void)setBotImage;
 - (void)doAction;
+- (int)damageAgainst:(ParentEnemy*)enemy;
 
 @end
