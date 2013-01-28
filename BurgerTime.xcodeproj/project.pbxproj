@@ -102,6 +102,7 @@
 		24C9068C16B5C52400C07198 /* Hooge0557.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24C9068B16B5C52400C07198 /* Hooge0557.ttf */; };
 		671045DB16B707A5007C3C4B /* heartappicon72.png in Resources */ = {isa = PBXBuildFile; fileRef = 671045DA16B707A5007C3C4B /* heartappicon72.png */; };
 		671045DD16B707DE007C3C4B /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 671045DC16B707DD007C3C4B /* Default-Portrait~ipad.png */; };
+		671BDA4316B73FD400D34DB6 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 671BDA4216B73FD400D34DB6 /* Default-Portrait@2x~ipad.png */; };
 		675D311F16B469350071B7B9 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6773E62716B4BA8700A3CBF5 /* AudioManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6773E62616B4BA8700A3CBF5 /* AudioManagement.m */; };
 		6773E62D16B4BC9400A3CBF5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6773E62C16B4BC9400A3CBF5 /* AudioToolbox.framework */; };
@@ -264,6 +265,7 @@
 		24C9068B16B5C52400C07198 /* Hooge0557.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Hooge0557.ttf; sourceTree = "<group>"; };
 		671045DA16B707A5007C3C4B /* heartappicon72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heartappicon72.png; sourceTree = "<group>"; };
 		671045DC16B707DD007C3C4B /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		671BDA4216B73FD400D34DB6 /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
 		6773E62516B4BA8700A3CBF5 /* AudioManagement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioManagement.h; sourceTree = "<group>"; };
 		6773E62616B4BA8700A3CBF5 /* AudioManagement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioManagement.m; sourceTree = "<group>"; };
 		6773E62C16B4BC9400A3CBF5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -396,6 +398,7 @@
 		0F9697D016B38D02005BE1C1 = {
 			isa = PBXGroup;
 			children = (
+				671BDA4216B73FD400D34DB6 /* Default-Portrait@2x~ipad.png */,
 				671045DC16B707DD007C3C4B /* Default-Portrait~ipad.png */,
 				671045DA16B707A5007C3C4B /* heartappicon72.png */,
 				0F9697E716B38D02005BE1C1 /* BurgerTime */,
@@ -732,6 +735,7 @@
 				67825E0916B5EA2F008656D1 /* ClosePopupButton.png in Resources */,
 				671045DB16B707A5007C3C4B /* heartappicon72.png in Resources */,
 				671045DD16B707DE007C3C4B /* Default-Portrait~ipad.png in Resources */,
+				671BDA4316B73FD400D34DB6 /* Default-Portrait@2x~ipad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
