@@ -100,6 +100,9 @@
 		249B884516B50F4600E5E707 /* class_map.json in Resources */ = {isa = PBXBuildFile; fileRef = 249B884316B50F4600E5E707 /* class_map.json */; };
 		249B884616B50F4600E5E707 /* everything.json in Resources */ = {isa = PBXBuildFile; fileRef = 249B884416B50F4600E5E707 /* everything.json */; };
 		24C9068C16B5C52400C07198 /* Hooge0557.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24C9068B16B5C52400C07198 /* Hooge0557.ttf */; };
+		671045D916B7069F007C3C4B /* heart_appicon144.png in Resources */ = {isa = PBXBuildFile; fileRef = 671045D816B7069F007C3C4B /* heart_appicon144.png */; };
+		671045DB16B707A5007C3C4B /* heartappicon72.png in Resources */ = {isa = PBXBuildFile; fileRef = 671045DA16B707A5007C3C4B /* heartappicon72.png */; };
+		671045DD16B707DE007C3C4B /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 671045DC16B707DD007C3C4B /* Default-Portrait~ipad.png */; };
 		675D311F16B469350071B7B9 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6773E62716B4BA8700A3CBF5 /* AudioManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6773E62616B4BA8700A3CBF5 /* AudioManagement.m */; };
 		6773E62D16B4BC9400A3CBF5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6773E62C16B4BC9400A3CBF5 /* AudioToolbox.framework */; };
@@ -202,7 +205,7 @@
 		0F85771C16B5D31800B7D011 /* DefeatView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefeatView.h; sourceTree = "<group>"; };
 		0F8ACDB416B5D763006E794F /* VictoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VictoryView.h; sourceTree = "<group>"; };
 		0F8ACDB516B5D763006E794F /* VictoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VictoryView.m; sourceTree = "<group>"; };
-		0F9697DB16B38D02005BE1C1 /* BurgerTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BurgerTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F9697DB16B38D02005BE1C1 /* Heart Invaders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Heart Invaders.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F9697DF16B38D02005BE1C1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0F9697E116B38D02005BE1C1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0F9697E316B38D02005BE1C1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -260,6 +263,9 @@
 		249B884316B50F4600E5E707 /* class_map.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = class_map.json; sourceTree = "<group>"; };
 		249B884416B50F4600E5E707 /* everything.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = everything.json; sourceTree = "<group>"; };
 		24C9068B16B5C52400C07198 /* Hooge0557.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Hooge0557.ttf; sourceTree = "<group>"; };
+		671045D816B7069F007C3C4B /* heart_appicon144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart_appicon144.png; sourceTree = "<group>"; };
+		671045DA16B707A5007C3C4B /* heartappicon72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heartappicon72.png; sourceTree = "<group>"; };
+		671045DC16B707DD007C3C4B /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		6773E62516B4BA8700A3CBF5 /* AudioManagement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioManagement.h; sourceTree = "<group>"; };
 		6773E62616B4BA8700A3CBF5 /* AudioManagement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioManagement.m; sourceTree = "<group>"; };
 		6773E62C16B4BC9400A3CBF5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -392,6 +398,9 @@
 		0F9697D016B38D02005BE1C1 = {
 			isa = PBXGroup;
 			children = (
+				671045DC16B707DD007C3C4B /* Default-Portrait~ipad.png */,
+				671045DA16B707A5007C3C4B /* heartappicon72.png */,
+				671045D816B7069F007C3C4B /* heart_appicon144.png */,
 				0F9697E716B38D02005BE1C1 /* BurgerTime */,
 				24C9068916B5C51800C07198 /* fonts */,
 				0F96980916B38D02005BE1C1 /* BurgerTimeTests */,
@@ -405,7 +414,7 @@
 		0F9697DC16B38D02005BE1C1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0F9697DB16B38D02005BE1C1 /* BurgerTime.app */,
+				0F9697DB16B38D02005BE1C1 /* Heart Invaders.app */,
 				0F96980116B38D02005BE1C1 /* BurgerTimeTests.octest */,
 			);
 			name = Products;
@@ -597,7 +606,7 @@
 			);
 			name = BurgerTime;
 			productName = BurgerTime;
-			productReference = 0F9697DB16B38D02005BE1C1 /* BurgerTime.app */;
+			productReference = 0F9697DB16B38D02005BE1C1 /* Heart Invaders.app */;
 			productType = "com.apple.product-type.application";
 		};
 		0F96980016B38D02005BE1C1 /* BurgerTimeTests */ = {
@@ -724,6 +733,9 @@
 				0FE9708A16B5DD7F006048C3 /* DeadDude_02.png in Resources */,
 				0FE9708B16B5DD7F006048C3 /* DeadDude_03.png in Resources */,
 				67825E0916B5EA2F008656D1 /* ClosePopupButton.png in Resources */,
+				671045D916B7069F007C3C4B /* heart_appicon144.png in Resources */,
+				671045DB16B707A5007C3C4B /* heartappicon72.png in Resources */,
+				671045DD16B707DE007C3C4B /* Default-Portrait~ipad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -897,13 +909,14 @@
 		0F96981516B38D02005BE1C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: John Detloff (MSXW884Y5A)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jethro Bell (Y36M9HWW85)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BurgerTime/BurgerTime-Prefix.pch";
 				INFOPLIST_FILE = "BurgerTime/BurgerTime-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "F3FF5004-4E64-4C8F-B0BE-5A422920935A";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "Heart Invaders";
+				PROVISIONING_PROFILE = "F076F39B-6465-479E-9047-77917F403280";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -914,8 +927,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BurgerTime/BurgerTime-Prefix.pch";
 				INFOPLIST_FILE = "BurgerTime/BurgerTime-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "Heart Invaders";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
