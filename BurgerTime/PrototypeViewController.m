@@ -27,7 +27,7 @@
 
 
 #define kPowerRadius 80
-#define kFullHealth 5000
+#define kFullHealth 1500
 #define kFullHealthbarLength 95
 
 @interface PrototypeViewController () <DeathDelegate, UIScrollViewDelegate, UIGestureRecognizerDelegate>
@@ -86,7 +86,8 @@
         
 //        _enemySpawnTimer = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(spawnEnemyWave) userInfo:nil repeats:NO]; // should repeat later
         
-        [self loadLevel:0];
+        int clvl = [[_levelParams objectForKey:[NSString stringWithFormat:@"levelNum"]] intValue];
+        [self loadLevel:clvl];
     }
     return self;
 }
@@ -111,6 +112,7 @@
     [super viewDidLoad];
     
     _infoPanel = [[InfoPanel alloc] initWithFrame:CGRectMake(32, 900, 245, 92)];
+    _infoPanel.points = _curLevel.starting_points;
     
     _pinchView = [[PanlessScrollView alloc] initWithFrame:self.view.bounds];
     _pinchView.minimumZoomScale = 1;
@@ -449,7 +451,7 @@
 }
 
 - (void)loadLevel:(int)level {
-    _curLevel = [StaticDataManager objectOfType:@"level" atIndex:level];
+    _curLevel = [StaticDataManager objectOfType:@"level" atIndex:level-1];
     _waveCtr = 0;
     _waveTimeElapsed = 0;
     _waveTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(spawnEnemyWaveByTime) userInfo:nil repeats:YES];

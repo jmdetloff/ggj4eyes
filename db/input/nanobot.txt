@@ -4,4 +4,4 @@ int	str	int	int	dict	int
 1	Cleaner	15	1	{"Plaque":4}	5
 2	Healer	15	1	{"Tear":4}	5
 3	Mom	5	0	{}	30
-4	Fighter	25	1	{"Parasite":2}	5
+4	Fighter	15	1	{"Parasite":2}	5

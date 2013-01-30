@@ -68,7 +68,7 @@
     _pointsCountLabel.font = f;
     
     self.wave = 0;
-    self.points = 60;
+//    self.points = 50;
     self.fighterCount = 0;
     self.healCount = 0;
     self.cleanerCount = 0;

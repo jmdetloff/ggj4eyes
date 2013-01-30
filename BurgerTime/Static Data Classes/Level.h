@@ -11,6 +11,7 @@
 @interface Level : NSObject
 
 @property (nonatomic) int pk;
+@property (nonatomic) int starting_points;
 @property (nonatomic, strong) NSArray *wave_ids;
 @property (nonatomic, strong) NSArray *wave_times;
 

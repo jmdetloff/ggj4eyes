@@ -64,6 +64,12 @@
     _totalPoints.textColor = [UIColor whiteColor];
     //[self addSubview:_totalPoints];
     
+    if (_level <= 2) {
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setBool:YES forKey:[NSString stringWithFormat:@"level%iunlocked", _level+1]];
+        [defaults synchronize];
+    }
+    
     self.points = 0;
 }
 

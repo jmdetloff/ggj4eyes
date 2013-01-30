@@ -21,6 +21,7 @@ static NSArray *_botColors;
 
 @implementation HeartGuardBot {
     int _actionCounter;
+    int _maxMomCount;
 }
 @synthesize level;
 @synthesize range;
@@ -52,6 +53,9 @@ static NSArray *_botColors;
     _actionCounter = 0;
     _nanobotType = nanobotType;
     [self setBotImage];
+    
+    if (_nanobotType == SPAWNBOT)
+        _maxMomCount = 10;
 }
 
 - (int)damageAgainst:(ParentEnemy*)enemy {
@@ -88,6 +92,9 @@ static NSArray *_botColors;
                 PlaqueEnemy *pe = (PlaqueEnemy*)enemy;
                 if (self.enemyKey != pe && pe.hp > 0) {
                     CGPoint p = [pe findASpreadPoint];
+                    //mdsa - stupid hack
+                    p = CGPointMake(p.x - 10, p.y - 10);
+                    //end hack
                     [self orderCycleWithPivot:p radius:10];
                     [pe track:self];
                 }
@@ -131,7 +138,10 @@ static NSArray *_botColors;
         case SPAWNBOT: {
             if (_actionCounter > 50) {
                 _actionCounter = 0;
+                _maxMomCount--;
                 [self.livingGuyManager livingGuyReproduces:self];
+                if (_maxMomCount == 0)
+                    [self.livingGuyManager livingGuyDies:self];
             }
         }
         break;
