@@ -9,7 +9,7 @@
 #import "ParentEnemy.h"
 #import "HeartGuardBot.h"
 
-#define PLAQUE_HP_MULTIPLIER 50
+//#define PLAQUE_HP_MULTIPLIER 50
 
 @interface PlaqueEnemy : ParentEnemy
 

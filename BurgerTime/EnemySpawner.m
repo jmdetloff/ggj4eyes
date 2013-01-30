@@ -21,7 +21,7 @@
         pe = [[HeartLeakEnemy alloc] initWithHP:w.hp];
     } else if ([w.enemy_type isEqualToString:@"Plaque"]) {
         pe = [[PlaqueEnemy alloc] initWithHP:w.hp spreadRadius:30];
-        hpmult = PLAQUE_HP_MULTIPLIER;
+//        hpmult = PLAQUE_HP_MULTIPLIER;
     } else if ([w.enemy_type isEqualToString:@"Parasite"]) {
         pe = [[ParasiteEnemy alloc] init];
     } else {
