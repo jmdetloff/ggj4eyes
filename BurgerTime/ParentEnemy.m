@@ -7,6 +7,7 @@
 //
 
 #import "ParentEnemy.h"
+#import "HeartGuardBot.h"
 
 @implementation ParentEnemy {
     NSInteger _attackTimer;
@@ -85,6 +86,13 @@
     if (_attackTimer > 40) {
         _attackTimer = 0;
         [self.livingGuyManager livingGuy:self dealsHeartDamage:5];
+    }
+}
+
+- (void)untrack:(HeartGuardBot *)bot {
+    if ([self.trackingBots containsObject:bot]) {
+        [self.trackingBots removeObject:bot];
+        [bot clearDestination];
     }
 }
 

@@ -10,6 +10,8 @@
 #import "MovingCollidingGuy.h"
 #import "LivingGuyManager.h"
 
+@class HeartGuardBot;
+
 typedef enum { TEAR, PLAQUE, PARASITE } EnemyType;
 
 @interface ParentEnemy : MovingCollidingGuy <DestinationDelegate, LivingGuy>
@@ -27,4 +29,5 @@ typedef enum { TEAR, PLAQUE, PARASITE } EnemyType;
 - (void)die;
 +(NSString*)nameFromType:(EnemyType)type;
 - (void)attack;
+- (void)untrack:(HeartGuardBot *)bot;
 @end

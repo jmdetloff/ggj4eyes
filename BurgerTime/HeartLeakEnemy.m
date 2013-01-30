@@ -62,6 +62,8 @@
         if (self.hp <= 0) {
             [self.livingGuyManager livingGuyDies:self];
         }
+    } else {
+        [self untrack:bot];
     }
 }
 
