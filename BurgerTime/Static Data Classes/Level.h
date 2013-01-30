@@ -12,6 +12,7 @@
 
 @property (nonatomic) int pk;
 @property (nonatomic) int starting_points;
+@property (nonatomic) int starting_bot_num;
 @property (nonatomic, strong) NSArray *wave_ids;
 @property (nonatomic, strong) NSArray *wave_times;
 

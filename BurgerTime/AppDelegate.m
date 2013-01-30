@@ -10,6 +10,8 @@
 #import "PrototypeViewController.h"
 #import "MenuViewController.h"
 #import "HelpScreen.h"
+#import "StaticDataManager.h"
+#import "Level.h"
 
 @implementation AppDelegate
 
@@ -28,7 +30,8 @@
 }
 
 -(void)showHelp:(NSInteger)level{
-    NSDictionary *levelParams = @{@"startingBotNum":@100, @"levelNum":[NSNumber numberWithInt:level]};
+    Level *l = [StaticDataManager objectOfType:@"level" atIndex:level-1];
+    NSDictionary *levelParams = @{@"startingBotNum":[NSString stringWithFormat:@"%d", l.starting_bot_num], @"levelNum":[NSNumber numberWithInt:level]};
     self.window.rootViewController = [[HelpScreen alloc] initWithLevelParameters:levelParams];
 }
 - (void)showLevel:(NSInteger)level {
@@ -37,7 +40,8 @@
 //    [defaults setBool:YES forKey:[NSString stringWithFormat:@"level%iunlocked", level]];
 //    [defaults synchronize];
     
-    NSDictionary *levelParams = @{@"startingBotNum":@100, @"levelNum":[NSNumber numberWithInt:level]};
+    Level *l = [StaticDataManager objectOfType:@"level" atIndex:level-1];
+    NSDictionary *levelParams = @{@"startingBotNum":[NSString stringWithFormat:@"%d", l.starting_bot_num], @"levelNum":[NSNumber numberWithInt:level]};
     self.window.rootViewController = [[PrototypeViewController alloc] initWithLevelParameters:levelParams];
 }
 

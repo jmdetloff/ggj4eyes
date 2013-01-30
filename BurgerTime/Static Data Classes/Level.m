@@ -10,6 +10,6 @@
 
 @implementation Level
 
-@synthesize pk, wave_ids, wave_times, starting_points;
+@synthesize pk, wave_ids, wave_times, starting_points, starting_bot_num;
 
 @end
