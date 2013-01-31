@@ -16,6 +16,7 @@
 #import "ParentEnemy.h"
 #import "Nanobot.h"
 #import "StaticDataManager.h"
+#import "PrototypeViewController.h"
 
 static NSArray *_botColors;
 
@@ -55,7 +56,7 @@ static NSArray *_botColors;
     [self setBotImage];
     
     if (_nanobotType == SPAWNBOT)
-        _maxMomCount = 10;
+        _maxMomCount = kMaxMomSpawn;
 }
 
 - (int)damageAgainst:(ParentEnemy*)enemy {

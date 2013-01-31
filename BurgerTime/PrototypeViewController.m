@@ -26,9 +26,7 @@
 #import "VictoryView.h"
 
 
-#define kPowerRadius 80
-#define kFullHealth 1500
-#define kFullHealthbarLength 95
+
 
 @interface PrototypeViewController () <DeathDelegate, UIScrollViewDelegate, UIGestureRecognizerDelegate>
 @end
@@ -591,6 +589,7 @@
     _gameOver = YES;
     
     DefeatView *defeatView = [[DefeatView alloc] initWithFrame:CGRectMake(33, 285, 702, 561) forLevel:[_levelParams[@"levelNum"] intValue]];
+    defeatView.wave = _waveCtr;
     [self.view addSubview:defeatView];
 }
 

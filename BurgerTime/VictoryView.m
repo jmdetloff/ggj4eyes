@@ -50,18 +50,22 @@
     [nextLevel setBackgroundImage:[UIImage imageNamed:@"NextButtonPressed.png"] forState:UIControlStateHighlighted];
     [nextLevel addTarget:self action:@selector(nextLevel) forControlEvents:UIControlEventTouchUpInside];
     
-    if (_level <= 3) {
+    if (_level <= 2) {
         [self addSubview:nextLevel];
     }
+    
+    UIFont *f = [UIFont fontWithName:@"Hooge0557" size:20];
     
     _pointsLabel = [[UILabel alloc] initWithFrame:CGRectMake(362 - 30, 556-self.frame.origin.y, 400, 20)];
     _pointsLabel.backgroundColor = [UIColor clearColor];
     _pointsLabel.textColor = [UIColor whiteColor];
+    _pointsLabel.font = f;
     [self addSubview:_pointsLabel];
     
     _totalPoints = [[UILabel alloc] initWithFrame:CGRectMake(362 - 30, 591-self.frame.origin.y, 400, 20)];
     _totalPoints.backgroundColor = [UIColor clearColor];
     _totalPoints.textColor = [UIColor whiteColor];
+    _totalPoints.font = f;
     //[self addSubview:_totalPoints];
     
     if (_level <= 2) {

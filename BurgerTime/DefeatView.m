@@ -47,6 +47,7 @@
     _waveLabel = [[UILabel alloc] initWithFrame:CGRectMake(362 - 30, 556-self.frame.origin.y, 400, 20)];
     _waveLabel.backgroundColor = [UIColor clearColor];
     _waveLabel.textColor = [UIColor whiteColor];
+    _waveLabel.font = [UIFont fontWithName:@"Hooge0557" size:20];
     [self addSubview:_waveLabel];
     
     self.wave = 0;
