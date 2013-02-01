@@ -70,12 +70,15 @@
     [[AudioManagement sharedInstance] playMenuBackground];
 }
 
-// Blank color is R90, G74, B66
 - (void)instructions {
     [[AudioManagement sharedInstance] playIcon];
 
     _blank = [[UIImageView alloc] initWithFrame:self.view.bounds];
     UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, YES, 0.0);
+    
+   // Background color is R90, G74, B66 but I'm not dealing with that
+    // right now because this is easier.
+    
     _blank.image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
