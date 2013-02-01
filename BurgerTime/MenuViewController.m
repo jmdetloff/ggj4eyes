@@ -20,6 +20,7 @@
     UIButton *_level2;
     UIButton *_level3;
     UIImageView *_popover;
+    UIScrollView *_container;
 }
 
 
@@ -71,16 +72,22 @@
 
 - (void)instructions {
     [[AudioManagement sharedInstance] playIcon];
-    _popover = [[UIImageView alloc] initWithFrame:self.view.bounds];
+
+    _popover = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,768,1996)];
     _popover.userInteractionEnabled = YES;
-    _popover.image = [UIImage imageNamed:@"InstructionsBG.png"];
-    [self.view addSubview:_popover];
+    _popover.image = [UIImage imageNamed:@"InstructionsBG_long.png"];
     
     UIButton *backButton = [[UIButton alloc] initWithFrame:CGRectMake(52, 45, 63, 63)];
     [backButton setBackgroundImage:[UIImage imageNamed:@"HomeButton.png"] forState:UIControlStateNormal];
     [backButton setBackgroundImage:[UIImage imageNamed:@"HomeButtonPressed.png"] forState:UIControlStateHighlighted];
     [backButton addTarget:self action:@selector(closePopover) forControlEvents:UIControlEventTouchUpInside];
     [_popover addSubview:backButton];
+
+    _container = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+   // _container.pagingEnabled = true;
+    _container.contentSize = _popover.image.size;
+    [_container addSubview:_popover];
+    [self.view addSubview:_container];
 }
 
 
@@ -100,6 +107,11 @@
 
 
 - (void)closePopover {
+    if (_container) {
+        [[AudioManagement sharedInstance] playIcon];
+        [_container removeFromSuperview];
+        _container = nil;
+    }
     if (_popover) {
         [[AudioManagement sharedInstance] playIcon];
         [_popover removeFromSuperview];

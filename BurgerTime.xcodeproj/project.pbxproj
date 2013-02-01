@@ -117,6 +117,7 @@
 		6773E65716B4D4DA00A3CBF5 /* zapper.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E65316B4D4DA00A3CBF5 /* zapper.caf */; };
 		6773E65816B4D4DA00A3CBF5 /* heartbeat.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E65416B4D4DA00A3CBF5 /* heartbeat.caf */; };
 		67825E0916B5EA2F008656D1 /* ClosePopupButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 67825E0816B5EA2F008656D1 /* ClosePopupButton.png */; };
+		67CC08E916BB63110028146B /* InstructionsBG_long.png in Resources */ = {isa = PBXBuildFile; fileRef = 67CC08E816BB63100028146B /* InstructionsBG_long.png */; };
 		67CC3F1016B507DE00CD0BB1 /* icon.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E64816B4D05100A3CBF5 /* icon.caf */; };
 		67CC3F1116B507E100CD0BB1 /* clothability.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E64716B4D05100A3CBF5 /* clothability.caf */; };
 		67CC3F1216B507E400CD0BB1 /* pointspurchase.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6773E64916B4D05100A3CBF5 /* pointspurchase.caf */; };
@@ -280,6 +281,7 @@
 		6773E65316B4D4DA00A3CBF5 /* zapper.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = zapper.caf; sourceTree = "<group>"; };
 		6773E65416B4D4DA00A3CBF5 /* heartbeat.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = heartbeat.caf; sourceTree = "<group>"; };
 		67825E0816B5EA2F008656D1 /* ClosePopupButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ClosePopupButton.png; sourceTree = "<group>"; };
+		67CC08E816BB63100028146B /* InstructionsBG_long.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InstructionsBG_long.png; sourceTree = "<group>"; };
 		67CF4AB816B5122700129B56 /* rip_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rip_03.png; sourceTree = "<group>"; };
 		67CF4AB916B5122700129B56 /* rip_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rip_02.png; sourceTree = "<group>"; };
 		67CF4ABA16B5122700129B56 /* rip_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rip_01.png; sourceTree = "<group>"; };
@@ -357,6 +359,7 @@
 		0F4D20D516B5BBB100291459 /* Menus */ = {
 			isa = PBXGroup;
 			children = (
+				67CC08E816BB63100028146B /* InstructionsBG_long.png */,
 				67CF4AD716B5DA8900129B56 /* InstructionsPopup.png */,
 				67825E0816B5EA2F008656D1 /* ClosePopupButton.png */,
 				0F4D210616B5C4F300291459 /* InfoBar.png */,
@@ -736,6 +739,7 @@
 				671045DB16B707A5007C3C4B /* heartappicon72.png in Resources */,
 				671045DD16B707DE007C3C4B /* Default-Portrait~ipad.png in Resources */,
 				671BDA4316B73FD400D34DB6 /* Default-Portrait@2x~ipad.png in Resources */,
+				67CC08E916BB63110028146B /* InstructionsBG_long.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -873,10 +877,11 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "F076F39B-6465-479E-9047-77917F403280";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D4FA83BD-5BEC-4D9C-AFE8-9C79132E9256";
+				PROVISIONING_PROFILE = "767F80B1-910E-4943-A636-E11F11E653DB";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "767F80B1-910E-4943-A636-E11F11E653DB";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = NO;
 			};
 			name = Debug;
 		};
@@ -898,10 +903,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "F076F39B-6465-479E-9047-77917F403280";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0E17218A-5856-40C0-B1B0-9A6ED2F0B078";
+				PROVISIONING_PROFILE = "767F80B1-910E-4943-A636-E11F11E653DB";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "767F80B1-910E-4943-A636-E11F11E653DB";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -910,12 +915,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer: Jethro Bell (Y36M9HWW85)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jethro Bell (Y36M9HWW85)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BurgerTime/BurgerTime-Prefix.pch";
 				INFOPLIST_FILE = "BurgerTime/BurgerTime-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "Heart Invaders";
-				PROVISIONING_PROFILE = "F076F39B-6465-479E-9047-77917F403280";
+				PROVISIONING_PROFILE = "767F80B1-910E-4943-A636-E11F11E653DB";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "767F80B1-910E-4943-A636-E11F11E653DB";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
@@ -924,11 +931,13 @@
 		0F96981616B38D02005BE1C1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jethro Bell (Y36M9HWW85)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BurgerTime/BurgerTime-Prefix.pch";
 				INFOPLIST_FILE = "BurgerTime/BurgerTime-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "Heart Invaders";
+				PROVISIONING_PROFILE = "767F80B1-910E-4943-A636-E11F11E653DB";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
