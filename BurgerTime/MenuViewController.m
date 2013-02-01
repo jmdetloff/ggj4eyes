@@ -20,6 +20,7 @@
     UIButton *_level2;
     UIButton *_level3;
     UIImageView *_popover;
+    UIImageView *_blank;
     UIScrollView *_container;
 }
 
@@ -69,10 +70,15 @@
     [[AudioManagement sharedInstance] playMenuBackground];
 }
 
-
+// Blank color is R90, G74, B66
 - (void)instructions {
     [[AudioManagement sharedInstance] playIcon];
 
+    _blank = [[UIImageView alloc] initWithFrame:self.view.bounds];
+    UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, YES, 0.0);
+    _blank.image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
     _popover = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,768,1996)];
     _popover.userInteractionEnabled = YES;
     _popover.image = [UIImage imageNamed:@"InstructionsBG_long.png"];
@@ -87,6 +93,7 @@
    // _container.pagingEnabled = true;
     _container.contentSize = _popover.image.size;
     [_container addSubview:_popover];
+    [self.view addSubview:_blank];
     [self.view addSubview:_container];
 }
 
@@ -116,6 +123,11 @@
         [[AudioManagement sharedInstance] playIcon];
         [_popover removeFromSuperview];
         _popover = nil;
+    }
+    if(_blank) {
+        [[AudioManagement sharedInstance] playIcon];
+        [_blank removeFromSuperview];
+        _blank = nil;
     }
 }
 
